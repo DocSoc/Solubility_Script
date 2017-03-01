@@ -1,0 +1,5 @@
+Solvent Screening results 
+
+no                                              Solvent      log10(x_solub)            mu(self)            mu(solv)              DG_fus           mu(water)              N_Ring              Volume             N_Amino           MolWeight             w_solub            log10(S)           Exp-State
+0                   methanol_c0  Concentrations: 1              -1.32990209         -4.84602061         -5.18214848          2.15040441         -5.24857384                   6        185.80570000                   0        151.16330000          0.23154399          0.00183489             unknown
+1                   ethanol  Concentrations: 1                  -1.52907872         -4.84602061         -4.91042810          2.15040441         -4.91691154                   6        185.80720000                   0        151.16330000          0.10000000         -0.31685287             unknown

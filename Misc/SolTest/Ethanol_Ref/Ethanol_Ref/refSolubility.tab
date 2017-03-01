@@ -1,0 +1,7 @@
+
+ Solubility at T =  298.15 K  in compound    2 (ethanol) - energies are in kcal/mol - volume is in A^3  - temperature is in K - mass solubility w_solu2 = x_s*MW(s)/((1-x_s)*MW(solvent)) is in g/g - molar solubility S is in mol/l(solution) - solvent density =  773.208 g/l - Note: log10(x_solub)=0 means compound is miscible with solvent - job 1 
+
+  Nr Compound                  log10(x_solub)           mu(self)          mu(solv)            DG_fus         mu(water)    N_Ring            Volume   N_Amino         MolWeight            w_solu2              log10(S)  Exp-State      Tmelt
+   1 paracetamol                  -1.52907871        -4.84602061       -4.91042812        2.15040441       -2.62595598         6          185.8073         0          151.1633       0.1000000000           -0.31685286    unknown         NA
+   2 ethanol                       0.00000000        -2.85245758       -2.85256317        0.00000000       -1.98484552         0           71.3206         0           46.0687                 NA            0.00000000     liquid     159.05
+   3 h2o                           0.00000000        -2.28890576       -2.02871977        0.00000000       -2.28890576         0           25.8434         0           18.0153                 NA            0.00000000     liquid     273.15

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Document: Ethanol_Ref.inpx
+Created on: Feb 25, 2017
+Author: COSMOthermX
+Description: Control file for solubility Solvent Screening
+-->
+<screening>
+    <property state="solid">Solubility</property>
+    <kindOfScreening>4</kindOfScreening>
+    <compoundList conformer="yes" parametrization="TZVPD-FINE">
+    <conformer>
+         <conformerName>paracetamol</conformerName>
+         <conformerAltName/>
+         <compound>
+            <compoundAltName/>
+            <filename>paracetamol_c0.cosmo</filename>
+            <filepath>/Volumes/Accounts (1Tb)/davidrjhose/COSMOlogicAppData/User_Databases/AZ_BP_TZVPD-FINE/p</filepath>
+         </compound>
+         <compound>
+            <compoundAltName/>
+            <filename>paracetamol_c1.cosmo</filename>
+            <filepath>/Volumes/Accounts (1Tb)/davidrjhose/COSMOlogicAppData/User_Databases/AZ_BP_TZVPD-FINE/p</filepath>
+         </compound>
+         <confOptions/>
+         <compOptions>
+            <contentIntern>0</contentIntern>
+            <useVap>1</useVap>
+         </compOptions>
+      </conformer>
+      <compound>
+         <compoundAltName/>
+         <filename>methanol_c0.cosmo</filename>
+         <filepath>../COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/m</filepath>
+         <compOptions>
+            <contentIntern>0</contentIntern>
+            <useVap>1</useVap>
+         </compOptions>
+         <compProperties>
+            <gfus>DGfus = 0</gfus>
+         </compProperties>
+      </compound>
+      <conformer>
+         <conformerName>ethanol</conformerName>
+         <conformerAltName/>
+         <compound>
+            <compoundAltName/>
+            <filename>ethanol_c0.cosmo</filename>
+            <filepath>../COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/e</filepath>
+         </compound>
+         <compound>
+            <compoundAltName/>
+            <filename>ethanol_c1.cosmo</filename>
+            <filepath>../COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/e</filepath>
+         </compound>
+         <confOptions/>
+         <compOptions>
+            <contentIntern>0</contentIntern>
+            <useVap>1</useVap>
+         </compOptions>
+         <compProperties>
+            <gfus>DGfus = 0</gfus>
+         </compProperties>
+      </conformer>
+   </compoundList>
+    <files>
+    <file>
+         <filename>Solubility0.inp</filename>
+         <filepath>Solubility0.inp</filepath>
+         <compoundIndexList>
+            <compoundIndex>0</compoundIndex>
+            <compoundIndex>1</compoundIndex>
+         </compoundIndexList>
+         <jobList>
+            <job>solub=2 tc=25.0 Iterative</job>
+         </jobList>
+      </file>
+      <file>
+         <filename>Solubility1.inp</filename>
+         <filepath>Solubility1.inp</filepath>
+         <compoundIndexList>
+            <compoundIndex>0</compoundIndex>
+            <compoundIndex>2</compoundIndex>
+         </compoundIndexList>
+         <jobList>
+            <job>solub=2 tc=25.0 Iterative</job>
+         </jobList>
+      </file>
+   </files>
+<referenceSolvent>
+      <file>
+         <filename>refSolubility.inp</filename>
+         <filepath>refSolubility.inp</filepath>
+         <compoundIndexList>
+            <compoundIndex>0</compoundIndex>
+            <compoundIndex>2</compoundIndex>
+            <compoundIndex>-1</compoundIndex>
+         </compoundIndexList>
+         <jobList>
+            <job>solub=2  ref_sol_g=0.1 WSOL2 solute=1  tk=298.15</job>
+         </jobList>
+      </file>
+      <expSolubility>0.1</expSolubility>
+      <unitexpSolubility>Mass2 g/gsolvent</unitexpSolubility>
+   </referenceSolvent>
+</screening>
