@@ -3,22 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>snips/Initialisation_Routines/Read_Solvent_Data.pl</string>
+	<string>Solubillity.pl</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>Solubillity.pl</string>
 			<key>lastUsed</key>
-			<date>2017-02-23T21:18:03Z</date>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Master_Data</string>
-			<key>regexFolderFilter</key>
-			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<date>2017-03-09T21:52:22Z</date>
 			<key>selected</key>
 			<true/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Master_Data</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
 			<key>sourceDirectory</key>
 			<string>Master_Data</string>
 		</dict>
@@ -31,6 +31,8 @@
 			<string>apps</string>
 		</dict>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>snips</string>
 			<key>regexFolderFilter</key>
@@ -43,14 +45,14 @@
 	<integer>331</integer>
 	<key>metaData</key>
 	<dict>
-		<key>snips/Initialisation_Routines/Read_Solvent_Data.pl</key>
+		<key>Solubillity.pl</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>25</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -60,7 +62,7 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>snips/Initialisation_Routines/Read_Solvent_Data.pl</string>
+		<string>Solubillity.pl</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>

@@ -1,8 +1,8 @@
 
 # Create a timestamp for unique filenames between script runs.
-	$TS = time() % 65535;
+	$TS = time() % 65535; # This rolls around every 18:12:15.
 	$Header = "Parameters\nOptions\n";
-	$TS = 123;
+	#$TS = 123;
 
 my @RefSolvs = (  1,   2,   5,   9,  15,  23,  55, 101, 120, 150); # The Solvent IDs of the reference solvents.
 my @PredSolvs = (3,4,6,7,8,10,11,12,13,14); # The Solvent IDs of the prediction solvents.
