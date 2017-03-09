@@ -5,7 +5,7 @@
 sub Hello {
 print <<ENDHELLO;
 
-			                      ( ~!~ ~!~ )
+			                       ( ~!~ ~!~ )
 			.-----------------oOOo----(_)----oOOo--------------------------.
 			|                                                              |
 			|                   A Perl Script for:                         |
@@ -36,7 +36,7 @@ ENDGOODBYE
 sub Usage {
 print <<ENDUSAGE;
 
-		                       ..--** Solubility.pl **--..
+		                       ..--** Sobubility.pl **--..
 
 	This script takes lists of Solvent and Solutes and sets up COSMOtherm
 	input file for the calculation of infinite dilution partition

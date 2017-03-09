@@ -306,16 +306,16 @@ sub COSMOthermInstalled {
 		# Dependances: LogMessage(), Usage().
 	# Variables:
 		my $Flag = 0; # A flag.
-		my $msg; # An error message.
+		my $Msg; # An error message.
 		# The appsdir is define as a global variable.
 	# Sub:
 		LogMessage("Enter: COSMOthermInstalled()", 2);
 		#opendir(DIR, $appsdir) or die "Can't open the APPS directory.";
 		
-		opendir(DIR, $appsdir) or $msg = "Can't open the APPS directory. line ". __LINE__ . " $!";
-		if($msg ne "") {
-			LogMessage("ERROR: $msg", 1);
-			print "$msg";
+		opendir(DIR, $appsdir) or $Msg = "Can't open the APPS directory. line ". __LINE__ . " $!";
+		if($Msg ne "") {
+			LogMessage("ERROR: $Msg", 1);
+			print "$Msg";
 			exit;
 		}
 
@@ -339,17 +339,11 @@ sub YearVersions {
 	# Determines the year versions of COSMOtherm that are available.
 	# Scan the directories in the cosmologic directory and determine the version years from the names.
 	# Variables:
-		my $msg;
 		my @YearList; # Holds the list of years found (reverse chronological order).
 		my $Flag = 0;
 	# Sub:
 		LogMessage("Enter: YearVersions()",2);
-		opendir(DIR, $cosmologicdir) or $msg = "Can't open directory. line ". __LINE__ ." $!\n";
-		if($msg ne "") {
-			LogMessage("ERROR: $msg", 1);
-			print "$msg";
-			exit;
-		}
+		opendir(DIR, $cosmologicdir) or die "Can't open $!\n";
 		while (my $file = readdir(DIR)) {
 			next unless (-d "$cosmologicdir/$file"); # Only check for directories.
 			next unless ($file =~ m/COSMOthermX/); # Only check for 'COSMOthermX## directories.
@@ -373,8 +367,8 @@ sub CTRL_Read {
 		# Open Control File.
 			open (FH_CTRL, "<", $CTRLFileName) or $msg = "Can't open Control File. line ". __LINE__ ." $!\n";
 			if($msg ne "") {
-				LogMessage("ERROR: $msg", 1);
-				print "$msg";
+				LogMessage("ERROR: $Msg", 1);
+				print "$Msg";
 				exit;
 			}
 		# Read in contents of control file.
@@ -492,8 +486,8 @@ sub Read_Solv_Data {
 		LogMessage("Enter: Read_Solv_Data()", 2);
 		open (FH_SOLV, "<" . $netpath . "/" . $SolvData) or $msg = "Can't Open Solvent Data. line ". __LINE__ . " $!."; # Open Solvent Master Data File.
 			if($msg ne "") {
-				LogMessage("ERROR: $msg", 1);
-				print "$msg";
+				LogMessage("ERROR: $Msg", 1);
+				print "$Msg";
 				exit;
 			}
 		LOOP_SOLV: while(<FH_SOLV>) {
@@ -522,14 +516,8 @@ sub Read_Project {
 	# Dependences: None.
 	# Global Variables: $ProjectFileName, $ProjectName, $Compound, $AltName and $Client.
 	# (c) David Hose. Feb 2017.
-	my $msg;
 		LogMessage("Enter: Read_Project()", 2);
-		open (FH_PROJ, "<", $ProjectFileName) or $msg = "Can't open Project File. line ". __LINE__ . " $!\n"; # Open Project File.
-			if($msg ne "") {
-				LogMessage("ERROR: $msg", 1);
-				print "$msg";
-				exit;
-			}
+		open (FH_PROJ, "<", $ProjectFileName) or die "Can't open Project File.\n"; # Open Project File.
 	# Read in contents of control file.
 		while (<FH_PROJ>) {
 			chomp;

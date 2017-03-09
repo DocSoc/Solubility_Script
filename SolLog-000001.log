@@ -1,0 +1,44 @@
+GENERAL INFORMATION
+
+Executed on 2017/02/09 at 16:20:09
+
+Log File Name : SolLog-000001.log
+Perl Script   : Solubillity.pl
+Author        : David Hose
+Version       : 0.1a (Mar 2017)
+
+User ID       : knzd043
+User realname : David Hose
+Hostname      : ukmcdwlx007
+Path          : /media/DAVE_HOSE_4/Solubility_GitHub/Solubility_Script
+
+DETAILS
+
+16:20:09 : STARTING SCRIPT
+16:20:09 : Initialiation
+16:20:09 : Enter: COSMOthermInstalled()
+16:20:09 : Leave: COSMOthermInstalled()
+16:20:09 : Enter: YearVersions()
+16:20:09 : PARAM: Available COSMOtherm years: 17 16 15 14
+16:20:09 : Leave: YearVersions()
+16:20:09 : Enter: CTRL_Read()
+16:20:09 : PARAM: COSMOtherm Year default.
+16:20:09 : PARAM: Parameterisation default
+16:20:09 : PARAM: Temperature 27 degC.
+16:20:09 : Leave: CTRL_Read()
+16:20:09 : Enter: CTD_Path()
+16:20:09 : PARAM: COSMOtherm Year is 2017.
+16:20:09 : PARAM: License file path: apps/cosmologic/COSMOthermX17/licensefiles/
+16:20:09 : PARAM: Parameterisation path: apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES
+16:20:09 : PARAM: Parameterisation file: BP_TZVPD_FINE_C30_1701.ctd
+16:20:09 : Leave: CTD_Path()
+16:20:09 : Enter: Read_Solv_Data()
+16:20:09 : MESSG: %Solvents, %Densities and %SolventProps have been set up.
+16:20:09 : Leave: Read_Solv_Data()
+16:20:09 : Enter: Read_Project()
+16:20:09 : PARAM: Project: AZD1234
+16:20:09 : PARAM: Compound: AZ12345678
+16:20:09 : PARAM: Alternative Name: Ketoester
+16:20:09 : PARAM: Client: Sarah-Kate Austin O'Bloggs
+16:20:09 : Leave: Read_Project()
+16:20:09 : SCRIPT COMPLETE
