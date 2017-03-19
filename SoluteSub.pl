@@ -4,42 +4,33 @@
 # For the solubility script only the first compound will be used - the script is intended for more general use.
 
 # Global Variables:
+$AppYear = 17;
 
-
-
-$Result = (Read_Solutes("Solubility_Test.list"))[0];
+$Result = (Read_Solutes("Solute.list"))[1];
+#$Result = (Read_Solutes("Solubility_Test.list"))[0];
 print "$Result";
 exit;
-
 
 sub Read_Solutes {
 	# Extracts the solutes from a COSMOtherm list file.
 		# Pass: Name of the COSMOtherm list file.
-		# Return:
-		# Dependences:
-		# Global Variables:
+		# Return: An array of the solutes.
+		# Dependences: LogMessage()
+		# Global Variables: NONE.
 	# (c) David Hose. March, 2017.
-	
 	my $File = $_[0];
-	
-	my $Line; # Holds the current line that has been read in from the Solute list file.
-	my @SOLUTES;					# This holds of the solutes file and path information.
+	my $Line;				# Holds the current line that has been read in from the Solute list file.
+	my @SOLUTES;			# This holds of the solutes file and path information.
 	my $SoluteCnt = 0;		# This counts the number of SOLUTES.
 	my $ConformerCnt = 0;	# This counts the number of conformers for a specific SOLUTE.
 	my $FirstConformer;		# Hold file and path information about the first conformer of a SOLUTE.
-	my $SoluteTempArray;
-	
-	
-	print "Opening the solute file\n";
-	
-	# Comment for LogFile.
-	
-	# Open the solute list file.
-		open (FH_SOLUTE, "<$File") or die "Can't open the Solute list file, $!\n";
-
+	my $SoluteTempArray;	# A temp array.
+	# Comments for LogFile.
+		LogMessage("Enter: Read_Solutes.", 1);
+		LogMessage("Opening Solute File '$File'",3);
+	open (FH_SOLUTE, "<$File") or die "Can't open the Solute list file, $! LINE:" . __LINE__ . "\n"; # Open the solute list file.
 	# Loop through the lines of the file.
 		SOLUTELINE:	while(<FH_SOLUTE>) {
-			#print "$_";
 			chomp;
 			$Line = $_;
 			# This section deals with compounds that have multiple conformers or are composites of multiple compounds (tautomers, etc.)
@@ -78,7 +69,9 @@ sub Read_Solutes {
 								$SoluteFile = $SoluteFile . "$SoluteTempArray[$i] \n" if($i > 0 && $i < ($MaxConformerCnt - 1));
 								$SoluteFile = $SoluteFile . "$SoluteTempArray[$i] ] Comp = $ConformerName \n" if($i == ($MaxConformerCnt - 1));
 							}
-						$SoluteFile =~ s/fdir=\"\.\./fdir=\"\/apps\/cosmologic\/COSMOthermX16\//g; # Modify relative to absolute path.
+						$SoluteFile =~ s/\/COSMOthermX\/\.\.//;
+						$SoluteFile =~ s/\/COSMOthermX\d\d\//\/COSMOthermX$AppYear\//;
+						#$SoluteFile =~ s/fdir=\"\.\./fdir=\"\/apps\/cosmologic\/COSMOthermX16\//g; # Modify relative to absolute path.
 						$SOLUTES[$SoluteCnt] = $SoluteFile;
 						next SOLUTELINE;
 					}
@@ -90,19 +83,21 @@ sub Read_Solutes {
 					$CompoundName =~ s/_c0.cosmo//; # Strip out conformer number and extgension from the file name.
 					$Path = $TEMP[3]; # Get the COSMOtherm path of the file.
 					$SoluteFile = "f = $CompoundName\_c0.cosmo $Path Comp = $CompoundName\n";
-					$SoluteFile =~ s/fdir=\"\.\./fdir=\"\/apps\/cosmologic\/COSMOthermX16\//g;
+					$SoluteFile =~ s/\/COSMOthermX\/\.\.//;
+					$SoluteFile =~ s/\/COSMOthermX\d\d\//\/COSMOthermX$AppYear\//;
 					$SOLUTES[$SoluteCnt] = $SoluteFile;
 					next SOLUTELINE;
 				}
 		} # END while SOLUTELINE loop.
-	# Close solute list file.
-		close FH_SOLUTE;
-		
-	# Discard blank first entry.
-		shift @SOLUTES;
-
-	# Comment for LogFile.
-	
+	close FH_SOLUTE; # Close solute list file.
+	shift @SOLUTES; # Discard blank first entry.
+	LogMessage("Leave: Read_Solutes.", 1); # Comment for LogFile.
+	LogMessage("PARAM: $SOLUTES[0]", 3);
 	return(@SOLUTES);
 
 } # END Read_Solutes()
+
+sub LogMessage {
+#	print "";
+}
+

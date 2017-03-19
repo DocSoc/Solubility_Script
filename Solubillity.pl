@@ -12,17 +12,30 @@ my $debug = 1; # Development only.
 
 ### Variables: ###
 	## Script Information (Only change upon script updates).
-			$author = "David Hose";
-			$version = "0.1a";
-			$versiondate = "Mar 2017";
-			$scriptname = $0; # Pulls the name of the script from perl's special variables. 
-			$scriptname =~ s/.\///; # Cleans up the name by removing './'.
+			my $author = "David Hose";		# Primary Author.
+			my $verauthor = "David Hose"; 	# Subversion Author.
+			my $version = "0.1a";			# Script Version.
+			my $versiondate = "Mar 2017";	# Date of current version of the script.
+			my @Temp = split(/\//, $0);
+			my $scriptname = $Temp[-1]; # Pulls the name of the script from perl's special variables.
+			#$scriptname =~ s/.\///;		# Cleans up the name by removing './'.
+			my $scriptpath = join '/', @Temp[0..$#Temp-1]; # Path to the script.
 	## Key file locations:
 		## Network files (Key master files).
-			my $netpath = "/projects/PharmDev/COSMOtherm/Ref_Solubility/Master_Data"; # Provisional location.
+			my $netpath = "/projects/PharmDev/COSMOtherm/Ref_Solubility/Master_Data";	# Provisional location.
 			$netpath = "Master_Data"; # DEVELOPMENT LOCATION.
 			my $SolvData = "Solvents.txt";
+		## COSMOtherm Related Directories.
+			my $appsdir = "/apps"; # Points to applications directory (UNIX environment).
+			$appsdir = "apps"; # DEVELOPMENT LOCATION.
+			my $cosmologicdir = "$appsdir/cosmologic"; # Points to the cosmologic directory within the application directory (UNIX environment).
+			my $cosmodbpath; # Path of the COSMOtherm compound database.
 			
+		## Log file settings.
+			my $LogFileName = join('', "SolLog-", time(), ".log"); # Log file name (only use a limited number of digits).
+			$LogFileName = join('', "SolLog-", "000001" , ".log"); # DEVELOPMENT. REMOVE IN PRODUCTION.
+			$LogLevel = 3; # 1 = Sparse, 2 = Normal and 3 = Verbose. (Allow this to be set by the Parser!!!)	
+		
 		## Data files for the script to work with.
 			# Control file. (Application and Parameter years, and temperature.
 				my $CTRLFileName = "control.dat"; # DEVELOPMENT DEFAULT.
@@ -30,51 +43,38 @@ my $debug = 1; # Development only.
 				my $ProjectFileName = "project.dat";
 			# Solute List.
 				my $SoluteFileName = "Solubility_Test.list";
-		
-			
-		## Applications Directory.
-			my $appsdir = "/apps"; # Points to applications directory (UNIX environment).
-			$appsdir = "apps"; # DEVELOPMENT LOCATION.
-			my $cosmologicdir = "$appsdir/cosmologic"; # Points to the cosmologic directory within the application directory (UNIX environment).
-			
-	
-	## Log file settings.
-		my $LogFileName = join('', "SolLog-", time(), ".log"); # Log file name (only use a limited number of digits).
-		$LogFileName = join('', "SolLog-", "000001" , ".log"); # DEVELOPMENT. REMOVE IN PRODUCTION.
-		$LogLevel = 3; # 1 = Sparse, 2 = Normal and 3 = Verbose. (Allow this to be set by the Parser!!!)
-		
 
 	## General variables:
 		# Misc:
-			my @usr; # Holds ID information about the user
-			my @scriptdur; # Holds the start, end and duration times of the script.
+			my @usr;		# Holds ID information about the user
+			my @scriptdur;	# Holds the start, end and duration times of the script.
 		# COSMOtherm related variables:
 			# General:
-				my $AppYear; # Holds the Application Year (COSMOtherm version).
-				my $ParamYear; # Holds the Parameterisation Year (COSMOtherm parameterisation).
-				my @Years; # Holds the available COSMOtherm application versions.
-				my $cdir; # Holds the path and name of the required CTD file (Used by COSMOtherm).
-				my $ctd; # Holds the name of the required CTD file (Used by COSMOtherm).
-				my $ldir; # Holds the path of the license file (Used by COSMOtherm).
+				my $AppYear;	# Holds the Application Year (COSMOtherm version).
+				my $ParamYear;	# Holds the Parameterisation Year (COSMOtherm parameterisation).
+				my @Years;		# Holds the available COSMOtherm application versions.
+				my $cdir;		# Holds the path and name of the required CTD file (Used by COSMOtherm).
+				my $ctd;		# Holds the name of the required CTD file (Used by COSMOtherm).
+				my $ldir;		# Holds the path of the license file (Used by COSMOtherm).
 			# COSMOtherm Database location Variables.
 			
 		# Project related variables:
-			my $ProjectName; # Project Name (AZDxxxx or pre-nomination name).
-			my $Compound; # AZxxxxxxxx name.
-			my $AltName; # Alternative compound name (trivial name).
-			my $Client; # Name of the client who requested the work.
+			my $ProjectName;	# Project Name (AZDxxxx or pre-nomination name).
+			my $Compound;		# AZxxxxxxxx name.
+			my $AltName;		# Alternative compound name (trivial name).
+			my $Client;			# Name of the client who requested the work.
 		
 		# Solvent Properties 'Database' variables:
-			my %Solvents; # This hash holds all of the solvent cosmo file locations (key = Solvent ID).
-			my %Densities; # This hash holds all of the solvent density information (key = Solvent ID).
-			my %SolventProps; # This hash holds all of the solvent properties information (key = Solvent ID).
+			my %Solvents;		# This hash holds all of the solvent cosmo file locations (key = Solvent ID).
+			my %Densities;		# This hash holds all of the solvent density information (key = Solvent ID).
+			my %SolventProps;	# This hash holds all of the solvent properties information (key = Solvent ID).
 		# Script control...
-			my $DenOpt = 1; # Defines which density to use for the solute. 1 = 1.335, 2, = 1.000, 3 = Solvent Density.
-			my $Temperature; # The temperature of the solubility measurement.
+			my $DenOpt = 1;		# Defines which density to use for the solute. 1 = 1.335, 2, = 1.000, 3 = Solvent Density.
+			my $Temperature;	# The temperature of the solubility measurement.
 			
-			my $RefSolFileName = "refsolvsolub.dat"; # Holds the filename that contains the solubility information.
-			my @RefSolub; # 2D Array that holds the reference solubility data.  This data will be in mg/mL.
-			my $RefSolNum; # Holds the number of reference solvent solubilities.
+			my $RefSolFileName = "refsolvsolub.dat";	# Holds the filename that contains the solubility information.
+			my @RefSolub; 	# 2D Array that holds the reference solubility data.  This data will be in mg/mL.
+			my $RefSolNum;	# Holds the number of reference solvent solubilities.
 			my $CalcsDir = "Calcs";
 		
 
@@ -113,7 +113,7 @@ my $debug = 1; # Development only.
 		print "\tRead Project Information...";
 		Read_Project(); # Read in Project Information.
 		print "DONE.\n";
-		print "\tRead Solute File '$SoluteFileName' ...";
+		print "\tRead Solute File '$SoluteFileName'...";
 		#Read Solute();
 		print "DONE.\n";
 	} # END ## INITIALISATION ##
@@ -126,10 +126,11 @@ my $debug = 1; # Development only.
 		print "DONE.\n";
 	}## END REFERENCE SOLUBILITY DATA ##
 
-	## PREFORM THE REFERENCE SOLUBILITY CALCULATIONS IN COSMOTHERM ##
+	## PERFORM THE REFERENCE SOLUBILITY CALCULATIONS IN COSMOTHERM ##
 		# This section of code...
 			# Creates the Calculation Directory and Reference Subdirectory.
 	{
+	LogMessage("Starting Gfus Calculations.", 1);
 		print "";
 		# Make a directory to store all of the calculations.
 			mkdir "$CalcsDir", 0777;
@@ -165,18 +166,21 @@ my $debug = 1; # Development only.
 		
 		}
 		
-		
+	LogMessage("Ending Gfus Calculations.", 1);
 	}
 
 #sleep(1);
 
-	## NORMAL TERMINATION ##
-		$scriptdur[1] = time();
-		print "\n";
-		Goodbye();
-		LogMessage("SCRIPT COMPLETE", 1);
-		close FH_LOG; # Close the log file.
-		exit;
+## NORMAL TERMINATION ##
+{
+	$scriptdur[1] = time();
+	print "\n";
+	Goodbye();
+	my $msg = Duration($scriptdur[2]);
+	LogMessage("SCRIPT COMPLETE. Duration = $msg", 1);
+	close FH_LOG; # Close the log file.
+	exit; # Catch all exit.
+}
 
 ### MAIN ROUTINE FINISHES HERE ###
 	
@@ -207,20 +211,23 @@ sub Hello {
 		Version: $version ($versiondate).
 			
 ENDHELLO
-
-TimeSalute();
+TimeSalute(); # Print a meesage that's appropriate for the time of day.
 print "\n\n";
-
 } # END Hello()
 
 sub Goodbye {
-	# Say Goodbye.
+	# Say Goodbye to the user and inform them of the script duration.
+		# Pass: NONE.
+		# Return: NONE.
+		# Dependences: NONE.
+		# Global Variables: @scriptdur.
+	# (c) David Hose, Feb 2017.
 	$scriptdur[2] = $scriptdur[1] - $scriptdur[0];
 	my $runtime = Duration($scriptdur[2]);
 	print <<ENDGOODBYE;
 	Script completed. Goodbye $usr[2].
 	Duration: $runtime.
-	
+
 
 ENDGOODBYE
 } # END Goodbye()
@@ -241,15 +248,24 @@ print <<ENDUSAGE;
 	See supporting documentation for further details.
 
 ENDUSAGE
-exit;
-}
+exit; # Exit.
+} # END Usage()
 
 sub User() {
-	# Determines how the script user is.
-		@usr = ((getpwuid($<))[0], (getpwuid($<))[6]); # Store user's login ID and Real Name.
-		$usr[1] =~ s/\./ /g; # Replace peroids in the real name if present.
-		$usr[2] = (split(/\s/, $usr[1]))[0]; # Separate out the first name of the user.
+	# Determines who the script user is (get login ID, Real name and first name).
+		# Pass: NONE.
+		# Return: NONE.
+		# Dependences: NONE.
+		# Global Variables: @usr
+	# (c) David Hose. Feb 2017.
+	@usr = ((getpwuid($<))[0], (getpwuid($<))[6]); # Store user's login ID and Real Name.
+	$usr[1] =~ s/\./ /g; # Replace peroids in the real name if present.
+	$usr[2] = (split(/\s/, $usr[1]))[0]; # Separate out the first name of the user.
 } # END User()
+
+sub Parser {
+
+} # END Parser()
 
 ## LOG FILE RELATED ##
 
@@ -258,27 +274,27 @@ sub LogFileHeader {
 		# Pass: NONE (Data is pulled from Global Level or Environment).
 		# Return: NONE.
 		# Dependences: LogTime(). use Cwd;
-		# Global Variables: NONE
+		# Global Variables: FH_LOG
 	# (c) David Hose. March, 2017.
-		# Variables:
-			chomp(my $hostname = `hostname -s`);
-			my $dir = getcwd();
-			my $username = getpwuid($<);
-		# Sub:
-			# Header section:
-				print FH_LOG "GENERAL INFORMATION\n\n";
-				print FH_LOG "Executed on ", LogTime(), "\n\n";
-			# Script information:
-				printf FH_LOG ("%-14s: %s\n", "Log File Name", $LogFileName); # The name of the logfile.
-				printf FH_LOG ("%-14s: %s\n", "Perl Script", $scriptname); # The name of the script.
-				printf FH_LOG ("%-14s: %s\n", "Author", $author); # Script author.
-				printf FH_LOG ("%-14s: %s (%s)\n\n", "Version", $version, $versiondate); # Version number and date of the script.
-			# User and machine information:
-				printf FH_LOG ("%-14s: %s\n", "User ID", $usr[0]); # User login ID.
-				printf FH_LOG ("%-14s: %s\n", "User realname", $usr[1]); # User's realname.
-				printf FH_LOG ("%-14s: %s\n", "Hostname", $hostname); # Machine's ID.
-				printf FH_LOG ("%-14s: %s\n", "Path", $dir); # Working directory.
-				print FH_LOG "\nDETAILS\n\n";
+	# Variables:
+		chomp(my $hostname = `hostname -s`);
+		my $dir = getcwd();
+	# Header section:
+		print FH_LOG "GENERAL INFORMATION\n\n";
+		print FH_LOG "Executed on ", LogTime(), "\n\n";
+	# Script information:
+		printf FH_LOG ("%-15s: %s\n", "Log File Name", $LogFileName); # The name of the logfile.
+		printf FH_LOG ("%-15s: %s\n", "Perl Script", $scriptname); # The name of the script.
+		printf FH_LOG ("%-15s: %s\n", "Script Path", $scriptpath); # The path to the script.
+		printf FH_LOG ("%-15s: %s\n", "Primary Author", $author); # Primary author.
+		printf FH_LOG ("%-15s: %s\n", "Version Author", $verauthor); # Version author.
+		printf FH_LOG ("%-15s: %s (%s)\n\n", "Version", $version, $versiondate); # Version number and date of the script.
+	# User and machine information:
+		printf FH_LOG ("%-15s: %s\n", "User ID", $usr[0]); # User login ID.
+		printf FH_LOG ("%-15s: %s\n", "User realname", $usr[1]); # User's realname.
+		printf FH_LOG ("%-15s: %s\n", "Hostname", $hostname); # Machine's ID.
+		printf FH_LOG ("%-15s: %s\n", "Data Path", $dir); # Working directory.
+		print FH_LOG "\nDETAILS\n\n";
 } # END LogFileHeader()
 
 sub LogMessage {
@@ -297,6 +313,8 @@ sub LogMessage {
 	print FH_LOG "", TimeNow(2), " : $Message\n" if ($LogFlag <= $LogLevel);
 } # END LogMessage()
 
+## TIME RELATED FUNCTIONS ##
+
 sub LogTime {
 	# Generates a current date and time message ["YYYY/MM/DD at HH:MM:SS"].
 		# Pass: NONE
@@ -311,10 +329,10 @@ sub LogTime {
 
 sub TimeNow {
 	# Returns the current time in either HH:MM or HH:MM:SS format.
-		# Pass:
-		# Return:
-		# Dependences:
-		# Global Variables:
+		# Pass: Time option
+		# Return: Time in appropriate format.
+		# Dependences: LogMessage()
+		# Global Variables: NONE.
 	# (c) David Hose. March, 2017.
 		# Pass:
 			# $_[0] The required format option. 1 = HH:MM, 2 = HH:MM:SS.
@@ -333,9 +351,9 @@ sub TimeNow {
 
 sub Duration {
 	# Calculates the elapsed time in a more human readable form from the number of seconds that have been passed to the routine.
-		# Pass:
-		# Return:
-		# Dependences:
+		# Pass: Number of seconds.
+		# Return: $Time (duration in human form)
+		# Dependences: LogMessage()
 		# Global Variables:
 	# (c) David Hose. March, 2017.
 		# Variables:
@@ -387,7 +405,7 @@ sub Duration {
 sub TimeSalute {
 	# Create a message based upon the time of day.
 		# Pass: NONE
-		# Return: Greeting.
+		# Return: $TimeMsg (A greeting).
 		# Dependences: NONE.
 		# Global Variables: $usr[2].
 	# (c) David Hose. March 2017.
@@ -415,29 +433,24 @@ sub COSMOthermInstalled {
 		# Pass: NONE.
 		# Return: NONE.
 		# Dependances: LogMessage(), Usage().
-		# Global Variables:
+		# Global Variables: $appsdir
 	# (c) David Hose. March, 2017.
 	# Variables:
 		my $Flag = 0; # A flag.
 		my $msg; # An error message.
-		# The appsdir is define as a global variable.
-	# Sub:
-		LogMessage("Enter: COSMOthermInstalled()", 2);
-		#opendir(DIR, $appsdir) or die "Can't open the APPS directory.";
-		
-		opendir(DIR, $appsdir) or $msg = "Can't open the APPS directory. line ". __LINE__ . " $!";
-		if($msg ne "") {
-			LogMessage("ERROR: $msg", 1);
-			print "$msg";
-			exit;
-		}
-
-		while (my $entry = readdir(DIR)) {
-			next unless (-d "$appsdir/$entry"); # Only check for directories.
-			$Flag = 1 if($entry eq "cosmologic"); # If the 'cosmologic' directory is found, set the flag.
-		}
-		closedir (DIR);
-		# No 'cosmologic' directory?  Prompt user to load the module and exit.
+	LogMessage("Enter: COSMOthermInstalled()", 2);
+	opendir(DIR, $appsdir) or $msg = "Can't open the APPS directory $!. LINE:". __LINE__;
+	if($msg ne "") {
+		LogMessage("ERROR: $msg", 1);
+		print "$msg\n";
+		exit;
+	}
+	while (my $entry = readdir(DIR)) {
+		next unless (-d "$appsdir/$entry"); # Only check for directories.
+		$Flag = 1 if($entry eq "cosmologic"); # If the 'cosmologic' directory is found, set the flag.
+	}
+	closedir (DIR);
+	# No 'cosmologic' directory?  Prompt user to load the module and exit.
 		if($Flag == 0) {
 			print "\nThe COSMOtherm module hasn't been loaded.\nPlease load COSMOtherm module and re-run script.\n\n";
 			LogMessage("ERROR: COSMOtherm hasn't been Installed.", 1);
@@ -445,16 +458,16 @@ sub COSMOthermInstalled {
 			Usage();
 			exit; # Catch All exit.
 		}
-		LogMessage("Leave: COSMOthermInstalled()", 2);
-	} # END COSMOthermInstalled()
+	LogMessage("Leave: COSMOthermInstalled()", 2);
+} # END COSMOthermInstalled()
 
 sub YearVersions {
 	# Determines the year versions of COSMOtherm that are available.
 	# Scan the directories in the cosmologic directory and determine the version years from the names.
-		# Pass:
-		# Return:
-		# Dependences:
-		# Global Variables:
+		# Pass: NONE.
+		# Return: @YearList
+		# Dependences: LogMessage()
+		# Global Variables: $cosmologicdir
 	# (c) David Hose. March, 2017.
 	# Variables:
 		my $msg;
@@ -462,9 +475,9 @@ sub YearVersions {
 		my $Flag = 0;
 	# Sub:
 		LogMessage("Enter: YearVersions()",2);
-		opendir(DIR, $cosmologicdir) or $msg = "Can't open directory. line ". __LINE__ ." $!\n";
+		opendir(DIR, $cosmologicdir) or $msg = "Can't open directory $!. LINE:". __LINE__;
 		if($msg ne "") {
-			LogMessage("ERROR: $msg", 1);
+			LogMessage("ERROR: $msg\n", 1);
 			print "$msg";
 			exit;
 		}
@@ -483,10 +496,10 @@ sub YearVersions {
 
 sub CTD_Path {
 	# Formally sets AppYear and ParamYear, as well as the Parametermisation file location.
-		# Pass:
-		# Return:
-		# Dependences:
-		# Global Variables:
+		# Pass: NONE.
+		# Return: NONE.
+		# Dependences: LogMessage()
+		# Global Variables: $AppYear, cdir, $ldir, $ctd, $cosmodbpath
 	# (c) David Hose. March, 2017.
 	LogMessage("Enter: CTD_Path()", 2);
 	# Determine if the chosen COSMOtherm application year is available.
@@ -536,6 +549,10 @@ sub CTD_Path {
 					Usage(); # Gracefully terminate via Usage and add comment to the log.
 				}
 			}
+		######
+		# Correctly determine the path to the COSMOtherm compound database.
+			$cosmodbpath=0;
+		######
 	LogMessage("PARAM: License file path: $ldir", 2);
 	LogMessage("PARAM: Parameterisation path: $cdir", 2);
 	LogMessage("PARAM: Parameterisation file: $ctd", 2);
@@ -550,8 +567,15 @@ sub COSMO_Files {
 				# The directory name must not contain blank spaces unless it is given in quotes.
 			# $license holds the location of the license file.
 		# Reference: COSMOtherm User Manual C30_1601.
+		# Return:
+		# Dependences: LogMessage()
+		# Global Variables: FH_OUTPUT, $ctd, $cdir, $license
 	# Variables:
 		my ($ctd, $cdir, $license) = @_;
+		# Return: NONE.
+		# Dependences: LogMessage()
+		# Global Variables: FH_OUTPUT
+	# (c) David Hose. March 2017.
 	# Sub:
 		LogMessage("Enter: COSMO_Files()", 3);
 		# Check that the correct number of parameters has been passed.
@@ -588,6 +612,10 @@ sub COSMO_Print {
 	# Options: (The if statements are to be modified in future versions).
 		# 1 = Default (notempty wtln VPfile EHfile).
 		# 2 = NOT Defined.
+	# Return: NONE.
+	# Dependences: LogMessage()
+	# Global Variables: FH_OUTPUT
+	# (c) David Hose. March 2017.
 	# Variables:
 		my $Options = $_[0];
 		my $MaxOpts = 2; # Set this to the maximum number of options available (Change fo future expansions of options).
@@ -630,6 +658,10 @@ sub COSMO_Comment {
 			# 1: Gfus Calculations.
 			# 2: 
 			# 3: NOT DEFINED (intended for future versions).
+		# Return:
+		# Dependences: LogMessage()
+		# Global Variables: FH_OUTPUT
+	# (c) David Hose, March 2017.
 	# Sub:
 		LogMessage("Enter: COSMO_Comment()", 3);
 		# Option 1 (DGfus Calculaions):
@@ -689,15 +721,15 @@ sub CTRL_Read {
 	# Reads in data from the Control File (Application Year, Paramaterisations and Temperature).
 		# Pass: NONE
 		# Return: NONE
-		# Dependences:
-		# Global Variables:
+		# Dependences: LogMessage()
+		# Global Variables: $CTRLFileName, $AppYear., $ParamYear, $Temperature
 	# (c) David Hose. March, 2017.
 		LogMessage("Enter: CTRL_Read()", 2);
 		my $msg;
 		# Open Control File.
-			open (FH_CTRL, "<", $CTRLFileName) or $msg = "Can't open Control File. line ". __LINE__ ." $!\n";
+			open (FH_CTRL, "<", $CTRLFileName) or $msg = "Can't open Control File $!. LINE:". __LINE__;
 			if($msg ne "") {
-				LogMessage("ERROR: $msg", 1);
+				LogMessage("ERROR: $msg\n", 1);
 				print "$msg";
 				exit;
 			}
@@ -748,16 +780,16 @@ sub CTRL_Read {
 sub Read_Solv_Data {
 	# This subroutine open the Master Solvent File, extracts solvent cosmo file locations,
 	# solvent density and physical properities.  A set of hash variables are populated.
-	# Pass: None.
-	# Return: None.
-	# Dependences: None.
-	# Global Variables: $netpath, $Solvent_Data, %Solvents, %Densities and %SolventProps.
+		# Pass: NONE.
+		# Return: NONE.
+		# Dependences: LogMessage().
+		# Global Variables: $netpath, $Solvent_Data, %Solvents, %Densities and %SolventProps.
 	# (c) David Hose. Feb 2017.
 		my $msg;
 		LogMessage("Enter: Read_Solv_Data()", 2);
-		open (FH_SOLV, "<" . $netpath . "/" . $SolvData) or $msg = "Can't Open Solvent Data. line ". __LINE__ . " $!."; # Open Solvent Master Data File.
+		open (FH_SOLV, "<" . $netpath . "/" . $SolvData) or $msg = "Can't Open Solvent Data $!. LINE:". __LINE__; # Open Solvent Master Data File.
 			if($msg ne "") {
-				LogMessage("ERROR: $msg", 1);
+				LogMessage("ERROR: $msg\n", 1);
 				print "$msg";
 				exit;
 			}
@@ -782,16 +814,16 @@ sub Read_Solv_Data {
 
 sub Read_Project {
 	# Reads in the Project information and sets appropriate variables.
-		# Pass: None.
-		# Return: None.
-		# Dependences: None.
+		# Pass: NONE.
+		# Return: NONE.
+		# Dependences: LogMessage()
 		# Global Variables: $ProjectFileName, $ProjectName, $Compound, $AltName and $Client.
 	# (c) David Hose. Feb 2017.
 	my $msg;
 		LogMessage("Enter: Read_Project()", 2);
-		open (FH_PROJ, "<", $ProjectFileName) or $msg = "Can't open Project File. line ". __LINE__ . " $!\n"; # Open Project File.
+		open (FH_PROJ, "<", $ProjectFileName) or $msg = "Can't open Project File $!. LINE:". __LINE__; # Open Project File.
 			if($msg ne "") {
-				LogMessage("ERROR: $msg", 1);
+				LogMessage("ERROR: $msg\n", 1);
 				print "$msg";
 				exit;
 			}
@@ -850,7 +882,7 @@ sub Read_Project {
 
 sub Read_RefSol_Data {
 	# Reads in the Reference solubilities.
-		# Pass: None.
+		# Pass: NONE.
 		# Return: The number of reference solvent solubilities that has been read in.
 		# Dependences: NObs(), Mean() and StDev().
 		# Global Variables: $RefSolFileName and @RefSolub.
@@ -894,15 +926,14 @@ sub Read_RefSol_Data {
 		return $RefSolNum; # Returns the number of reference solvents solubilities.
 } # END Read_RefSol_Data()
 
-
-## SOLUBILITY CALCULATIONS ##
+## SOLUBILITY AND DENSITY CALCULATIONS ##
 
 sub ConvmgmL2gg {
 	# Conversion of solubility in mg/mL to g/g (of solvent).
 		# Pass: Solvent ID, Solubility in mg/mL, solute option and temperature.
 		# Return: Solubility in g/g.
 		# Dependences: GetSolRho()
-		# Global Variables: None.
+		# Global Variables: NONE.
 	# (c) David Hose, March 2017.
 	my ($ID, $Sol, $Opt, $Temp) = @_;
 	my $ConvSol;
@@ -921,7 +952,7 @@ sub Convgg2mgmL {
 		# Pass: Solvent ID, Solubility in g/g, solute option and temperature.
 		# Return: Solubility in mg/mL.
 		# Dependences: GetSolRho()
-		# Global Variables: None.
+		# Global Variables: NONE.
 	# (c) David Hose, March 2017.
 	my ($ID, $Sol, $Opt, $Temp) = @_;
 	my $ConvSol;
@@ -939,7 +970,7 @@ sub GetSolRho {
 	# Pulls back the density of the solvent based upon ID and temperature.
 		# Pass: Solvent ID and Temperature (degC).
 		# Return: Density.
-		# Dependences: None.
+		# Dependences: NONE.
 		# Global Variables:  %Densities.
 	# (c) David Hose, March 2017.	
 	my ($ID, $Temp) = @_;
@@ -960,8 +991,8 @@ sub NObs {
 	# Determine the number of values in the array.
 		# Pass: An array of numbers.
 		# Return: Number entries in the array.
-		# Dependences: None.
-		# Global Variables: None.
+		# Dependences: NONE.
+		# Global Variables: NONE.
 	# (c) David Hose, Feb, 2017.
 		my $nobs = scalar(@_);
 } # END NObs()
@@ -971,7 +1002,7 @@ sub Mean {
 		# Pass: An array of numbers.
 		# Return: The mean.
 		# Dependences: NObs()
-		# Global Variables: None.
+		# Global Variables: NONE.
 	# (c) David Hose, Feb, 2017.
 		my $m = 0;
 		foreach $i (@_) {$m = $m + $i}
@@ -984,7 +1015,7 @@ sub StDev {
 		# Pass: An array of numbers.
 		# Return: The standard deviation.
 		# Dependences: NObs(), Mean()
-		# Global Variables: None.
+		# Global Variables: NONE.
 	# (c) David Hose, Feb, 2017.
 	if(NObs(@_) == 1) {
 		# If the number of observations are 1, this leads to a div-by-zero error. To prevent runtime errors return a StDev value of 0.

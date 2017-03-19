@@ -1,114 +1,118 @@
 GENERAL INFORMATION
 
-Executed on 2017/02/17 at 16:03:11
+Executed on 2017/02/19 at 15:25:33
 
-Log File Name : SolLog-000001.log
-Perl Script   : Solubillity.pl
-Author        : David Hose
-Version       : 0.1a (Mar 2017)
+Log File Name  : SolLog-000001.log
+Perl Script    : Solubillity.pl
+Script Path    : /Volumes/DAVE_HOSE_4/Solubility_GitHub/Solubility_Script
+Primary Author : David Hose
+Version Author : David Hose
+Version        : 0.1a (Mar 2017)
 
-User ID       : knzd043
-User realname : David Hose
-Hostname      : ukmcdwlx007
-Path          : /media/DAVE_HOSE_4/Solubility_GitHub/Solubility_Script
+User ID        : davidrjhose
+User realname  : David Hose
+Hostname       : david-hoses-power-mac-g5
+Data Path      : /Volumes/DAVE_HOSE_4/Solubility_GitHub/Solubility_Script
 
 DETAILS
 
-16:03:11 : STARTING SCRIPT
-16:03:11 : Initialiation
-16:03:11 : Enter: COSMOthermInstalled()
-16:03:11 : Leave: COSMOthermInstalled()
-16:03:11 : Enter: YearVersions()
-16:03:11 : PARAM: Available COSMOtherm years: 17 16 15 14
-16:03:11 : Leave: YearVersions()
-16:03:11 : Enter: CTRL_Read()
-16:03:11 : PARAM: COSMOtherm Year default.
-16:03:11 : PARAM: Parameterisation default
-16:03:11 : PARAM: Temperature 27 degC.
-16:03:11 : Leave: CTRL_Read()
-16:03:11 : Enter: CTD_Path()
-16:03:11 : PARAM: COSMOtherm Year is 2017.
-16:03:11 : PARAM: License file path: apps/cosmologic/COSMOthermX17/licensefiles/
-16:03:11 : PARAM: Parameterisation path: apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES
-16:03:11 : PARAM: Parameterisation file: BP_TZVPD_FINE_C30_1701.ctd
-16:03:11 : Leave: CTD_Path()
-16:03:11 : Enter: Read_Solv_Data()
-16:03:11 : MESSG: %Solvents, %Densities and %SolventProps have been set up.
-16:03:11 : Leave: Read_Solv_Data()
-16:03:11 : Enter: Read_Project()
-16:03:11 : PARAM: Project: AZD1234
-16:03:11 : PARAM: Compound: AZ12345678
-16:03:11 : PARAM: Alternative Name: Ketoester
-16:03:11 : PARAM: Client: Sarah-Kate Austin O'Bloggs
-16:03:11 : Leave: Read_Project()
-16:03:11 : Enter: COSMO_Files()
-16:03:11 : Leave: COSMO_Files()
-16:03:11 : Enter: COSMO_Print()
-16:03:11 : Leave: COSMO_Print()
-16:03:11 : Enter: COSMO_Comment()
-16:03:11 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-16:03:11 : Leave: COSMO_Comment()
-16:03:11 : Enter: COSMO_Files()
-16:03:11 : Leave: COSMO_Files()
-16:03:11 : Enter: COSMO_Print()
-16:03:11 : Leave: COSMO_Print()
-16:03:11 : Enter: COSMO_Comment()
-16:03:11 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-16:03:11 : Leave: COSMO_Comment()
-16:03:11 : Enter: COSMO_Files()
-16:03:11 : Leave: COSMO_Files()
-16:03:11 : Enter: COSMO_Print()
-16:03:11 : Leave: COSMO_Print()
-16:03:11 : Enter: COSMO_Comment()
-16:03:11 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-16:03:11 : Leave: COSMO_Comment()
-16:03:11 : Enter: COSMO_Files()
-16:03:11 : Leave: COSMO_Files()
-16:03:11 : Enter: COSMO_Print()
-16:03:11 : Leave: COSMO_Print()
-16:03:11 : Enter: COSMO_Comment()
-16:03:11 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-16:03:11 : Leave: COSMO_Comment()
-16:03:11 : Enter: COSMO_Files()
-16:03:11 : Leave: COSMO_Files()
-16:03:11 : Enter: COSMO_Print()
-16:03:11 : Leave: COSMO_Print()
-16:03:11 : Enter: COSMO_Comment()
-16:03:11 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-16:03:11 : Leave: COSMO_Comment()
-16:03:11 : Enter: COSMO_Files()
-16:03:11 : Leave: COSMO_Files()
-16:03:11 : Enter: COSMO_Print()
-16:03:11 : Leave: COSMO_Print()
-16:03:11 : Enter: COSMO_Comment()
-16:03:11 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-16:03:11 : Leave: COSMO_Comment()
-16:03:11 : Enter: COSMO_Files()
-16:03:11 : Leave: COSMO_Files()
-16:03:11 : Enter: COSMO_Print()
-16:03:11 : Leave: COSMO_Print()
-16:03:11 : Enter: COSMO_Comment()
-16:03:11 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-16:03:11 : Leave: COSMO_Comment()
-16:03:11 : Enter: COSMO_Files()
-16:03:11 : Leave: COSMO_Files()
-16:03:11 : Enter: COSMO_Print()
-16:03:11 : Leave: COSMO_Print()
-16:03:11 : Enter: COSMO_Comment()
-16:03:11 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-16:03:11 : Leave: COSMO_Comment()
-16:03:11 : Enter: COSMO_Files()
-16:03:11 : Leave: COSMO_Files()
-16:03:11 : Enter: COSMO_Print()
-16:03:11 : Leave: COSMO_Print()
-16:03:11 : Enter: COSMO_Comment()
-16:03:11 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-16:03:11 : Leave: COSMO_Comment()
-16:03:11 : Enter: COSMO_Files()
-16:03:11 : Leave: COSMO_Files()
-16:03:11 : Enter: COSMO_Print()
-16:03:11 : Leave: COSMO_Print()
-16:03:11 : Enter: COSMO_Comment()
-16:03:11 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-16:03:11 : Leave: COSMO_Comment()
-16:03:11 : SCRIPT COMPLETE
+15:25:33 : STARTING SCRIPT
+15:25:33 : Initialiation
+15:25:33 : Enter: COSMOthermInstalled()
+15:25:33 : Leave: COSMOthermInstalled()
+15:25:33 : Enter: YearVersions()
+15:25:33 : PARAM: Available COSMOtherm years: 17 16 15 14
+15:25:33 : Leave: YearVersions()
+15:25:33 : Enter: CTRL_Read()
+15:25:33 : PARAM: COSMOtherm Year default.
+15:25:33 : PARAM: Parameterisation default
+15:25:33 : PARAM: Temperature 27 degC.
+15:25:33 : Leave: CTRL_Read()
+15:25:33 : Enter: CTD_Path()
+15:25:33 : PARAM: COSMOtherm Year is 2017.
+15:25:33 : PARAM: License file path: apps/cosmologic/COSMOthermX17/licensefiles/
+15:25:33 : PARAM: Parameterisation path: apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES
+15:25:33 : PARAM: Parameterisation file: BP_TZVPD_FINE_C30_1701.ctd
+15:25:33 : Leave: CTD_Path()
+15:25:33 : Enter: Read_Solv_Data()
+15:25:33 : MESSG: %Solvents, %Densities and %SolventProps have been set up.
+15:25:33 : Leave: Read_Solv_Data()
+15:25:33 : Enter: Read_Project()
+15:25:33 : PARAM: Project: AZD1234
+15:25:33 : PARAM: Compound: AZ12345678
+15:25:33 : PARAM: Alternative Name: Ketoester
+15:25:33 : PARAM: Client: Sarah-Kate Austin O'Bloggs
+15:25:33 : Leave: Read_Project()
+15:25:33 : Starting Gfus Calculations.
+15:25:33 : Enter: COSMO_Files()
+15:25:33 : Leave: COSMO_Files()
+15:25:33 : Enter: COSMO_Print()
+15:25:33 : Leave: COSMO_Print()
+15:25:33 : Enter: COSMO_Comment()
+15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+15:25:33 : Leave: COSMO_Comment()
+15:25:33 : Enter: COSMO_Files()
+15:25:33 : Leave: COSMO_Files()
+15:25:33 : Enter: COSMO_Print()
+15:25:33 : Leave: COSMO_Print()
+15:25:33 : Enter: COSMO_Comment()
+15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+15:25:33 : Leave: COSMO_Comment()
+15:25:33 : Enter: COSMO_Files()
+15:25:33 : Leave: COSMO_Files()
+15:25:33 : Enter: COSMO_Print()
+15:25:33 : Leave: COSMO_Print()
+15:25:33 : Enter: COSMO_Comment()
+15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+15:25:33 : Leave: COSMO_Comment()
+15:25:33 : Enter: COSMO_Files()
+15:25:33 : Leave: COSMO_Files()
+15:25:33 : Enter: COSMO_Print()
+15:25:33 : Leave: COSMO_Print()
+15:25:33 : Enter: COSMO_Comment()
+15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+15:25:33 : Leave: COSMO_Comment()
+15:25:33 : Enter: COSMO_Files()
+15:25:33 : Leave: COSMO_Files()
+15:25:33 : Enter: COSMO_Print()
+15:25:33 : Leave: COSMO_Print()
+15:25:33 : Enter: COSMO_Comment()
+15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+15:25:33 : Leave: COSMO_Comment()
+15:25:33 : Enter: COSMO_Files()
+15:25:33 : Leave: COSMO_Files()
+15:25:33 : Enter: COSMO_Print()
+15:25:33 : Leave: COSMO_Print()
+15:25:33 : Enter: COSMO_Comment()
+15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+15:25:33 : Leave: COSMO_Comment()
+15:25:33 : Enter: COSMO_Files()
+15:25:33 : Leave: COSMO_Files()
+15:25:33 : Enter: COSMO_Print()
+15:25:33 : Leave: COSMO_Print()
+15:25:33 : Enter: COSMO_Comment()
+15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+15:25:33 : Leave: COSMO_Comment()
+15:25:33 : Enter: COSMO_Files()
+15:25:33 : Leave: COSMO_Files()
+15:25:33 : Enter: COSMO_Print()
+15:25:33 : Leave: COSMO_Print()
+15:25:33 : Enter: COSMO_Comment()
+15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+15:25:33 : Leave: COSMO_Comment()
+15:25:33 : Enter: COSMO_Files()
+15:25:33 : Leave: COSMO_Files()
+15:25:33 : Enter: COSMO_Print()
+15:25:33 : Leave: COSMO_Print()
+15:25:33 : Enter: COSMO_Comment()
+15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+15:25:33 : Leave: COSMO_Comment()
+15:25:33 : Enter: COSMO_Files()
+15:25:33 : Leave: COSMO_Files()
+15:25:33 : Enter: COSMO_Print()
+15:25:33 : Leave: COSMO_Print()
+15:25:33 : Enter: COSMO_Comment()
+15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+15:25:33 : Leave: COSMO_Comment()
+15:25:33 : Ending Gfus Calculations.
+15:25:33 : SCRIPT COMPLETE. Duration = Less than 1 second
