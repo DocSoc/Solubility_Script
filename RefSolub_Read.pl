@@ -5,7 +5,7 @@ print ("\nReference Solubility File Read.\n\n");
 # Read in Reference Solubility file and set up key variables.
 
 	my $RefSolFileName = "refsolvsolub.dat";
-	my @RefSolub; # 2D Array that holds the reference solubility data.
+	my @RefSolub; # 2D Array that holds the reference solubility data.  This data will be in mg/mL.
 	my $RefSolNum; # Holds the number of reference solvent solubilities.
 
 $RefSolNum = Read_RefSol_Data();
@@ -56,6 +56,7 @@ sub Read_RefSol_Data {
 								my @Sol = grep /\S/, @temp[2..4]; # Create / clear array holding the solubility data and remove blank elements.
 								$RefSolub[$RefSolNum][5] = Mean(@Sol); # Calculate and add the mean of the measurements.
 								$RefSolub[$RefSolNum][6] = StDev(@Sol); # Calculate and add the standard deviation of the measurements.
+								$RefSolub[$RefSolNum][7] = StDev(@Sol) / Mean(@Sol); # Relative standard deviation.
 							$RefSolNum++; # Increment row counter.
 		} # END while loop over FH_REFSOL.
 		# Close Reference Solubility File.

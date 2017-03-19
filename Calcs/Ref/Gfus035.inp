@@ -1,0 +1,3 @@
+ctd = BP_TZVPD_FINE_C30_1701.ctd cdir = "apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES" LDIR = "apps/cosmologic/COSMOthermX17/licensefiles/" 
+ unit notempty wtln ndgf EHfile long 
+!! Calculation of Gfus of AZ12345678 in 1,1,1-trichloroethane (ID# 1). !!

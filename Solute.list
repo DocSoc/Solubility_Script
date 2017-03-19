@@ -1,0 +1,14 @@
+# Parametrisation
+ctd = BP_TZVPD_FINE_C30_1601.ctd 
+# Compound list
+Conformer = paracetamol [ value = 0.0
+f = paracetamol_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/p" value = 0.0
+f = paracetamol_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/p" value = 0.0
+] Conformer
+f = h2o_c0.cosmo fdir="/apps/cosmologic/COSMOthermX16/COSMOthermX/../COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/h" value = 0.0
+Conformer = AZ13737566 [ value = 0.0
+f = AZ13737566_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a" value = 0.0
+f = AZ13737566_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a" value = 0.0
+f = AZ13737566_c2.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a" value = 0.0
+f = AZ13737566_c3.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a" value = 0.0
+] Conformer

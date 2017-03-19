@@ -1,0 +1,8 @@
+# Parametrisation
+ctd = BP_TZVPD_FINE_C30_1601.ctd 
+# Compound list
+Conformer = AZ13530968 [ value = 0.0
+f = AZ13530968_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a" value = 0.0
+f = AZ13530968_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a" value = 0.0
+f = AZ13530968_c2.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a" value = 0.0
+] Conformer
