@@ -3,7 +3,8 @@
 # Perl script to process measured solubilities, determine the best reference solvent, and then run a series of predictions.
 
 BEGIN { $| = 1 }	# Turn on autoflush for STDOUT.
-my $debug = 1; # Development only.
+my $debug = 1; # DEVELOPMENT ONLY.
+my $LiveRun = 0; # DEVELOPMENT ONLY.  Set 1 for running the COSMOtherm Calculations.  Ensure COSMOtherm module has been loaded for the current terminal session.
 
 # Load any required packages:
 	if($debug == 1) {use Data::Dumper qw(Dumper)} # Load the Data Dumper for checking data structures of complex variables.
@@ -11,15 +12,14 @@ my $debug = 1; # Development only.
 	use File::Path;
 
 ### Variables: ###
-	## Script Information (Only change upon script updates).
+	## Script Information (Only change ** lines upon script updates).
 			my $author = "David Hose";		# Primary Author.
-			my $verauthor = "David Hose"; 	# Subversion Author.
-			my $version = "0.1a";			# Script Version.
-			my $versiondate = "Mar 2017";	# Date of current version of the script.
+			my $verauthor = "David Hose"; 	# Subversion Author.**
+			my $version = "0.1a";			# Script Version.**
+			my $versiondate = "Mar 2017";	# Date of current version of the script.**
 			my @Temp = split(/\//, $0);
 			my $scriptname = $Temp[-1]; # Pulls the name of the script from perl's special variables.
-			#$scriptname =~ s/.\///;		# Cleans up the name by removing './'.
-			my $scriptpath = join '/', @Temp[0..$#Temp-1]; # Path to the script.
+			my $scriptpath = join '/', @Temp[0..$#Temp-1]; # Path to the script.  This isn't working as intended in UNIX environ.
 	## Key file locations:
 		## Network files (Key master files).
 			my $netpath = "/projects/PharmDev/COSMOtherm/Ref_Solubility/Master_Data";	# Provisional location.
@@ -27,22 +27,17 @@ my $debug = 1; # Development only.
 			my $SolvData = "Solvents.txt";
 		## COSMOtherm Related Directories.
 			my $appsdir = "/apps"; # Points to applications directory (UNIX environment).
-			$appsdir = "apps"; # DEVELOPMENT LOCATION.
+			$appsdir = "apps" if($LiveRun == 0); # DEVELOPMENT LOCATION.
 			my $cosmologicdir = "$appsdir/cosmologic"; # Points to the cosmologic directory within the application directory (UNIX environment).
-			my $cosmodbpath; # Path of the COSMOtherm compound database.
-			
+			my $cosmodbpath; # Path of the COSMOtherm compound database.  NEEDS SORTING OUT IN CTD_PATH SO @COSMO_DB CAN BE CORRECTLY SET UP.
 		## Log file settings.
-			my $LogFileName = join('', "SolLog-", time(), ".log"); # Log file name (only use a limited number of digits).
+			my $LogFileName = join('', "SolLog-", time(), ".log"); # Log file name (only use a limited number of digits). REPLACE WITH TIMESTAMP.
 			$LogFileName = join('', "SolLog-", "000001" , ".log"); # DEVELOPMENT. REMOVE IN PRODUCTION.
 			$LogLevel = 3; # 1 = Sparse, 2 = Normal and 3 = Verbose. (Allow this to be set by the Parser!!!)	
-		
 		## Data files for the script to work with.
-			# Control file. (Application and Parameter years, and temperature.
-				my $CTRLFileName = "control.dat"; # DEVELOPMENT DEFAULT.
-			# Project Information file.
-				my $ProjectFileName = "project.dat";
-			# Solute List.
-				my $SoluteFileName = "Solubility_Test.list";
+			my $CTRLFileName = "control.dat";				# DEVELOPMENT DEFAULT. # Control file. (Application and Parameter years, and temperature.
+			my $ProjectFileName = "project.dat";			# DEVELOPMENT DEFAULT. # Project Information file.
+			my $SoluteFileName = "Solubility_Test.list";	# DEVELOPMENT DEFAULT. # Solute List.
 
 	## General variables:
 		# Misc:
@@ -57,25 +52,30 @@ my $debug = 1; # Development only.
 				my $ctd;		# Holds the name of the required CTD file (Used by COSMOtherm).
 				my $ldir;		# Holds the path of the license file (Used by COSMOtherm).
 			# COSMOtherm Database location Variables.
+				my @COSMO_DB;
+				# The following is a temporary solution.
+				$COSMO_DB[0] = "/apps/cosmologic/COSMOthermX16/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE"; # Points to the COSMOlogic database (AUTOMATE THIS)
+				$COSMO_DB[1] = "/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE"; # Points to the AZ database.
 			
 		# Project related variables:
 			my $ProjectName;	# Project Name (AZDxxxx or pre-nomination name).
 			my $Compound;		# AZxxxxxxxx name.
 			my $AltName;		# Alternative compound name (trivial name).
 			my $Client;			# Name of the client who requested the work.
-		
 		# Solvent Properties 'Database' variables:
 			my %Solvents;		# This hash holds all of the solvent cosmo file locations (key = Solvent ID).
 			my %Densities;		# This hash holds all of the solvent density information (key = Solvent ID).
 			my %SolventProps;	# This hash holds all of the solvent properties information (key = Solvent ID).
 		# Script control...
 			my $DenOpt = 1;		# Defines which density to use for the solute. 1 = 1.335, 2, = 1.000, 3 = Solvent Density.
-			my $Temperature;	# The temperature of the solubility measurement.
-			
+			my $TExpt_C;	# The temperature of the solubility measurement.
 			my $RefSolFileName = "refsolvsolub.dat";	# Holds the filename that contains the solubility information.
 			my @RefSolub; 	# 2D Array that holds the reference solubility data.  This data will be in mg/mL.
 			my $RefSolNum;	# Holds the number of reference solvent solubilities.
 			my $CalcsDir = "Calcs";
+			my $Solute; # Holds the name of the solute.
+			
+			my $Curr_Ref_Solub;
 		
 
 ### MAIN ROUTINE STARTS HERE ###
@@ -101,31 +101,30 @@ my $debug = 1; # Development only.
 		COSMOthermInstalled(); # Check that COSMOtherm is installed if not exit.
 		@Years = YearVersions(); # Determine the Year codes of the available COSMOtherm versions.
 		print "DONE.\n";
-		print "\tRead Control Parameters...";
+		print "\tRead Control Parameters '$CTRLFileName'...";
 		CTRL_Read(); # Read in CONTROL Parameters (Application Year, Parameterisation, and Temperature).
 		print "DONE.\n";
 		print "\tCOSMOtherm Directory Locations...";
 		CTD_Path(); # Formally set Application Year (numerical) and Parametermisation.  Defines Parameter and License files locations.
 		print "DONE.\n";
-		print "\tRead Master Solvent Data...";
+		print "\tRead Master Solvent Data '$SolvData'...";
 		Read_Solv_Data(); # Read in Master Solvent Data.
 		print "DONE.\n";
-		print "\tRead Project Information...";
+		print "\tRead Project Information '$ProjectFileName'...";
 		Read_Project(); # Read in Project Information.
 		print "DONE.\n";
 		print "\tRead Solute File '$SoluteFileName'...";
-		#Read Solute();
+		$Solute = (Read_Solutes($SoluteFileName))[0]; # An array is returned (future codes).  Only the first element is required.
 		print "DONE.\n";
 	} # END ## INITIALISATION ##
 	## REFERENCE SOLUBILITY DATA ##
 		# This section of code:
 			# Reads in the experimental reference solubility information.
 	{
-		print "\tRead Experimental Reference Solvent Solubility Data...";
+		print "\tRead Experimental Reference Solvent Solubility Data '$RefSolFileName'...";
 		$RefSolNum = Read_RefSol_Data();
 		print "DONE.\n";
 	}## END REFERENCE SOLUBILITY DATA ##
-
 	## PERFORM THE REFERENCE SOLUBILITY CALCULATIONS IN COSMOTHERM ##
 		# This section of code...
 			# Creates the Calculation Directory and Reference Subdirectory.
@@ -142,18 +141,23 @@ my $debug = 1; # Development only.
 			my @RefSolvsID;
 			for(my $i=0; $i< $RefSolNum; $i++) {$RefSolvsID[$i] = $RefSolub[$i][1]} # Pull back the reference solvent IDs.
 		# Loop through the list of solvents and deterine the DGfus values.
-		print "Creating...\n";
+		print "\tFree-Energy of Fusion Calculations.\n";
 		foreach my $CurrSolv (@RefSolvsID) {
 			$CurrFile = sprintf("Gfus%.3d", $CurrSolv);
-			print "\tCurrent Reference Solvent: $CurrFile\n";
+			$CurrSolvName = ${$Solvents{$CurrSolv}}[0];
+			print "\t\tFile: $CurrFile\tReference Solvent: '$CurrSolvName'.\n";
 			open (FH_OUTPUT, ">$CalcsDir/Ref/$CurrFile.inp") or die "Can't open Reference Calculation File. $!\n";
 			# Write ctd line.
 			COSMO_Files ($ctd, $cdir, $ldir); # Add ctd parameters, directory and license locations.
 			COSMO_Print(1); # Gfus Print options.
-			COSMO_Comment(1, 1);
+			COSMO_Comment(1, $CurrSolv);
+			COSMO_Solute(1,$Solute);
+			COSMO_Solv($CurrSolv);
 			
+			$Curr_Ref_Solub = 0.10000001;
 			
-			close FH_OUTPUT;
+			COSMO_Route(1);
+			close FH_OUTPUT; # Close the Current Reference Solvent COSMOtherm .INP file.
 		
 		
 		
@@ -164,7 +168,7 @@ my $debug = 1; # Development only.
 		
 		
 		
-		}
+		} # END foreach loop for @RefSolvsID.
 		
 	LogMessage("Ending Gfus Calculations.", 1);
 	}
@@ -172,7 +176,7 @@ my $debug = 1; # Development only.
 #sleep(1);
 
 ## NORMAL TERMINATION ##
-{
+	{
 	$scriptdur[1] = time();
 	print "\n";
 	Goodbye();
@@ -180,7 +184,7 @@ my $debug = 1; # Development only.
 	LogMessage("SCRIPT COMPLETE. Duration = $msg", 1);
 	close FH_LOG; # Close the log file.
 	exit; # Catch all exit.
-}
+	}
 
 ### MAIN ROUTINE FINISHES HERE ###
 	
@@ -228,7 +232,6 @@ sub Goodbye {
 	Script completed. Goodbye $usr[2].
 	Duration: $runtime.
 
-
 ENDGOODBYE
 } # END Goodbye()
 
@@ -264,7 +267,7 @@ sub User() {
 } # END User()
 
 sub Parser {
-
+	# Parser to override some settings if required.
 } # END Parser()
 
 ## LOG FILE RELATED ##
@@ -285,7 +288,7 @@ sub LogFileHeader {
 	# Script information:
 		printf FH_LOG ("%-15s: %s\n", "Log File Name", $LogFileName); # The name of the logfile.
 		printf FH_LOG ("%-15s: %s\n", "Perl Script", $scriptname); # The name of the script.
-		printf FH_LOG ("%-15s: %s\n", "Script Path", $scriptpath); # The path to the script.
+		#printf FH_LOG ("%-15s: %s\n", "Script Path", $scriptpath); # The path to the script. This needs modification for UNIX environ.
 		printf FH_LOG ("%-15s: %s\n", "Primary Author", $author); # Primary author.
 		printf FH_LOG ("%-15s: %s\n", "Version Author", $verauthor); # Version author.
 		printf FH_LOG ("%-15s: %s (%s)\n\n", "Version", $version, $versiondate); # Version number and date of the script.
@@ -302,10 +305,9 @@ sub LogMessage {
 		# Pass:
 			# $Message The message to be displayed in the log file.
 			# $LogFlag The Message level [1 = Sparse/Errors, 2 = Normal and 3 = Verbose]
-			# $LogLevel is a global variable.
 		# Return: Date / Time.
 		# Dependences: NONE
-		# Global Variables: NONE
+		# Global Variables: $LogLevel
 	# (c) David Hose. March, 2017.
 	# Variables:
 		my $Message = $_[0];
@@ -334,7 +336,7 @@ sub TimeNow {
 		# Dependences: LogMessage()
 		# Global Variables: NONE.
 	# (c) David Hose. March, 2017.
-		# Pass:
+			# Pass:
 			# $_[0] The required format option. 1 = HH:MM, 2 = HH:MM:SS.
 		# Variables:
 			my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
@@ -354,7 +356,7 @@ sub Duration {
 		# Pass: Number of seconds.
 		# Return: $Time (duration in human form)
 		# Dependences: LogMessage()
-		# Global Variables:
+		# Global Variables: NONE.
 	# (c) David Hose. March, 2017.
 		# Variables:
 			my ($DayLabel, $HourLabel, $MinuteLabel, $SecondLabel);
@@ -439,7 +441,7 @@ sub COSMOthermInstalled {
 		my $Flag = 0; # A flag.
 		my $msg; # An error message.
 	LogMessage("Enter: COSMOthermInstalled()", 2);
-	opendir(DIR, $appsdir) or $msg = "Can't open the APPS directory $!. LINE:". __LINE__;
+	opendir(DIR, $appsdir) or $msg = "Can't open the APPS directory '$appsdir'. $!. LINE:". __LINE__;
 	if($msg ne "") {
 		LogMessage("ERROR: $msg", 1);
 		print "$msg\n";
@@ -470,12 +472,12 @@ sub YearVersions {
 		# Global Variables: $cosmologicdir
 	# (c) David Hose. March, 2017.
 	# Variables:
-		my $msg;
+		my $msg; # An error message.
 		my @YearList; # Holds the list of years found (reverse chronological order).
 		my $Flag = 0;
 	# Sub:
 		LogMessage("Enter: YearVersions()",2);
-		opendir(DIR, $cosmologicdir) or $msg = "Can't open directory $!. LINE:". __LINE__;
+		opendir(DIR, $cosmologicdir) or $msg = "Can't open directory '$cosmologicdir'. $!. LINE:". __LINE__;
 		if($msg ne "") {
 			LogMessage("ERROR: $msg\n", 1);
 			print "$msg";
@@ -533,7 +535,7 @@ sub CTD_Path {
 						LogMessage("ERROR: $msg", 1);
 						LogMessage("Leave: CTD_Path() via Usage()", 1);
 						Usage(); # Gracefully terminate via Usage and add comment to the log.
-				}
+					}
 				# Add OLDPARAM directory sub-level.
 					$cdir = $cdir . "/OLDPARAM" if($AppYear > $ParamYear);
 				if($ParamYear <= $Years[0] && $ParamYear >= 12) {	
@@ -622,7 +624,7 @@ sub COSMO_Print {
 	# Sub:
 		LogMessage("Enter: COSMO_Print()", 3);
 		# Check that the correct number of parameters has been passed.
-			if(scalar(@_) != 1) {
+		if(scalar(@_) != 1) {
 				my $ErrMsg = "ERROR: COSMO_Print() Invalid number of parameters passed (" . scalar(@_) . ").";
 				LogMessage($ErrMsg, 1);
 				print "$ErrMsg\n";
@@ -651,14 +653,9 @@ sub COSMO_Print {
 
 sub COSMO_Comment {
 	# Writes the appropriate Comment line to the current filehandle FH_OUTPUT.
-		# Pass:
-			# $_[0]: Option number.
-			# $_[1]: Solvent number.
-		# Options:
-			# 1: Gfus Calculations.
-			# 2: 
-			# 3: NOT DEFINED (intended for future versions).
-		# Return:
+		# Pass: Option number, Solvent number.
+		# Options: 1: Gfus Calculations. 2: 3: NOT DEFINED (intended for future versions).
+		# Return: NONE.
 		# Dependences: LogMessage()
 		# Global Variables: FH_OUTPUT
 	# (c) David Hose, March 2017.
@@ -673,8 +670,8 @@ sub COSMO_Comment {
 					print "$ErrMes\n";
 					exit;
 				}
-				my $SolventName = $Solvents{$_[1]}[1];
-				print FH_OUTPUT "!! Calculation of Gfus of $Compound in $SolventName (ID# $_[1]). !!\n";
+				my $SolventName = $Solvents{$_[1]}[0];
+				print FH_OUTPUT "!! Calculation of Gfus of $Compound in $SolventName (ID:$_[1]). !!\n";
 			} # END of Option 1.
 		# Option 2 (Partition Calculation of Solute between Solvent-Water).
 			if($_[0] == 2) {
@@ -690,21 +687,122 @@ sub COSMO_Comment {
 		LogMessage("Leave: COSMO_Comment()", 3);
 } # END COSMO_Comment()
 
+sub COSMO_Solute {
+	# Writes the solute path/filename information to the current COSMOtherm INP file.
+		# Pass: Option, Solute path/name, [Gfus, Hfus, Tmelt] (latter 3 are optional dpending upon option).
+		# Return: NONE.
+		# Dependences: LogMessage()
+		# Global Variable: NONE.
+	# (c) David Hose. March 2017.
+	LogMessage("Enter: COSMO_Solute()", 1);
+	my ($Opt, $Solute, $DGfus, $DHfus, $Tmelt) = @_;
+	if($Opt == 1) {
+		# Option 1: Write solute line 'as-is'.
+			print FH_OUTPUT "$Solute";
+			LogMessage("Leave: COSMO_Solute()", 1);
+			return;	
+	} # END Option 1.
+	elsif($Opt == 2) {
+		# Option 2: Write solute with DGfus etc values.
+			my @Temp = split(/\[/, $str); # Split the solute.
+			my $Props = "[ ";
+			if($DGfus eq "") {
+				my $msg = "ERROR: No Gfus Value available. LINE:" . __LINE__;
+				print "$msg\n";
+				LogMessage("$msg", 1);
+				exit;
+			} else {
+				$Props = $Props . " DGfus = $DGfus ";
+				LogMessage("PARAM: Gfus = $DGfus", 3);
+			}
+		if($DHfus ne "" && $Tmelt ne "") {
+			$Props = $Props . " DHfus = $DHfus TMELT_K = $Tmelt ";
+			LogMessage("PARAM: Hfus = $DHfus", 3);
+			LogMessage("PARAM: TMelt = $Tmelt", 3);
+		}
+		my $Temp = join("", $Temp[0], $Props, $Temp[1]);
+		print FH_OUTPUT "$Temp";
+		LogMessage("Leave: COSMO_Solute()", 1);
+		return;
+	} # END Option 2.
+	elsif($Opt == 3) {
+		LogMessage("Leave: COSMO_Solute()", 1);
+		return;
+	} # END Option 3.
+	else {
+		my $msg = "ERROR: INVALID OPTION.";
+				print "$msg\n";
+				LogMessage("$msg", 1);
+				exit;
+	}
+} # END COSMO_Solute()
 
+sub COSMO_Solv {
+	#
+		# Pass: Solvent ID.
+		# Return: Solvent Path/filename.
+		# Dependences: LogMessage()
+		# Global Variables: FH_OUTPUT
+	# (c) David Hose. March 2017.
+		LogMessage("Enter: Read_Solv()", 1); # Log file message.
+		$Solv_ID = $_[0]; # Pick up the solvent number ID.
+		@Data = @{$Solvents{$Solv_ID}}; # Pull out COSMOtherm solvent data from the Solvent Hash.
+		$Subdir = lc(substr($Data[1], 0, 1));	# Grab the first character of the name (of sub-folder) and ensures that it's in lower case.
+		if($Data[6] == 4) {$fdir=$COSMO_DB[0]} else {$fdir=$COSMO_DB[1]} # Select the correct database.
+		# For a single conformer solvent.
+			if ($Data[7] == 1) {
+				print FH_OUTPUT "f = $Data[1]_c0.$Data[5] fdir=\"$fdir/$Subdir\" VPfile DGfus = 0 \n";
+			}
+		# For a multiple conformer solvent.
+			if ($Data[7] > 1) {
+				print FH_OUTPUT "f = $Data[1]_c0.$Data[5] fdir=\"$fdir/$Subdir\" Comp = $Data[1] [ VPfile DGfus = 0 \n";
+				for ($conf = 1; $conf < ($Data[7] - 1); $conf++) {
+					print FH_OUTPUT "f = $Data[1]_c$conf.$Data[5] fdir=\"$fdir/$Subdir\"\n"
+				}
+				$lastconf = $conf;
+				print FH_OUTPUT "f = $Data[1]_c$lastconf.$Data[5] fdir=\"$fdir/$Subdir\" ]\n";
+			} 
+		LogMessage("PARAM: Solvent #$Solv_ID '$Data[0]'",3);
+		LogMessage("MESSG: DB: $fdir",3);
+		LogMessage("MESSG: Conformers: $Data[7]",3);
+		#LogMessage("",3);
+		LogMessage("Enter: Read_Solv()", 1);
+		return;
+} # END Select_Solv()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+sub COSMO_Route {
+	# Writes a COSMOtherm Routecard depending upon the option selected.
+		# Pass: Option.
+			# Option 1: Gfus Calculation. ref_sol_g value required for the solvent/solute combination, and Texp for the measurement.
+			# Option 2: 
+			# Option 3: 
+		# Return: NONE.
+		# Dependences: LogMessage()
+		# Global Variables: FH_OUTPUT, see options above.
+	# (c) David Hose. March 2017.
+	LogMessage("Enter: COSMO_Route()", 3);
+	my $Opt = $_[0];
+	if($Opt == 1) {
+		# Option 1: Gfus calculation.
+		LogMessage("MESSG: Routecard 1: Gfus Calculation.", 3);
+		LogMessage("PARAM: Temperature: $TExpt_C C. Ref_Sol: $Curr_Ref_Solub g/g.", 3);
+		print FH_OUTPUT "solub=2 WSOL2 solute=1 tc=$TExpt_C ref_sol_g=$Curr_Ref_Solub \n";
+	}
+	elsif($Opt == 2) {
+		# Option 2:
+		LogMessage("MESSG: Routecard 2 selected.", 3);
+	}
+	elsif($Opt == 3) {
+		# Option 3:
+		LogMessage("MESSG: Routecard 3 selected.", 3);
+	}
+	else {
+		LogMessage("ERROR: No valid Route option selected.", 1);
+		exit;
+	}
+	LogMessage("Leave: COSMO_Route()", 3);
+	return;
+} # END COSMO_Route()
 
 
 
@@ -725,9 +823,9 @@ sub CTRL_Read {
 		# Global Variables: $CTRLFileName, $AppYear., $ParamYear, $Temperature
 	# (c) David Hose. March, 2017.
 		LogMessage("Enter: CTRL_Read()", 2);
-		my $msg;
+		my $msg; # An error message.
 		# Open Control File.
-			open (FH_CTRL, "<", $CTRLFileName) or $msg = "Can't open Control File $!. LINE:". __LINE__;
+			open (FH_CTRL, "<", $CTRLFileName) or $msg = "Can't open Control File '$CTRLFileName'. $!. LINE:". __LINE__;
 			if($msg ne "") {
 				LogMessage("ERROR: $msg\n", 1);
 				print "$msg";
@@ -759,7 +857,7 @@ sub CTRL_Read {
 											LogMessage("Leave: CTRL_Read() via Usage().", 1);
 											Usage(); # Controlled exit.
 										}		
-								$Temperature = $temp[1];
+								$TExpt_C = $temp[1];
 								} else {
 									$msg = "ERROR: No numerical value entered for the temperature!";
 											LogMessage("$msg", 1);
@@ -773,7 +871,6 @@ sub CTRL_Read {
 	LogMessage("PARAM: COSMOtherm Year $AppYear.", 3);
 	LogMessage("PARAM: Parameterisation $ParamYear", 3);
 	LogMessage("PARAM: Temperature $Temperature degC.", 3);
-	
 	LogMessage("Leave: CTRL_Read()", 2);
 } # END CTRL_Read().
 
@@ -785,9 +882,9 @@ sub Read_Solv_Data {
 		# Dependences: LogMessage().
 		# Global Variables: $netpath, $Solvent_Data, %Solvents, %Densities and %SolventProps.
 	# (c) David Hose. Feb 2017.
-		my $msg;
+		my $msg; # An error message.
 		LogMessage("Enter: Read_Solv_Data()", 2);
-		open (FH_SOLV, "<" . $netpath . "/" . $SolvData) or $msg = "Can't Open Solvent Data $!. LINE:". __LINE__; # Open Solvent Master Data File.
+		open (FH_SOLV, "<" . $netpath . "/" . $SolvData) or $msg = "Can't Open Solvent Data '$SolvData'. $!. LINE:". __LINE__; # Open Solvent Master Data File.
 			if($msg ne "") {
 				LogMessage("ERROR: $msg\n", 1);
 				print "$msg";
@@ -819,9 +916,9 @@ sub Read_Project {
 		# Dependences: LogMessage()
 		# Global Variables: $ProjectFileName, $ProjectName, $Compound, $AltName and $Client.
 	# (c) David Hose. Feb 2017.
-	my $msg;
+	my $msg; # An error message.
 		LogMessage("Enter: Read_Project()", 2);
-		open (FH_PROJ, "<", $ProjectFileName) or $msg = "Can't open Project File $!. LINE:". __LINE__; # Open Project File.
+		open (FH_PROJ, "<", $ProjectFileName) or $msg = "Can't open Project File '$ProjectFileName'. $!. LINE:". __LINE__; # Open Project File.
 			if($msg ne "") {
 				LogMessage("ERROR: $msg\n", 1);
 				print "$msg";
@@ -921,10 +1018,100 @@ sub Read_RefSol_Data {
 								$RefSolub[$RefSolNum][8] = ConvmgmL2gg($temp[1], $RefSolub[$RefSolNum][5], $DenOpt, $Temperature);;
 							$RefSolNum++; # Increment row counter.
 		} # END while loop over FH_REFSOL.
-		# Close Reference Solubility File.
-			close FH_REFSOL;
+		close FH_REFSOL; # Close Reference Solubility File.
 		return $RefSolNum; # Returns the number of reference solvents solubilities.
 } # END Read_RefSol_Data()
+
+sub Read_Solutes {
+	# Extracts the solutes from a COSMOtherm list file.
+		# Pass: Name of the COSMOtherm list file.
+		# Return: An array of the solutes.
+		# Dependences: LogMessage()
+		# Global Variables: NONE.
+	# (c) David Hose. March, 2017.
+	my $File = $_[0];
+	my $Line;				# Holds the current line that has been read in from the Solute list file.
+	my @SOLUTES;			# This holds of the solutes file and path information.
+	my $SoluteCnt = 0;		# This counts the number of SOLUTES.
+	my $ConformerCnt = 0;	# This counts the number of conformers for a specific SOLUTE.
+	my $FirstConformer;		# Hold file and path information about the first conformer of a SOLUTE.
+	my $SoluteTempArray;	# A temp array.
+	my $msg; # An error message.
+	# Comments for LogFile.
+		LogMessage("Enter: Read_Solutes.", 1);
+		LogMessage("Opening Solute File '$File'",3);
+	open (FH_SOLUTE, "<$File") or die "Can't open the Solute list file '$File', $! LINE:" . __LINE__ . "\n"; # Open the solute list file.
+	if($msg ne "") {
+		LogMessage("ERROR: $msg", 1);
+		print "$msg\n";
+		exit;
+	}
+	# Loop through the lines of the file.
+		SOLUTELINE:	while(<FH_SOLUTE>) {
+			chomp;
+			$Line = $_;
+			# This section deals with compounds that have multiple conformers or are composites of multiple compounds (tautomers, etc.)
+				# Search for the beginning of a multiple conformer compound (or composite compound).
+					if($Line =~ "^Conformer") {
+						$ConformerFlag = 1; # Found a multiple conformer compound.
+						# Capture the Compound Name to be used.
+							$ConformerName = $Line;
+							$ConformerName =~ s/^Conformer\s=\s//; # Strip the "Conformer = " prefix from the line.
+							$ConformerName =~ s/\s\[\svalue\s=\s0.0//; # Strip the " [ value = 0.0" suffix from the line.
+						next SOLUTELINE;
+					}
+				# From the first line of a conformer section...
+					if($Line =~ "^f = " && $ConformerFlag == 1 && $ConformerCnt == 0) {
+						$Line =~ s/value\s\=\s0.0//; # Strip the " value = 0.0" suffix.
+						$SoluteTempArray[$ConformerCnt] = $Line; # Write this to a temp array.
+						$ConformerCnt++; # Increment the Conformer counter.
+						next SOLUTELINE;
+					}
+				# From the other conformer lines.
+					if($Line =~ "^f = " && $ConformerFlag == 1 && $ConformerCnt != 0) {
+						$Line =~ s/value\s\=\s0.0//; # Strip the " value = 0.0" suffix.
+						$SoluteTempArray[$ConformerCnt] = $Line; # Write this to a temp array.
+						$ConformerCnt++; # Increment the Conformer counter.
+						next SOLUTELINE;
+					}
+				# Last line of the Conformer section...
+					if($Line =~ "^] Conformer") {
+						$ConformerFlag = 0; # Reset FLAG for next time.
+						$SoluteCnt++; # Increase the Solute counter.
+						$MaxConformerCnt = $ConformerCnt; # Define the number of conformers that the compound has.
+						$ConformerCnt = 0; # Reset Conformer counter for next time.
+						# Take the contents of the temp array and construct the entry for the SOLUTES array.
+							for (my $i = 0; $i < $MaxConformerCnt; $i++) {
+								$SoluteFile = "$SoluteTempArray[$i] Comp = $ConformerName [ \n" if($i == 0);
+								$SoluteFile = $SoluteFile . "$SoluteTempArray[$i] \n" if($i > 0 && $i < ($MaxConformerCnt - 1));
+								$SoluteFile = $SoluteFile . "$SoluteTempArray[$i] ] Comp = $ConformerName \n" if($i == ($MaxConformerCnt - 1));
+							}
+						$SoluteFile =~ s/\/COSMOthermX\/\.\.//;
+						$SoluteFile =~ s/\/COSMOthermX\d\d\//\/COSMOthermX$AppYear\//;
+						#$SoluteFile =~ s/fdir=\"\.\./fdir=\"\/apps\/cosmologic\/COSMOthermX16\//g; # Modify relative to absolute path.
+						$SOLUTES[$SoluteCnt] = $SoluteFile;
+						next SOLUTELINE;
+					}
+			# This section deals with compounds that have single conformers.
+				if($Line =~ "^f = " && $ConformerFlag == 0) {
+					$SoluteCnt++;
+					@TEMP = split(/\s+/, $Line);
+					$CompoundName = $TEMP[2]; # Get the COSMOtherm filename of the first conformer.
+					$CompoundName =~ s/_c0.cosmo//; # Strip out conformer number and extgension from the file name.
+					$Path = $TEMP[3]; # Get the COSMOtherm path of the file.
+					$SoluteFile = "f = $CompoundName\_c0.cosmo $Path Comp = $CompoundName\n";
+					$SoluteFile =~ s/\/COSMOthermX\/\.\.//;
+					$SoluteFile =~ s/\/COSMOthermX\d\d\//\/COSMOthermX$AppYear\//;
+					$SOLUTES[$SoluteCnt] = $SoluteFile;
+					next SOLUTELINE;
+				}
+		} # END while SOLUTELINE loop.
+	close FH_SOLUTE; # Close solute list file.
+	shift @SOLUTES; # Discard blank first entry.
+	LogMessage("Leave: Read_Solutes.", 1); # Comment for LogFile.
+	LogMessage("PARAM: $SOLUTES[0]", 3);
+	return(@SOLUTES);
+} # END Read_Solutes()
 
 ## SOLUBILITY AND DENSITY CALCULATIONS ##
 
@@ -1030,3 +1217,4 @@ sub StDev {
 	}
 } # END StDev()
 
+### END OF SCRIPT ###

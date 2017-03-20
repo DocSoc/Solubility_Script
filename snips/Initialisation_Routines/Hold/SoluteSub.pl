@@ -7,7 +7,7 @@
 $AppYear = 17;
 
 $Result = (Read_Solutes("Solute.list"))[1];
-#$Result = (Read_Solutes("Solubility_Test.list"))[0];
+$Result = (Read_Solutes("Solubility_Test.list"))[0];
 print "$Result";
 exit;
 
@@ -94,7 +94,6 @@ sub Read_Solutes {
 	LogMessage("Leave: Read_Solutes.", 1); # Comment for LogFile.
 	LogMessage("PARAM: $SOLUTES[0]", 3);
 	return(@SOLUTES);
-
 } # END Read_Solutes()
 
 sub LogMessage {

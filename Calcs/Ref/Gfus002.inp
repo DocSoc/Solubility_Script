@@ -1,3 +1,8 @@
 ctd = BP_TZVPD_FINE_C30_1701.ctd cdir = "apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES" LDIR = "apps/cosmologic/COSMOthermX17/licensefiles/" 
  unit notempty wtln ndgf EHfile long 
-!! Calculation of Gfus of AZ12345678 in 1,1,1-trichloroethane (ID# 1). !!
+!! Calculation of Gfus of AZ13530968 in TMU [1,1,3,3-Tetramethylurea] (ID:2). !!
+f = AZ13530968_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  Comp = AZ13530968 [ 
+f = AZ13530968_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  
+f = AZ13530968_c2.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  ] Comp = AZ13530968 
+f = 1,1,3,3-Tetramethylurea_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1" VPfile DGfus = 0 
+solub=2 WSOL2 solute=1 tc=27 ref_sol_g=0.10000001 

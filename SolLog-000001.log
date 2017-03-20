@@ -1,10 +1,9 @@
 GENERAL INFORMATION
 
-Executed on 2017/02/19 at 15:25:33
+Executed on 2017/02/20 at 22:17:54
 
 Log File Name  : SolLog-000001.log
 Perl Script    : Solubillity.pl
-Script Path    : /Volumes/DAVE_HOSE_4/Solubility_GitHub/Solubility_Script
 Primary Author : David Hose
 Version Author : David Hose
 Version        : 0.1a (Mar 2017)
@@ -16,103 +15,220 @@ Data Path      : /Volumes/DAVE_HOSE_4/Solubility_GitHub/Solubility_Script
 
 DETAILS
 
-15:25:33 : STARTING SCRIPT
-15:25:33 : Initialiation
-15:25:33 : Enter: COSMOthermInstalled()
-15:25:33 : Leave: COSMOthermInstalled()
-15:25:33 : Enter: YearVersions()
-15:25:33 : PARAM: Available COSMOtherm years: 17 16 15 14
-15:25:33 : Leave: YearVersions()
-15:25:33 : Enter: CTRL_Read()
-15:25:33 : PARAM: COSMOtherm Year default.
-15:25:33 : PARAM: Parameterisation default
-15:25:33 : PARAM: Temperature 27 degC.
-15:25:33 : Leave: CTRL_Read()
-15:25:33 : Enter: CTD_Path()
-15:25:33 : PARAM: COSMOtherm Year is 2017.
-15:25:33 : PARAM: License file path: apps/cosmologic/COSMOthermX17/licensefiles/
-15:25:33 : PARAM: Parameterisation path: apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES
-15:25:33 : PARAM: Parameterisation file: BP_TZVPD_FINE_C30_1701.ctd
-15:25:33 : Leave: CTD_Path()
-15:25:33 : Enter: Read_Solv_Data()
-15:25:33 : MESSG: %Solvents, %Densities and %SolventProps have been set up.
-15:25:33 : Leave: Read_Solv_Data()
-15:25:33 : Enter: Read_Project()
-15:25:33 : PARAM: Project: AZD1234
-15:25:33 : PARAM: Compound: AZ12345678
-15:25:33 : PARAM: Alternative Name: Ketoester
-15:25:33 : PARAM: Client: Sarah-Kate Austin O'Bloggs
-15:25:33 : Leave: Read_Project()
-15:25:33 : Starting Gfus Calculations.
-15:25:33 : Enter: COSMO_Files()
-15:25:33 : Leave: COSMO_Files()
-15:25:33 : Enter: COSMO_Print()
-15:25:33 : Leave: COSMO_Print()
-15:25:33 : Enter: COSMO_Comment()
-15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-15:25:33 : Leave: COSMO_Comment()
-15:25:33 : Enter: COSMO_Files()
-15:25:33 : Leave: COSMO_Files()
-15:25:33 : Enter: COSMO_Print()
-15:25:33 : Leave: COSMO_Print()
-15:25:33 : Enter: COSMO_Comment()
-15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-15:25:33 : Leave: COSMO_Comment()
-15:25:33 : Enter: COSMO_Files()
-15:25:33 : Leave: COSMO_Files()
-15:25:33 : Enter: COSMO_Print()
-15:25:33 : Leave: COSMO_Print()
-15:25:33 : Enter: COSMO_Comment()
-15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-15:25:33 : Leave: COSMO_Comment()
-15:25:33 : Enter: COSMO_Files()
-15:25:33 : Leave: COSMO_Files()
-15:25:33 : Enter: COSMO_Print()
-15:25:33 : Leave: COSMO_Print()
-15:25:33 : Enter: COSMO_Comment()
-15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-15:25:33 : Leave: COSMO_Comment()
-15:25:33 : Enter: COSMO_Files()
-15:25:33 : Leave: COSMO_Files()
-15:25:33 : Enter: COSMO_Print()
-15:25:33 : Leave: COSMO_Print()
-15:25:33 : Enter: COSMO_Comment()
-15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-15:25:33 : Leave: COSMO_Comment()
-15:25:33 : Enter: COSMO_Files()
-15:25:33 : Leave: COSMO_Files()
-15:25:33 : Enter: COSMO_Print()
-15:25:33 : Leave: COSMO_Print()
-15:25:33 : Enter: COSMO_Comment()
-15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-15:25:33 : Leave: COSMO_Comment()
-15:25:33 : Enter: COSMO_Files()
-15:25:33 : Leave: COSMO_Files()
-15:25:33 : Enter: COSMO_Print()
-15:25:33 : Leave: COSMO_Print()
-15:25:33 : Enter: COSMO_Comment()
-15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-15:25:33 : Leave: COSMO_Comment()
-15:25:33 : Enter: COSMO_Files()
-15:25:33 : Leave: COSMO_Files()
-15:25:33 : Enter: COSMO_Print()
-15:25:33 : Leave: COSMO_Print()
-15:25:33 : Enter: COSMO_Comment()
-15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-15:25:33 : Leave: COSMO_Comment()
-15:25:33 : Enter: COSMO_Files()
-15:25:33 : Leave: COSMO_Files()
-15:25:33 : Enter: COSMO_Print()
-15:25:33 : Leave: COSMO_Print()
-15:25:33 : Enter: COSMO_Comment()
-15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-15:25:33 : Leave: COSMO_Comment()
-15:25:33 : Enter: COSMO_Files()
-15:25:33 : Leave: COSMO_Files()
-15:25:33 : Enter: COSMO_Print()
-15:25:33 : Leave: COSMO_Print()
-15:25:33 : Enter: COSMO_Comment()
-15:25:33 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
-15:25:33 : Leave: COSMO_Comment()
-15:25:33 : Ending Gfus Calculations.
-15:25:33 : SCRIPT COMPLETE. Duration = Less than 1 second
+22:17:54 : STARTING SCRIPT
+22:17:54 : Initialiation
+22:17:54 : Enter: COSMOthermInstalled()
+22:17:54 : Leave: COSMOthermInstalled()
+22:17:54 : Enter: YearVersions()
+22:17:54 : PARAM: Available COSMOtherm years: 17 16 15 14
+22:17:54 : Leave: YearVersions()
+22:17:54 : Enter: CTRL_Read()
+22:17:54 : PARAM: COSMOtherm Year default.
+22:17:54 : PARAM: Parameterisation default
+22:17:54 : PARAM: Temperature  degC.
+22:17:54 : Leave: CTRL_Read()
+22:17:54 : Enter: CTD_Path()
+22:17:54 : PARAM: COSMOtherm Year is 2017.
+22:17:54 : PARAM: License file path: apps/cosmologic/COSMOthermX17/licensefiles/
+22:17:54 : PARAM: Parameterisation path: apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES
+22:17:54 : PARAM: Parameterisation file: BP_TZVPD_FINE_C30_1701.ctd
+22:17:54 : Leave: CTD_Path()
+22:17:54 : Enter: Read_Solv_Data()
+22:17:54 : MESSG: %Solvents, %Densities and %SolventProps have been set up.
+22:17:54 : Leave: Read_Solv_Data()
+22:17:54 : Enter: Read_Project()
+22:17:54 : PARAM: Project: AZD9293
+22:17:54 : PARAM: Compound: AZ13530968
+22:17:54 : PARAM: Alternative Name: Ketoester
+22:17:54 : PARAM: Client: Sarah-Kate Austin O'Bloggs
+22:17:54 : Leave: Read_Project()
+22:17:54 : Enter: Read_Solutes.
+22:17:54 : Opening Solute File 'Solubility_Test.list'
+22:17:54 : Leave: Read_Solutes.
+22:17:54 : PARAM: f = AZ13530968_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  Comp = AZ13530968 [ 
+f = AZ13530968_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  
+f = AZ13530968_c2.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  ] Comp = AZ13530968 
+
+22:17:54 : Starting Gfus Calculations.
+22:17:54 : Enter: COSMO_Files()
+22:17:54 : Leave: COSMO_Files()
+22:17:54 : Enter: COSMO_Print()
+22:17:54 : Leave: COSMO_Print()
+22:17:54 : Enter: COSMO_Comment()
+22:17:54 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+22:17:54 : Leave: COSMO_Comment()
+22:17:54 : Enter: COSMO_Solute()
+22:17:54 : Leave: COSMO_Solute()
+22:17:54 : Enter: Read_Solv()
+22:17:54 : PARAM: Solvent #1 '1,1,1-Trichloroethane'
+22:17:54 : MESSG: DB: /apps/cosmologic/COSMOthermX16/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE
+22:17:54 : MESSG: Conformers: 1
+22:17:54 : Enter: Read_Solv()
+22:17:54 : Enter: COSMO_Route()
+22:17:54 : MESSG: Routecard 1: Gfus Calculation.
+22:17:54 : PARAM: Temperature: 27 C. Ref_Sol: 0.10000001 g/g.
+22:17:54 : Leave: COSMO_Route()
+22:17:54 : Enter: COSMO_Files()
+22:17:54 : Leave: COSMO_Files()
+22:17:54 : Enter: COSMO_Print()
+22:17:54 : Leave: COSMO_Print()
+22:17:54 : Enter: COSMO_Comment()
+22:17:54 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+22:17:54 : Leave: COSMO_Comment()
+22:17:54 : Enter: COSMO_Solute()
+22:17:54 : Leave: COSMO_Solute()
+22:17:54 : Enter: Read_Solv()
+22:17:54 : PARAM: Solvent #2 'TMU [1,1,3,3-Tetramethylurea]'
+22:17:54 : MESSG: DB: /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE
+22:17:54 : MESSG: Conformers: 1
+22:17:54 : Enter: Read_Solv()
+22:17:54 : Enter: COSMO_Route()
+22:17:54 : MESSG: Routecard 1: Gfus Calculation.
+22:17:54 : PARAM: Temperature: 27 C. Ref_Sol: 0.10000001 g/g.
+22:17:54 : Leave: COSMO_Route()
+22:17:54 : Enter: COSMO_Files()
+22:17:54 : Leave: COSMO_Files()
+22:17:54 : Enter: COSMO_Print()
+22:17:54 : Leave: COSMO_Print()
+22:17:54 : Enter: COSMO_Comment()
+22:17:54 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+22:17:54 : Leave: COSMO_Comment()
+22:17:54 : Enter: COSMO_Solute()
+22:17:54 : Leave: COSMO_Solute()
+22:17:54 : Enter: Read_Solv()
+22:17:54 : PARAM: Solvent #3 '1,1-Dichloroethane'
+22:17:54 : MESSG: DB: /apps/cosmologic/COSMOthermX16/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE
+22:17:54 : MESSG: Conformers: 1
+22:17:54 : Enter: Read_Solv()
+22:17:54 : Enter: COSMO_Route()
+22:17:54 : MESSG: Routecard 1: Gfus Calculation.
+22:17:54 : PARAM: Temperature: 27 C. Ref_Sol: 0.10000001 g/g.
+22:17:54 : Leave: COSMO_Route()
+22:17:54 : Enter: COSMO_Files()
+22:17:54 : Leave: COSMO_Files()
+22:17:54 : Enter: COSMO_Print()
+22:17:54 : Leave: COSMO_Print()
+22:17:54 : Enter: COSMO_Comment()
+22:17:54 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+22:17:54 : Leave: COSMO_Comment()
+22:17:54 : Enter: COSMO_Solute()
+22:17:54 : Leave: COSMO_Solute()
+22:17:54 : Enter: Read_Solv()
+22:17:54 : PARAM: Solvent #12 '1,4-Dioxane'
+22:17:54 : MESSG: DB: /apps/cosmologic/COSMOthermX16/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE
+22:17:54 : MESSG: Conformers: 1
+22:17:54 : Enter: Read_Solv()
+22:17:54 : Enter: COSMO_Route()
+22:17:54 : MESSG: Routecard 1: Gfus Calculation.
+22:17:54 : PARAM: Temperature: 27 C. Ref_Sol: 0.10000001 g/g.
+22:17:54 : Leave: COSMO_Route()
+22:17:54 : Enter: COSMO_Files()
+22:17:54 : Leave: COSMO_Files()
+22:17:54 : Enter: COSMO_Print()
+22:17:54 : Leave: COSMO_Print()
+22:17:54 : Enter: COSMO_Comment()
+22:17:54 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+22:17:54 : Leave: COSMO_Comment()
+22:17:54 : Enter: COSMO_Solute()
+22:17:54 : Leave: COSMO_Solute()
+22:17:54 : Enter: Read_Solv()
+22:17:54 : PARAM: Solvent #35 'Benzonitrile'
+22:17:54 : MESSG: DB: /apps/cosmologic/COSMOthermX16/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE
+22:17:54 : MESSG: Conformers: 1
+22:17:54 : Enter: Read_Solv()
+22:17:54 : Enter: COSMO_Route()
+22:17:54 : MESSG: Routecard 1: Gfus Calculation.
+22:17:54 : PARAM: Temperature: 27 C. Ref_Sol: 0.10000001 g/g.
+22:17:54 : Leave: COSMO_Route()
+22:17:54 : Enter: COSMO_Files()
+22:17:54 : Leave: COSMO_Files()
+22:17:54 : Enter: COSMO_Print()
+22:17:54 : Leave: COSMO_Print()
+22:17:54 : Enter: COSMO_Comment()
+22:17:54 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+22:17:54 : Leave: COSMO_Comment()
+22:17:54 : Enter: COSMO_Solute()
+22:17:54 : Leave: COSMO_Solute()
+22:17:54 : Enter: Read_Solv()
+22:17:54 : PARAM: Solvent #68 'Fluorobenzene'
+22:17:54 : MESSG: DB: /apps/cosmologic/COSMOthermX16/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE
+22:17:54 : MESSG: Conformers: 1
+22:17:54 : Enter: Read_Solv()
+22:17:54 : Enter: COSMO_Route()
+22:17:54 : MESSG: Routecard 1: Gfus Calculation.
+22:17:54 : PARAM: Temperature: 27 C. Ref_Sol: 0.10000001 g/g.
+22:17:54 : Leave: COSMO_Route()
+22:17:54 : Enter: COSMO_Files()
+22:17:54 : Leave: COSMO_Files()
+22:17:54 : Enter: COSMO_Print()
+22:17:54 : Leave: COSMO_Print()
+22:17:54 : Enter: COSMO_Comment()
+22:17:54 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+22:17:54 : Leave: COSMO_Comment()
+22:17:54 : Enter: COSMO_Solute()
+22:17:54 : Leave: COSMO_Solute()
+22:17:54 : Enter: Read_Solv()
+22:17:54 : PARAM: Solvent #78 'Morpholine'
+22:17:54 : MESSG: DB: /apps/cosmologic/COSMOthermX16/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE
+22:17:54 : MESSG: Conformers: 1
+22:17:54 : Enter: Read_Solv()
+22:17:54 : Enter: COSMO_Route()
+22:17:54 : MESSG: Routecard 1: Gfus Calculation.
+22:17:54 : PARAM: Temperature: 27 C. Ref_Sol: 0.10000001 g/g.
+22:17:54 : Leave: COSMO_Route()
+22:17:54 : Enter: COSMO_Files()
+22:17:54 : Leave: COSMO_Files()
+22:17:54 : Enter: COSMO_Print()
+22:17:54 : Leave: COSMO_Print()
+22:17:54 : Enter: COSMO_Comment()
+22:17:54 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+22:17:54 : Leave: COSMO_Comment()
+22:17:54 : Enter: COSMO_Solute()
+22:17:54 : Leave: COSMO_Solute()
+22:17:54 : Enter: Read_Solv()
+22:17:54 : PARAM: Solvent #101 'Pyridine'
+22:17:54 : MESSG: DB: /apps/cosmologic/COSMOthermX16/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE
+22:17:54 : MESSG: Conformers: 1
+22:17:54 : Enter: Read_Solv()
+22:17:54 : Enter: COSMO_Route()
+22:17:54 : MESSG: Routecard 1: Gfus Calculation.
+22:17:54 : PARAM: Temperature: 27 C. Ref_Sol: 0.10000001 g/g.
+22:17:54 : Leave: COSMO_Route()
+22:17:54 : Enter: COSMO_Files()
+22:17:54 : Leave: COSMO_Files()
+22:17:54 : Enter: COSMO_Print()
+22:17:54 : Leave: COSMO_Print()
+22:17:54 : Enter: COSMO_Comment()
+22:17:54 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+22:17:54 : Leave: COSMO_Comment()
+22:17:54 : Enter: COSMO_Solute()
+22:17:54 : Leave: COSMO_Solute()
+22:17:54 : Enter: Read_Solv()
+22:17:54 : PARAM: Solvent #126 '1-Methoxypropan-2-ol'
+22:17:54 : MESSG: DB: /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE
+22:17:54 : MESSG: Conformers: 10
+22:17:54 : Enter: Read_Solv()
+22:17:54 : Enter: COSMO_Route()
+22:17:54 : MESSG: Routecard 1: Gfus Calculation.
+22:17:54 : PARAM: Temperature: 27 C. Ref_Sol: 0.10000001 g/g.
+22:17:54 : Leave: COSMO_Route()
+22:17:54 : Enter: COSMO_Files()
+22:17:54 : Leave: COSMO_Files()
+22:17:54 : Enter: COSMO_Print()
+22:17:54 : Leave: COSMO_Print()
+22:17:54 : Enter: COSMO_Comment()
+22:17:54 : MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.
+22:17:54 : Leave: COSMO_Comment()
+22:17:54 : Enter: COSMO_Solute()
+22:17:54 : Leave: COSMO_Solute()
+22:17:54 : Enter: Read_Solv()
+22:17:54 : PARAM: Solvent #127 'Propylene Carbonate [4-Methyl-1,3-dioxolan-2-one]'
+22:17:54 : MESSG: DB: /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE
+22:17:54 : MESSG: Conformers: 1
+22:17:54 : Enter: Read_Solv()
+22:17:54 : Enter: COSMO_Route()
+22:17:54 : MESSG: Routecard 1: Gfus Calculation.
+22:17:54 : PARAM: Temperature: 27 C. Ref_Sol: 0.10000001 g/g.
+22:17:54 : Leave: COSMO_Route()
+22:17:54 : Ending Gfus Calculations.
+22:17:54 : SCRIPT COMPLETE. Duration = Less than 1 second
