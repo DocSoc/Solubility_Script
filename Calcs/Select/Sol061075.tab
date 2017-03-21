@@ -1,0 +1,9 @@
+
+ Property  job 1 : Solubility ;
+ Settings  job 1 : T= 293.15 K ; x(2)= 1.0000 ; 
+ Units     job 1 : Energies in kcal/mol ; Volume in A^3 ; Temperature in K ; Concentrations x : mole fraction ;
+ General   job 1 : Mass fraction solubility w_solub is in g/g ; Molar solubility S is in mol/l (solution) ; Solvent density =  908.244 g/l ;
+ 
+  Nr Compound                  log10(x_solub)           mu(self)          mu(solv)            DG_fus         mu(water)    N_Ring            Volume   N_Amino         MolWeight            w_solub              log10(S)  Exp-State      Tmelt
+   1 AZ13530968                   -2.72891188        -7.43676122       -7.42559829        3.64931224       -7.24508135        18          402.8916         0          376.2926       0.0068435287           -1.78084055    unknown         NA
+   2 isopropylacetate              0.00000000        -1.80208604       -1.80208604        0.00000000       -1.76171230         0          142.1935         0          102.1322                 NA            0.00000000     liquid     199.75

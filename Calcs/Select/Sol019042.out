@@ -1,0 +1,392 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Solubility Calculation of Solute in Solvent 
+ Job-Date   : 03/21/2017
+ Job-Time   : 15:36:46
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+ Reading vapor pressure and property information for compound 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap
+ Note: Vapor Pressure / property file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap is empty
+ Free energy of fusion for pure compound 1 (DGFUS = 3.18944 kcal/mol)
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204754.5909 kcal/mol
+ E_gas                  :   -2204740.7759 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.8150 kcal/mol
+ E_diel                 :        -18.7411 kcal/mol
+ Averaging corr dE      :          1.1081 kcal/mol
+ EvdW in continuum      :       -358.6958 kcal/mol
+ Area                   :        347.5579 A^2
+ Volume                 :        402.8905 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0028 a.u.
+ Dipole moment (t,x,y,z):          7.1747  0.488760  7.156487 -0.149195 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.26E+02  4.58E+01  2.09E+02  1.75E+02  5.53E+02              
+ H-bond moment (accept) :          6.7617
+ H-bond moment (donor)  :          2.3419
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204751.2414 kcal/mol
+ E_gas                  :   -2204738.3753 kcal/mol
+ E_COSMO-E_gas+dE       :        -12.8661 kcal/mol
+ E_diel                 :        -17.6608 kcal/mol
+ Averaging corr dE      :          1.0677 kcal/mol
+ EvdW in continuum      :       -351.4171 kcal/mol
+ Area                   :        340.9253 A^2
+ Volume                 :        403.0683 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0031 a.u.
+ Dipole moment (t,x,y,z):          7.7437 -4.364802 -6.198433  1.578924 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.16E+02  3.56E+01  1.86E+02  1.45E+02  4.85E+02              
+ H-bond moment (accept) :          5.5908
+ H-bond moment (donor)  :          2.1978
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204749.4696 kcal/mol
+ E_gas                  :   -2204735.8858 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.5838 kcal/mol
+ E_diel                 :        -18.5107 kcal/mol
+ Averaging corr dE      :          1.0974 kcal/mol
+ EvdW in continuum      :       -356.7686 kcal/mol
+ Area                   :        345.9657 A^2
+ Volume                 :        403.3632 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0024 a.u.
+ Dipole moment (t,x,y,z):          7.3409 -4.690418 -5.646647 -0.062138 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.23E+02  4.47E+01  2.02E+02  1.75E+02  5.37E+02              
+ H-bond moment (accept) :          6.4083
+ H-bond moment (donor)  :          2.1788
+
+
+ Reading COSMO information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/b/butyronitrile_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/b/butyronitrile_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/b/butyronitrile.vap
+ Free energy of fusion for pure compound 2 (DGFUS = 0.00000 kcal/mol)
+ Enthalpy of fusion for pure compound 2 (DHFUS = 1.20000 kcal/mol)
+ Vapor Pressure [mbar] / Temperature [°C] input for compound 2:
+                0.1000           -48.0000
+               10.0000             8.0000
+             1000.0000           117.2000
+ Antoine equation coefficients (in [mbar]/[K]) for compound 2:        16.6029      3287.5557       -51.2553
+ Minimum interpolative temperature for vapor pressure estimation of compound 2:     225.150 K
+ Maximum interpolative temperature for vapor pressure estimation of compound 2:     390.350 K
+ UNIQUAC volume parameter for compound 2 (UNIQUAC_RI = 3.21890)
+ UNIQUAC surface parameter for compound 2 (UNIQUAC_QI = 2.80400)
+ Boiling temperature of compound 2 (TBOIL = 390.75000 K)
+ Melting temperature of compound 2 (TMELT = 161.25000 K)
+ Experimental dielectric constant for molecule 4   EPSILON = 24.30000
+ Critical temperature of compound 2 (TCRIT = 582.25000 K)
+ Critical pressure of compound 2 (PCRIT = 37895.50000 mbar)
+
+ Compound Information for compound 2 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/b/butyronitrile_c0.cosmo)
+ Atomic weights         : 111111111111
+ E_COSMO+dE             :    -132704.1660 kcal/mol
+ E_gas                  :    -132697.4284 kcal/mol
+ E_COSMO-E_gas+dE       :         -6.7376 kcal/mol
+ E_diel                 :         -8.9018 kcal/mol
+ Averaging corr dE      :          0.2139 kcal/mol
+ EvdW in continuum      :       -125.6151 kcal/mol
+ Area                   :        123.9410 A^2
+ Volume                 :        108.8624 A^3
+ Molecular Weight       :         69.1055 a.m.u.
+ Total COSMO charge     :  -7.4189379E-05 a.u.
+ Dipole moment (t,x,y,z):          5.4794  1.532302  5.260827  0.003286 Debye                            
+ Sigma moments (1-6)    :          0.0000  4.59E+01  2.21E+01  4.52E+01  4.06E+01  6.17E+01              
+ H-bond moment (accept) :          0.9205
+ H-bond moment (donor)  :          0.0000
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    4
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing solids solubilities: Heats of fusion used as given in the input file
+ Computed solubilities will be refined iteratively: Threshold = 1.00E-05
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 butyronit
+ Mole Fraction        :     1.0000    0.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.43676 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.76165
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.02764 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.69267 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.30393 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.16842 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.84183 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 butyronit
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  2  (butyronitrile)
+ Chemical potential of the compound in the mixture :        -0.76860 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.13610
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -132704.93462 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -2.75780 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         2.63803 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.01125 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -5.40708 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 butyronit
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.81777 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.01759
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204761.40865 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -12.36131 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.06113 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.50109 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -17.94066 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+ Compound:  2  (butyronitrile)
+ Chemical potential of the compound in the mixture :        -0.73498 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.25093
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -132704.90099 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -2.72176 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         2.65430 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.01124 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -5.38730 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 butyronit
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.97488 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.41732
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204761.56576 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -12.48920 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.01318 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.51968 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.00015 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.72208
+ w_Solubility [g(Solute)/g(Solution)]              :         0.01024
+
+ Compound:  2  (butyronitrile)
+ Chemical potential of the compound in the mixture :        -0.76860 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.13610
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -132704.93462 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -2.75780 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         2.63803 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.01125 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -5.40708 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+ Log10(x_Solubility)                               :         0.00000
+
+
+
+
+ Results for mixture 5
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 butyronit
+ Mole Fraction        :     0.0019    0.9981
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.85915 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.33104
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204761.45003 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -12.46328 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.13908 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.60244 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.01787 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.80837
+ w_Solubility [g(Solute)/g(Solution)]              :  8.40729257E-03
+
+ Compound:  2  (butyronitrile)
+ Chemical potential of the compound in the mixture :        -0.76863 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.13608
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -132704.93465 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -2.76498 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         2.63733 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.01021 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -5.41252 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 6
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 butyronit
+ Mole Fraction        :     0.0016    0.9984
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.86135 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.33268
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204761.45223 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -12.45014 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.13464 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.58802 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.01470 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.80672
+ w_Solubility [g(Solute)/g(Solution)]              :  8.43890761E-03
+
+ Compound:  2  (butyronitrile)
+ Chemical potential of the compound in the mixture :        -0.76863 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.13608
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -132704.93465 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -2.76369 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         2.63746 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.01039 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -5.41154 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 7
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 butyronit
+ Mole Fraction        :     0.0016    0.9984
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.86130 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.33264
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204761.45218 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -12.45036 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.13473 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.58827 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.01475 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.80676
+ w_Solubility [g(Solute)/g(Solution)]              :  8.43820831E-03
+
+ Compound:  2  (butyronitrile)
+ Chemical potential of the compound in the mixture :        -0.76863 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.13608
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -132704.93465 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -2.76371 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         2.63745 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.01039 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -5.41156 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 8
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 butyronit
+ Mole Fraction        :     0.0016    0.9984
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.86130 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.33264
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204761.45218 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -12.45036 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.13473 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.58827 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.01475 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.80676
+ w_Solubility [g(Solute)/g(Solution)]              :  8.43822371E-03
+
+ Compound:  2  (butyronitrile)
+ Chemical potential of the compound in the mixture :        -0.76863 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.13608
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -132704.93465 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -2.76371 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         2.63745 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.01039 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -5.41156 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+----------------
+ END job       1
+----------------

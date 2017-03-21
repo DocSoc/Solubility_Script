@@ -1,0 +1,336 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Calculation of Gfus of AZ13530968 in Ethyl Lactate (ID:124). !!
+ Job-Date   : 03/21/2017
+ Job-Time   : 11:19:42
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047545908809612E+06 kcal/mol
+ E_gas                  : -2.2047407758595427E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.3815021418500692E+01 kcal/mol
+ E_diel                 : -1.8741097682544183E+01 kcal/mol
+ Averaging corr dE      :  1.1080556917143740E+00 kcal/mol
+ EvdW in continuum      : -3.5869582409676792E+02 kcal/mol
+ Area                   :  3.4755790236900066E+02 A^2
+ Volume                 :  4.0289052007962806E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  2.8206111837914350E-03 a.u.
+ Dipole moment (t,x,y,z):   7.17471E+00  4.88760E-01  7.15649E+00 -1.49195E-01 Debye                     
+ Sigma moments (1-6)    :   6.62526E-14  1.26082E+02  4.57635E+01  2.08980E+02  1.75017E+02  5.52993E+02 
+ H-bond moment (accept) :  6.7616750700730961E+00
+ H-bond moment (donor)  :  2.3418698075613533E+00
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047512413992281E+06 kcal/mol
+ E_gas                  : -2.2047383753013550E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.2866097873076797E+01 kcal/mol
+ E_diel                 : -1.7660782740455844E+01 kcal/mol
+ Averaging corr dE      :  1.0676646047629947E+00 kcal/mol
+ EvdW in continuum      : -3.5141710084911767E+02 kcal/mol
+ Area                   :  3.4092533972000086E+02 A^2
+ Volume                 :  4.0306834173301530E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  3.0803784690760063E-03 a.u.
+ Dipole moment (t,x,y,z):   7.74371E+00 -4.36480E+00 -6.19843E+00  1.57892E+00 Debye                     
+ Sigma moments (1-6)    :   1.61537E-14  1.15954E+02  3.55562E+01  1.85701E+02  1.44749E+02  4.84586E+02 
+ H-bond moment (accept) :  5.5908276593953437E+00
+ H-bond moment (donor)  :  2.1977940140201802E+00
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047494696116853E+06 kcal/mol
+ E_gas                  : -2.2047358857822344E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.3583829450886697E+01 kcal/mol
+ E_diel                 : -1.8510678826816303E+01 kcal/mol
+ Averaging corr dE      :  1.0973693821534591E+00 kcal/mol
+ EvdW in continuum      : -3.5676861025593655E+02 kcal/mol
+ Area                   :  3.4596571778000055E+02 A^2
+ Volume                 :  4.0336322930821598E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  2.4033856911052707E-03 a.u.
+ Dipole moment (t,x,y,z):   7.34088E+00 -4.69042E+00 -5.64665E+00 -6.21380E-02 Debye                     
+ Sigma moments (1-6)    :   7.86905E-14  1.23492E+02  4.46705E+01  2.02476E+02  1.74512E+02  5.37388E+02 
+ H-bond moment (accept) :  6.4082977499049703E+00
+ H-bond moment (donor)  :  2.1788107554402876E+00
+
+
+ Reading COSMO information for molecule 4 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate.vap
+ Note: Vapor Pressure / property file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate.vap is empty
+ Free energy of fusion for pure compound 2 (DGFUS = 0.0000000000000000E+00 kcal/mol)
+
+ Compound Information for compound 2 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c0.cosmo)
+ Atomic weights         : 111111111111111111
+ E_COSMO+dE             : -2.6508955412041384E+05 kcal/mol
+ E_gas                  : -2.6508298755511577E+05 kcal/mol
+ E_COSMO-E_gas+dE       : -6.5665652980678715E+00 kcal/mol
+ E_diel                 : -8.5127525752432689E+00 kcal/mol
+ Averaging corr dE      :  6.0354357520742097E-01 kcal/mol
+ EvdW in continuum      : -1.6096016708957424E+02 kcal/mol
+ Area                   :  1.6275338691199991E+02 A^2
+ Volume                 :  1.5165519709136726E+02 A^3
+ Molecular Weight       :  1.1813166000000001E+02 a.m.u.
+ Total COSMO charge     :  7.3147779196688575E-04 a.u.
+ Dipole moment (t,x,y,z):   4.56657E+00  4.19337E+00 -1.45761E+00  1.06985E+00 Debye                     
+ Sigma moments (1-6)    :   5.46785E-15  6.33029E+01  3.45022E+01  7.48361E+01  7.33084E+01  1.28511E+02 
+ H-bond moment (accept) :  2.2222727773385227E+00
+ H-bond moment (donor)  :  0.0000000000000000E+00
+
+
+ Reading COSMO information for molecule 5 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c1.cosmo
+ Reading gas phase energy information for molecule 5 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c1.energy
+
+ Compound Information for compound 2 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c1.cosmo)
+ Atomic weights         : 111111111111111111
+ E_COSMO+dE             : -2.6508793349806510E+05 kcal/mol
+ E_gas                  : -2.6508044692733156E+05 kcal/mol
+ E_COSMO-E_gas+dE       : -7.4865707335411571E+00 kcal/mol
+ E_diel                 : -1.0147315793576720E+01 kcal/mol
+ Averaging corr dE      :  6.6128725130308696E-01 kcal/mol
+ EvdW in continuum      : -1.6124581422566223E+02 kcal/mol
+ Area                   :  1.6338419104600004E+02 A^2
+ Volume                 :  1.5208789644794300E+02 A^3
+ Molecular Weight       :  1.1813166000000001E+02 a.m.u.
+ Total COSMO charge     :  4.3667875161389257E-04 a.u.
+ Dipole moment (t,x,y,z):   2.98116E+00  2.92481E+00 -4.80784E-01  3.18856E-01 Debye                     
+ Sigma moments (1-6)    :  -3.40561E-14  7.56647E+01  3.30689E+01  1.05282E+02  6.39500E+01  1.97238E+02 
+ H-bond moment (accept) :  2.8218353974525958E+00
+ H-bond moment (donor)  :  1.1504462388301331E+00
+
+
+ Reading COSMO information for molecule 6 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c2.cosmo
+ Reading gas phase energy information for molecule 6 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c2.energy
+
+ Compound Information for compound 2 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c2.cosmo)
+ Atomic weights         : 111111111111111111
+ E_COSMO+dE             : -2.6508782415137137E+05 kcal/mol
+ E_gas                  : -2.6508025955061812E+05 kcal/mol
+ E_COSMO-E_gas+dE       : -7.5646007532486692E+00 kcal/mol
+ E_diel                 : -1.4103243058455778E+01 kcal/mol
+ Averaging corr dE      :  6.3208211210690324E-01 kcal/mol
+ EvdW in continuum      : -1.6196806163045864E+02 kcal/mol
+ Area                   :  1.6410044514100019E+02 A^2
+ Volume                 :  1.5271471777613328E+02 A^3
+ Molecular Weight       :  1.1813166000000001E+02 a.m.u.
+ Total COSMO charge     :  4.4818239084882806E-04 a.u.
+ Dipole moment (t,x,y,z):   4.87703E+00  2.45838E+00 -1.87937E+00  3.76958E+00 Debye                     
+ Sigma moments (1-6)    :   2.89074E-14  8.82429E+01  4.00015E+01  1.50528E+02  9.54177E+01  3.47925E+02 
+ H-bond moment (accept) :  4.6981200955881803E+00
+ H-bond moment (donor)  :  1.9379319384315581E+00
+
+
+ Reading COSMO information for molecule 7 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c3.cosmo
+ Reading gas phase energy information for molecule 7 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c3.energy
+ Note: Extreme ratio (E_COSMO-E_GAS)/E_DIEL =      1.01 detected for compound /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c3.cosmo
+
+ Compound Information for compound 2 conformer 4 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c3.cosmo)
+ Atomic weights         : 111111111111111111
+ E_COSMO+dE             : -2.6508737527047773E+05 kcal/mol
+ E_gas                  : -2.6507751126359601E+05 kcal/mol
+ E_COSMO-E_gas+dE       : -9.8640068817185238E+00 kcal/mol
+ E_diel                 : -9.7557153419039295E+00 kcal/mol
+ Averaging corr dE      :  6.5914586630675465E-01 kcal/mol
+ EvdW in continuum      : -1.5969447336014545E+02 kcal/mol
+ Area                   :  1.6180173833099974E+02 A^2
+ Volume                 :  1.5233240122135061E+02 A^3
+ Molecular Weight       :  1.1813166000000001E+02 a.m.u.
+ Total COSMO charge     :  4.3973226791280243E-04 a.u.
+ Dipole moment (t,x,y,z):   2.77429E+00  1.87574E+00  2.04326E+00  5.79141E-02 Debye                     
+ Sigma moments (1-6)    :   2.26624E-14  7.31081E+01  3.07552E+01  1.01431E+02  5.82656E+01  1.90004E+02 
+ H-bond moment (accept) :  2.6385590766644609E+00
+ H-bond moment (donor)  :  1.2114737662573225E+00
+
+
+ Reading COSMO information for molecule 8 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c4.cosmo
+ Reading gas phase energy information for molecule 8 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c4.energy
+
+ Compound Information for compound 2 conformer 5 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e/Ethyl_Lactate_c4.cosmo)
+ Atomic weights         : 111111111111111111
+ E_COSMO+dE             : -2.6508470258208725E+05 kcal/mol
+ E_gas                  : -2.6507551179980650E+05 kcal/mol
+ E_COSMO-E_gas+dE       : -9.1907822807552293E+00 kcal/mol
+ E_diel                 : -1.2730690018795441E+01 kcal/mol
+ Averaging corr dE      :  5.9451851627356633E-01 kcal/mol
+ EvdW in continuum      : -1.5845362874313182E+02 kcal/mol
+ Area                   :  1.5918678135200020E+02 A^2
+ Volume                 :  1.5113506875520937E+02 A^3
+ Molecular Weight       :  1.1813166000000001E+02 a.m.u.
+ Total COSMO charge     :  5.1990999816108551E-04 a.u.
+ Dipole moment (t,x,y,z):   5.91577E+00  4.46741E+00 -3.76609E+00 -9.24731E-01 Debye                     
+ Sigma moments (1-6)    :  -2.83107E-14  7.91198E+01  3.68719E+01  9.78558E+01  7.86588E+01  1.63049E+02 
+ H-bond moment (accept) :  2.7377351525671330E+00
+ H-bond moment (donor)  :  4.6292676375849168E-01
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    8
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing liquid-liquid solubilities: Heats of fusion are assumed to be zero
+ Computing heat of fusion from given reference solubility of AZ13530968         
+ Reference solubility in given solvent =  3.565E-02 [g/g]   
+ log(x_Ref) =   -1.951
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             Ethyl_Lactate         
+ Mole Fraction        :  1.0000000000000000E+00 0.0000000000000000E+00
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -7.1710377574966939E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0164398645559942E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047617619187185E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.8434460779094863E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  5.3767897493174175E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -3.0728051661645113E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -2.0754257339033753E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000002E+00 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             Ethyl_Lactate         
+ Mole Fraction        :  0.0000000000000000E+00 1.0000000000000000E+00
+
+ Compound:  2  (Ethyl_Lactate)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -1.6161247328577353E+00 kcal/mol
+ Log10(partial pressure [mbar])                    :  7.7951795060758666E-01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.6509117024514673E+05 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -4.5676151995339467E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  3.3427748129372148E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -4.4703621476370897E-01 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -7.7903884882500414E+00 kcal/mol
+ Ring correction                                   :  0.0000000000000000E+00 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             Ethyl_Lactate         
+ Mole Fraction        :  0.0000000000000000E+00 1.0000000000000000E+00
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  0.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -7.4767412079904787E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0500619892123359E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047620676221689E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.5340621631877392E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  5.8786956764941412E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -2.5633058483005371E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -1.8673943825350168E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000002E+00 kcal/mol
+
+ Compound:  2  (Ethyl_Lactate)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -1.6358805813433486E+00 kcal/mol
+ Log10(partial pressure [mbar])                    :  7.2619732567353612E-01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.6509119000099518E+05 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -4.5894312800752184E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  3.3347817836122271E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -4.5230325217777834E-01 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -7.7998546942200671E+00 kcal/mol
+ Ring correction                                   :  0.0000000000000000E+00 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             Ethyl_Lactate         
+ Mole Fraction        :  1.1193339977441376E-02 9.8880666002255857E-01
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  1.1193339977441376E-02
+ Chemical potential of the compound in the mixture : -7.4113439284016787E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0339370631753919E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047620022248896E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.5381327707091559E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  5.8813698325065502E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -2.5802253554615509E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -1.8700985343241555E+01 kcal/mol
+ Ring correction                                   : -2.2232393999999998E+00 kcal/mol
+ Log10(x_Solubility)                               : -1.9510403051303831E+00
+ w_Solubility [g(Solute)/g(Solution)]              :  3.6058498746098774E-02
+
+ Compound:  2  (Ethyl_Lactate)
+ Mole Fraction of the compound in the mixture      :  9.8880666002255857E-01
+ Chemical potential of the compound in the mixture : -1.6153027033777829E+00 kcal/mol
+ Log10(partial pressure [mbar])                    :  7.8011648759178298E-01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.6509116942311724E+05 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -4.6050159943505378E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  3.3368787425971163E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -4.5839391558192111E-01 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -7.8122246551192323E+00 kcal/mol
+ Ring correction                                   :  0.0000000000000000E+00 kcal/mol
+ Log10(x_Solubility)                               :  0.0000000000000000E+00
+
+
+----------------
+ END job       1
+----------------

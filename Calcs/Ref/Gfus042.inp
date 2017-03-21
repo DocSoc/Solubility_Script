@@ -1,0 +1,8 @@
+ctd = BP_TZVPD_FINE_C30_1701.ctd cdir = "/apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES" LDIR = "/apps/cosmologic/COSMOthermX17/licensefiles/" 
+ unit notempty wtln ndgf ehfile long 
+!! Calculation of Gfus of AZ13530968 in Butyronitrile (ID:42). !!
+f = AZ13530968_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  Comp = AZ13530968 [ 
+f = AZ13530968_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  
+f = AZ13530968_c2.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  ] Comp = AZ13530968 
+f = butyronitrile_c0.cosmo fdir="/apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/b" VPfile DGfus = 0 
+solub=2 WSOL2 solute=1 tc=20 ref_sol_g=0.00297853719813385 

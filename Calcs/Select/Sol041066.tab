@@ -1,0 +1,9 @@
+
+ Property  job 1 : Solubility ;
+ Settings  job 1 : T= 293.15 K ; x(2)= 1.0000 ; 
+ Units     job 1 : Energies in kcal/mol ; Volume in A^3 ; Temperature in K ; Concentrations x : mole fraction ;
+ General   job 1 : Mass fraction solubility w_solub is in g/g ; Molar solubility S is in mol/l (solution) ; Solvent density =  923.496 g/l ;
+ 
+  Nr Compound                  log10(x_solub)           mu(self)          mu(solv)            DG_fus         mu(water)    N_Ring            Volume   N_Amino         MolWeight            w_solub              log10(S)  Exp-State      Tmelt
+   1 AZ13530968                   -2.91756829        -7.43676122       -7.84270840        4.31948002       -7.68228047        18          402.8915         0          376.2926       0.0051432777           -1.89796968    unknown         NA
+   2 ethylacetate                  0.00000000        -1.51843433       -1.51843433        0.00000000       -1.48777436         0          120.2490         0           88.1056                 NA            0.00000000     liquid     189.55

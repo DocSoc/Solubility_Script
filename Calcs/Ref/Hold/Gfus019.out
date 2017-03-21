@@ -1,0 +1,255 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Calculation of Gfus of AZ13530968 in 2-Methyltetrahydrofuran [2-MeTHF] (ID:19). !!
+ Job-Date   : 03/21/2017
+ Job-Time   : 11:15:10
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047545908809612E+06 kcal/mol
+ E_gas                  : -2.2047407758595427E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.3815021418500692E+01 kcal/mol
+ E_diel                 : -1.8741097682544183E+01 kcal/mol
+ Averaging corr dE      :  1.1080556917143740E+00 kcal/mol
+ EvdW in continuum      : -3.5869582409676792E+02 kcal/mol
+ Area                   :  3.4755790236900066E+02 A^2
+ Volume                 :  4.0289052007962806E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  2.8206111837914350E-03 a.u.
+ Dipole moment (t,x,y,z):   7.17471E+00  4.88760E-01  7.15649E+00 -1.49195E-01 Debye                     
+ Sigma moments (1-6)    :   6.62526E-14  1.26082E+02  4.57635E+01  2.08980E+02  1.75017E+02  5.52993E+02 
+ H-bond moment (accept) :  6.7616750700730961E+00
+ H-bond moment (donor)  :  2.3418698075613533E+00
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047512413992281E+06 kcal/mol
+ E_gas                  : -2.2047383753013550E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.2866097873076797E+01 kcal/mol
+ E_diel                 : -1.7660782740455844E+01 kcal/mol
+ Averaging corr dE      :  1.0676646047629947E+00 kcal/mol
+ EvdW in continuum      : -3.5141710084911767E+02 kcal/mol
+ Area                   :  3.4092533972000086E+02 A^2
+ Volume                 :  4.0306834173301530E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  3.0803784690760063E-03 a.u.
+ Dipole moment (t,x,y,z):   7.74371E+00 -4.36480E+00 -6.19843E+00  1.57892E+00 Debye                     
+ Sigma moments (1-6)    :   1.61537E-14  1.15954E+02  3.55562E+01  1.85701E+02  1.44749E+02  4.84586E+02 
+ H-bond moment (accept) :  5.5908276593953437E+00
+ H-bond moment (donor)  :  2.1977940140201802E+00
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047494696116853E+06 kcal/mol
+ E_gas                  : -2.2047358857822344E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.3583829450886697E+01 kcal/mol
+ E_diel                 : -1.8510678826816303E+01 kcal/mol
+ Averaging corr dE      :  1.0973693821534591E+00 kcal/mol
+ EvdW in continuum      : -3.5676861025593655E+02 kcal/mol
+ Area                   :  3.4596571778000055E+02 A^2
+ Volume                 :  4.0336322930821598E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  2.4033856911052707E-03 a.u.
+ Dipole moment (t,x,y,z):   7.34088E+00 -4.69042E+00 -5.64665E+00 -6.21380E-02 Debye                     
+ Sigma moments (1-6)    :   7.86905E-14  1.23492E+02  4.46705E+01  2.02476E+02  1.74512E+02  5.37388E+02 
+ H-bond moment (accept) :  6.4082977499049703E+00
+ H-bond moment (donor)  :  2.1788107554402876E+00
+
+
+ Reading COSMO information for molecule 4 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/m/MeTHF_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/m/MeTHF_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/m/MeTHF.vap
+ Free energy of fusion for pure compound 2 (DGFUS = 0.0000000000000000E+00 kcal/mol)
+ Antoine equation coefficients ([mbar]/[°C]) for compound 2:         9.3261      1602.9171       301.6468
+ Boiling temperature of compound 2 (TBOIL = 3.5334999999999997E+02 K)
+ Melting temperature of compound 2 (TMELT = 1.3699999999999997E+02 K)
+ Critical temperature of compound 2 (TCRIT = 5.3700000000000000E+02 K)
+ Critical pressure of compound 2 (PCRIT = 3.7576300000000003E+04 mbar)
+
+ Compound Information for compound 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/m/MeTHF_c0.cosmo)
+ Atomic weights         : 1111111111111111
+ E_COSMO+dE             : -1.7061226647561364E+05 kcal/mol
+ E_gas                  : -1.7060902994218367E+05 kcal/mol
+ E_COSMO-E_gas+dE       : -3.2365334299684037E+00 kcal/mol
+ E_diel                 : -4.4249850957823238E+00 kcal/mol
+ Averaging corr dE      :  2.6956062668262176E-01 kcal/mol
+ EvdW in continuum      : -1.2586515275650561E+02 kcal/mol
+ Area                   :  1.3291650475300003E+02 A^2
+ Volume                 :  1.2327634305786414E+02 A^3
+ Molecular Weight       :  8.6132800000000003E+01 a.m.u.
+ Total COSMO charge     :  1.8097069516486819E-04 a.u.
+ Dipole moment (t,x,y,z):   2.19969E+00  1.02293E+00 -1.66298E+00  1.01329E+00 Debye                     
+ Sigma moments (1-6)    :  -2.05114E-14  3.15028E+01  2.95206E+01  4.96133E+01  7.33577E+01  1.15955E+02 
+ H-bond moment (accept) :  2.4856312421177544E+00
+ H-bond moment (donor)  :  0.0000000000000000E+00
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    4
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing liquid-liquid solubilities: Heats of fusion are assumed to be zero
+ Computing heat of fusion from given reference solubility of AZ13530968         
+ Reference solubility in given solvent =  2.582E-02 [g/g]   
+ log(x_Ref) =   -2.228
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             MeTHF                 
+ Mole Fraction        :  1.0000000000000000E+00 0.0000000000000000E+00
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -7.1710377574966913E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0164398645559938E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047617619187185E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.8434460779094859E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  5.3767897493174202E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -3.0728051661645113E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -2.0754257339033753E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000002E+00 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             MeTHF                 
+ Mole Fraction        :  0.0000000000000000E+00 1.0000000000000000E+00
+
+ Compound:  2  (MeTHF)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -2.4809960072065391E+00 kcal/mol
+ Log10(partial pressure [mbar])                    :  2.1142545473068060E+00
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -1.7061474747162085E+05 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -4.4452229930350775E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  2.1875224639229747E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :  0.0000000000000000E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -6.6327454569580517E+00 kcal/mol
+ Ring correction                                   : -6.1756650000000002E-01 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             MeTHF                 
+ Mole Fraction        :  0.0000000000000000E+00 1.0000000000000000E+00
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  0.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -7.2428379221311712E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0329167536958588E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047618337188833E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.4622811507280733E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  6.0880029380058494E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -1.8572040044044384E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -1.8876837406092886E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000002E+00 kcal/mol
+
+ Compound:  2  (MeTHF)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -2.4941172937320966E+00 kcal/mol
+ Log10(partial pressure [mbar])                    :  2.0751249370619100E+00
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -1.7061476059290738E+05 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -4.4550777718905232E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  2.1853362343749478E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :  0.0000000000000000E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -6.6404140062654715E+00 kcal/mol
+ Ring correction                                   : -6.1756650000000002E-01 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             MeTHF                 
+ Mole Fraction        :  5.9096360113835783E-03 9.9409036398861639E-01
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  5.9096360113835783E-03
+ Chemical potential of the compound in the mixture : -7.2999420491295455E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0258256576261378E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047618908230104E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.4825161298138818E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  5.9502521088539382E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -1.9128070439914249E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -1.8885987501447712E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000006E+00 kcal/mol
+ Log10(x_Solubility)                               : -2.2284392675308760E+00
+ w_Solubility [g(Solute)/g(Solution)]              :  2.5971195363370562E-02
+
+ Compound:  2  (MeTHF)
+ Mole Fraction of the compound in the mixture      :  9.9409036398861639E-01
+ Chemical potential of the compound in the mixture : -2.4807531424475497E+00 kcal/mol
+ Log10(partial pressure [mbar])                    :  2.1144313822548928E+00
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -1.7061474722875608E+05 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -4.4704663280576673E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  2.1825680887786936E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -1.0637886167680565E-02 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -6.6423965306686812E+00 kcal/mol
+ Ring correction                                   : -6.1756650000000002E-01 kcal/mol
+ Log10(x_Solubility)                               :  0.0000000000000000E+00
+
+
+----------------
+ END job       1
+----------------

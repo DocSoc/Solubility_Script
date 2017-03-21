@@ -1,0 +1,382 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Solubility Calculation of Solute in Solvent 
+ Job-Date   : 03/21/2017
+ Job-Time   : 16:04:51
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+ Reading vapor pressure and property information for compound 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap
+ Note: Vapor Pressure / property file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap is empty
+ Free energy of fusion for pure compound 1 (DGFUS = 3.64931 kcal/mol)
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204754.5909 kcal/mol
+ E_gas                  :   -2204740.7759 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.8150 kcal/mol
+ E_diel                 :        -18.7411 kcal/mol
+ Averaging corr dE      :          1.1081 kcal/mol
+ EvdW in continuum      :       -358.6958 kcal/mol
+ Area                   :        347.5579 A^2
+ Volume                 :        402.8905 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0028 a.u.
+ Dipole moment (t,x,y,z):          7.1747  0.488760  7.156487 -0.149195 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.26E+02  4.58E+01  2.09E+02  1.75E+02  5.53E+02              
+ H-bond moment (accept) :          6.7617
+ H-bond moment (donor)  :          2.3419
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204751.2414 kcal/mol
+ E_gas                  :   -2204738.3753 kcal/mol
+ E_COSMO-E_gas+dE       :        -12.8661 kcal/mol
+ E_diel                 :        -17.6608 kcal/mol
+ Averaging corr dE      :          1.0677 kcal/mol
+ EvdW in continuum      :       -351.4171 kcal/mol
+ Area                   :        340.9253 A^2
+ Volume                 :        403.0683 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0031 a.u.
+ Dipole moment (t,x,y,z):          7.7437 -4.364802 -6.198433  1.578924 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.16E+02  3.56E+01  1.86E+02  1.45E+02  4.85E+02              
+ H-bond moment (accept) :          5.5908
+ H-bond moment (donor)  :          2.1978
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204749.4696 kcal/mol
+ E_gas                  :   -2204735.8858 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.5838 kcal/mol
+ E_diel                 :        -18.5107 kcal/mol
+ Averaging corr dE      :          1.0974 kcal/mol
+ EvdW in continuum      :       -356.7686 kcal/mol
+ Area                   :        345.9657 A^2
+ Volume                 :        403.3632 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0024 a.u.
+ Dipole moment (t,x,y,z):          7.3409 -4.690418 -5.646647 -0.062138 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.23E+02  4.47E+01  2.02E+02  1.75E+02  5.37E+02              
+ H-bond moment (accept) :          6.4083
+ H-bond moment (donor)  :          2.1788
+
+
+ Reading COSMO information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/i/isopropylacetate_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/i/isopropylacetate_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/i/isopropylacetate.vap
+ Free energy of fusion for pure compound 2 (DGFUS = 0.00000 kcal/mol)
+ Vapor Pressure [mbar] / Temperature [°C] input for compound 2:
+                0.1000           -61.0000
+               10.0000           -11.0000
+             1000.0000            88.2000
+ Antoine equation coefficients (in [mbar]/[K]) for compound 2:        16.2679      2815.7622       -60.5240
+ Minimum interpolative temperature for vapor pressure estimation of compound 2:     212.150 K
+ Maximum interpolative temperature for vapor pressure estimation of compound 2:     361.350 K
+ Boiling temperature of compound 2 (TBOIL = 361.75000 K)
+ Melting temperature of compound 2 (TMELT = 199.75000 K)
+
+ Compound Information for compound 2 conformer 1 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/i/isopropylacetate_c0.cosmo)
+ Atomic weights         : 11111111111111111
+ E_COSMO+dE             :    -217864.5621 kcal/mol
+ E_gas                  :    -217859.2994 kcal/mol
+ E_COSMO-E_gas+dE       :         -5.2627 kcal/mol
+ E_diel                 :         -6.9367 kcal/mol
+ Averaging corr dE      :          0.4058 kcal/mol
+ EvdW in continuum      :       -148.7141 kcal/mol
+ Area                   :        152.9551 A^2
+ Volume                 :        142.1936 A^3
+ Molecular Weight       :        102.1322 a.m.u.
+ Total COSMO charge     :          0.0005 a.u.
+ Dipole moment (t,x,y,z):          2.7812  1.884110  1.513271 -1.376593 Debye                            
+ Sigma moments (1-6)    :          0.0000  4.81E+01  3.22E+01  5.57E+01  6.48E+01  9.30E+01              
+ H-bond moment (accept) :          1.8015
+ H-bond moment (donor)  :          0.0000
+
+
+ Reading COSMO information for molecule 5 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/i/isopropylacetate_c1.cosmo
+ Reading gas phase energy information for molecule 5 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/i/isopropylacetate_c1.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/i/isopropylacetate.vap
+ Vapor Pressure [mbar] / Temperature [°C] input for compound 2:
+                0.1000           -61.0000
+               10.0000           -11.0000
+             1000.0000            88.2000
+ Antoine equation coefficients (in [mbar]/[K]) for compound 2:        16.2679      2815.7622       -60.5240
+ Minimum interpolative temperature for vapor pressure estimation of compound 2:     212.150 K
+ Maximum interpolative temperature for vapor pressure estimation of compound 2:     361.350 K
+
+ Compound Information for compound 2 conformer 2 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/i/isopropylacetate_c1.cosmo)
+ Atomic weights         : 11111111111111111
+ E_COSMO+dE             :    -217861.3467 kcal/mol
+ E_gas                  :    -217852.2722 kcal/mol
+ E_COSMO-E_gas+dE       :         -9.0744 kcal/mol
+ E_diel                 :        -12.7529 kcal/mol
+ Averaging corr dE      :          0.3629 kcal/mol
+ EvdW in continuum      :       -146.9047 kcal/mol
+ Area                   :        150.3795 A^2
+ Volume                 :        141.7639 A^3
+ Molecular Weight       :        102.1322 a.m.u.
+ Total COSMO charge     :   8.1263073E-05 a.u.
+ Dipole moment (t,x,y,z):          6.6357  5.042475  2.777055 -3.300677 Debye                            
+ Sigma moments (1-6)    :          0.0000  6.61E+01  4.75E+01  9.12E+01  1.12E+02  1.75E+02              
+ H-bond moment (accept) :          3.2963
+ H-bond moment (donor)  :          0.0000
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    5
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing solids solubilities: Heats of fusion used as given in the input file
+ Computed solubilities will be refined iteratively: Threshold = 1.00E-05
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 isopropyl
+ Mole Fraction        :     1.0000    0.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.43676 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.76165
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.02764 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.69267 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.30393 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.16842 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.84183 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 isopropyl
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  2  (isopropylacetate)
+ Chemical potential of the compound in the mixture :        -1.80209 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.46521
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -217866.36421 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.18569 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         2.91033 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00158 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.09833 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 isopropyl
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.24508 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.33081
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204761.83596 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -13.70100 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.55044 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.07571 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.19681 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+ Compound:  2  (isopropylacetate)
+ Chemical potential of the compound in the mixture :        -1.76171 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.57946
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -217866.32384 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.15211 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         2.92315 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00172 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.07782 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 isopropyl
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.42018 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.74929
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.01106 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -13.83789 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.50914 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.11686 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.24924 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.73295
+ w_Solubility [g(Solute)/g(Solution)]              :  6.78048726E-03
+
+ Compound:  2  (isopropylacetate)
+ Chemical potential of the compound in the mixture :        -1.80209 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.46521
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -217866.36421 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.18569 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         2.91033 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00158 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.09833 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+ Log10(x_Solubility)                               :         0.00000
+
+
+
+
+ Results for mixture 5
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 isopropyl
+ Mole Fraction        :     0.0018    0.9982
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.42556 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.75330
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.01644 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -13.89408 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.50823 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.15955 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.26180 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.72894
+ w_Solubility [g(Solute)/g(Solution)]              :  6.84303684E-03
+
+ Compound:  2  (isopropylacetate)
+ Chemical potential of the compound in the mixture :        -1.80207 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.46522
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -217866.36420 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.19295 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         2.90923 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00048 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.10244 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 6
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 isopropyl
+ Mole Fraction        :     0.0019    0.9981
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.42560 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.75333
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.01648 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -13.89457 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.50824 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.15993 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.26192 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.72891
+ w_Solubility [g(Solute)/g(Solution)]              :  6.84352493E-03
+
+ Compound:  2  (isopropylacetate)
+ Chemical potential of the compound in the mixture :        -1.80207 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.46522
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -217866.36420 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.19302 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         2.90921 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00050 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.10248 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 7
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 isopropyl
+ Mole Fraction        :     0.0019    0.9981
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.42560 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.75333
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.01648 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -13.89457 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.50824 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.15994 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.26192 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.72891
+ w_Solubility [g(Solute)/g(Solution)]              :  6.84352875E-03
+
+ Compound:  2  (isopropylacetate)
+ Chemical potential of the compound in the mixture :        -1.80207 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.46522
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -217866.36420 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.19302 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         2.90921 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00050 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.10248 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+----------------
+ END job       1
+----------------

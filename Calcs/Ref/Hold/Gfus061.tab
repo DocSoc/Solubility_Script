@@ -1,0 +1,9 @@
+
+ Property  job 1 : Solubility ;
+ Settings  job 1 : T= 300.15 K ; x(2)= 1.0000 ; 
+ Units     job 1 : Energies in kcal/mol ; Volume in A^3 ; Temperature in K ; Concentrations x : mole fraction ;
+ General   job 1 : Mass solubility w_solu2 = x_s*MW(s)/((1-x_s)*MW(solvent)) is in g/g ; Molar solubility S is in mol/l (solution) ; Solvent density = 1174.621 g/l ;
+ 
+  Nr Compound                  log10(x_solub)           mu(self)          mu(solv)            DG_fus         mu(water)    N_Ring            Volume   N_Amino         MolWeight            w_solu2              log10(S)  Exp-State      Tmelt
+   1 AZ13530968                   -2.44107914        -7.17103776       -7.46777685        3.64931224       -7.53098154        18          402.8914         0          376.2926       0.0175057712           -1.26826945    unknown         NA
+   2 dimethylsulfoxide             0.00000000         0.07549774        0.07553394        0.00000000        0.05858154         0           99.4142         0           78.1342                 NA            0.00000000     liquid     291.65

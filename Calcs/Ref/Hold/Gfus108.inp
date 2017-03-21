@@ -1,0 +1,8 @@
+ctd = BP_TZVPD_FINE_C30_1701.ctd cdir = "/apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES" LDIR = "/apps/cosmologic/COSMOthermX17/licensefiles/" 
+ unit notempty wtln ndgf EHfile long 
+!! Calculation of Gfus of AZ13530968 in THF [Tetrahydrofuran] (ID:108). !!
+f = AZ13530968_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  Comp = AZ13530968 [ 
+f = AZ13530968_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  
+f = AZ13530968_c2.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  ] Comp = AZ13530968 
+f = thf_c0.cosmo fdir="/apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/t" VPfile DGfus = 0 
+solub=2 WSOL2 solute=1 tc=27 ref_sol_g=0.0369642144694301 

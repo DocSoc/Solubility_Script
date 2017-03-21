@@ -1,0 +1,272 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Calculation of Gfus of AZ13530968 in Diethyl Carbonate (ID:55). !!
+ Job-Date   : 03/21/2017
+ Job-Time   : 11:17:02
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047545908809612E+06 kcal/mol
+ E_gas                  : -2.2047407758595427E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.3815021418500692E+01 kcal/mol
+ E_diel                 : -1.8741097682544183E+01 kcal/mol
+ Averaging corr dE      :  1.1080556917143740E+00 kcal/mol
+ EvdW in continuum      : -3.5869582409676792E+02 kcal/mol
+ Area                   :  3.4755790236900066E+02 A^2
+ Volume                 :  4.0289052007962806E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  2.8206111837914350E-03 a.u.
+ Dipole moment (t,x,y,z):   7.17471E+00  4.88760E-01  7.15649E+00 -1.49195E-01 Debye                     
+ Sigma moments (1-6)    :   6.62526E-14  1.26082E+02  4.57635E+01  2.08980E+02  1.75017E+02  5.52993E+02 
+ H-bond moment (accept) :  6.7616750700730961E+00
+ H-bond moment (donor)  :  2.3418698075613533E+00
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047512413992281E+06 kcal/mol
+ E_gas                  : -2.2047383753013550E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.2866097873076797E+01 kcal/mol
+ E_diel                 : -1.7660782740455844E+01 kcal/mol
+ Averaging corr dE      :  1.0676646047629947E+00 kcal/mol
+ EvdW in continuum      : -3.5141710084911767E+02 kcal/mol
+ Area                   :  3.4092533972000086E+02 A^2
+ Volume                 :  4.0306834173301530E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  3.0803784690760063E-03 a.u.
+ Dipole moment (t,x,y,z):   7.74371E+00 -4.36480E+00 -6.19843E+00  1.57892E+00 Debye                     
+ Sigma moments (1-6)    :   1.61537E-14  1.15954E+02  3.55562E+01  1.85701E+02  1.44749E+02  4.84586E+02 
+ H-bond moment (accept) :  5.5908276593953437E+00
+ H-bond moment (donor)  :  2.1977940140201802E+00
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047494696116853E+06 kcal/mol
+ E_gas                  : -2.2047358857822344E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.3583829450886697E+01 kcal/mol
+ E_diel                 : -1.8510678826816303E+01 kcal/mol
+ Averaging corr dE      :  1.0973693821534591E+00 kcal/mol
+ EvdW in continuum      : -3.5676861025593655E+02 kcal/mol
+ Area                   :  3.4596571778000055E+02 A^2
+ Volume                 :  4.0336322930821598E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  2.4033856911052707E-03 a.u.
+ Dipole moment (t,x,y,z):   7.34088E+00 -4.69042E+00 -5.64665E+00 -6.21380E-02 Debye                     
+ Sigma moments (1-6)    :   7.86905E-14  1.23492E+02  4.46705E+01  2.02476E+02  1.74512E+02  5.37388E+02 
+ H-bond moment (accept) :  6.4082977499049703E+00
+ H-bond moment (donor)  :  2.1788107554402876E+00
+
+
+ Reading COSMO information for molecule 4 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/d/Diethylcarbonate_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/d/Diethylcarbonate_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/d/Diethylcarbonate.vap
+ Note: Vapor Pressure / property file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/d/Diethylcarbonate.vap is empty
+ Free energy of fusion for pure compound 2 (DGFUS = 0.0000000000000000E+00 kcal/mol)
+
+ Compound Information for compound 2 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/d/Diethylcarbonate_c0.cosmo)
+ Atomic weights         : 111111111111111111
+ E_COSMO+dE             : -2.6509302303184598E+05 kcal/mol
+ E_gas                  : -2.6508692479799909E+05 kcal/mol
+ E_COSMO-E_gas+dE       : -6.0982338468893431E+00 kcal/mol
+ E_diel                 : -7.8650768981759427E+00 kcal/mol
+ Averaging corr dE      :  4.5317363929913440E-01 kcal/mol
+ EvdW in continuum      : -1.6477805220784012E+02 kcal/mol
+ Area                   :  1.6766998861399986E+02 A^2
+ Volume                 :  1.5312815312025879E+02 A^3
+ Molecular Weight       :  1.1813166000000001E+02 a.m.u.
+ Total COSMO charge     :  2.0473842639886719E-04 a.u.
+ Dipole moment (t,x,y,z):   8.95187E-01  1.51771E-03  8.87992E-01  1.13258E-01 Debye                     
+ Sigma moments (1-6)    :  -2.71727E-14  5.51932E+01  3.27029E+01  5.41968E+01  5.67708E+01  7.57918E+01 
+ H-bond moment (accept) :  1.1897340974493282E+00
+ H-bond moment (donor)  :  0.0000000000000000E+00
+
+
+ Reading COSMO information for molecule 5 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/d/Diethylcarbonate_c1.cosmo
+ Reading gas phase energy information for molecule 5 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/d/Diethylcarbonate_c1.energy
+
+ Compound Information for compound 2 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/d/Diethylcarbonate_c1.cosmo)
+ Atomic weights         : 111111111111111111
+ E_COSMO+dE             : -2.6509171881715226E+05 kcal/mol
+ E_gas                  : -2.6508420425514126E+05 kcal/mol
+ E_COSMO-E_gas+dE       : -7.5145620109979063E+00 kcal/mol
+ E_diel                 : -1.0302726368398735E+01 kcal/mol
+ Averaging corr dE      :  4.2364650176252877E-01 kcal/mol
+ EvdW in continuum      : -1.6407148432889812E+02 kcal/mol
+ Area                   :  1.6717367766000015E+02 A^2
+ Volume                 :  1.5353269738171488E+02 A^3
+ Molecular Weight       :  1.1813166000000001E+02 a.m.u.
+ Total COSMO charge     :  3.1761033471457091E-04 a.u.
+ Dipole moment (t,x,y,z):   5.31525E+00 -1.27091E+00  5.14476E+00  4.10019E-01 Debye                     
+ Sigma moments (1-6)    :   2.99760E-15  5.93961E+01  3.99353E+01  6.90220E+01  8.11599E+01  1.16413E+02 
+ H-bond moment (accept) :  2.1196184110708884E+00
+ H-bond moment (donor)  :  0.0000000000000000E+00
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    5
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing liquid-liquid solubilities: Heats of fusion are assumed to be zero
+ Computing heat of fusion from given reference solubility of AZ13530968         
+ Reference solubility in given solvent =  3.881E-03 [g/g]   
+ log(x_Ref) =   -2.914
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             Diethylcarbonate      
+ Mole Fraction        :  1.0000000000000000E+00 0.0000000000000000E+00
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -7.1710377574966913E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0164398645559938E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047617619187185E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.8434460779094859E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  5.3767897493174202E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -3.0728051661645113E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -2.0754257339033753E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000002E+00 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             Diethylcarbonate      
+ Mole Fraction        :  0.0000000000000000E+00 1.0000000000000000E+00
+
+ Compound:  2  (Diethylcarbonate)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -2.0981823100912300E+00 kcal/mol
+ Log10(partial pressure [mbar])                    :  7.6350289724403941E-01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.6509512121415610E+05 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -4.9052262073082771E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  3.2169445486398640E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :  2.0951177649545530E-02 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -8.1795936961850266E+00 kcal/mol
+ Ring correction                                   :  0.0000000000000000E+00 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             Diethylcarbonate      
+ Mole Fraction        :  0.0000000000000000E+00 1.0000000000000000E+00
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  0.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -7.3444034763484831E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0403615629511883E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047619352844376E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.4063551486987933E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  5.4761113335354219E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -8.1559396120326644E-01 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -1.8744848933412282E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000002E+00 kcal/mol
+
+ Compound:  2  (Diethylcarbonate)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -2.1169845334215851E+00 kcal/mol
+ Log10(partial pressure [mbar])                    :  7.1098259636517458E-01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.6509514001637942E+05 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -4.9224667676863403E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  3.2105607859893408E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :  2.0895869333853564E-02 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -8.1895595516521471E+00 kcal/mol
+ Ring correction                                   :  0.0000000000000000E+00 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             Diethylcarbonate      
+ Mole Fraction        :  1.2183436557288839E-03 9.9878165634427107E-01
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  1.2183436557288839E-03
+ Chemical potential of the compound in the mixture : -7.2255327038255324E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0204077564169406E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047618164136652E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.3988604735368995E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  5.5484482554378767E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -8.3093319636693552E-01 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -1.8728082837366273E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000006E+00 kcal/mol
+ Log10(x_Solubility)                               : -2.9142301938577084E+00
+ w_Solubility [g(Solute)/g(Solution)]              :  3.8856043629120446E-03
+
+ Compound:  2  (Diethylcarbonate)
+ Mole Fraction of the compound in the mixture      :  9.9878165634427107E-01
+ Chemical potential of the compound in the mixture : -2.0980994749360358E+00 kcal/mol
+ Log10(partial pressure [mbar])                    :  7.6356321126584081E-01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.6509512113132089E+05 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -4.9088139810785423E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  3.2165386232246487E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :  1.9930646034203605E-02 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -8.1818265883171666E+00 kcal/mol
+ Ring correction                                   :  0.0000000000000000E+00 kcal/mol
+ Log10(x_Solubility)                               :  0.0000000000000000E+00
+
+
+----------------
+ END job       1
+----------------

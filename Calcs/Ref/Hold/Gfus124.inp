@@ -1,0 +1,12 @@
+ctd = BP_TZVPD_FINE_C30_1701.ctd cdir = "/apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES" LDIR = "/apps/cosmologic/COSMOthermX17/licensefiles/" 
+ unit notempty wtln ndgf EHfile long 
+!! Calculation of Gfus of AZ13530968 in Ethyl Lactate (ID:124). !!
+f = AZ13530968_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  Comp = AZ13530968 [ 
+f = AZ13530968_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  
+f = AZ13530968_c2.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  ] Comp = AZ13530968 
+f = Ethyl_Lactate_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e" Comp = Ethyl_Lactate [ VPfile DGfus = 0 
+f = Ethyl_Lactate_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e"
+f = Ethyl_Lactate_c2.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e"
+f = Ethyl_Lactate_c3.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e"
+f = Ethyl_Lactate_c4.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/e" ]
+solub=2 WSOL2 solute=1 tc=27 ref_sol_g=0.0356548837105575 

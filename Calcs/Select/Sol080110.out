@@ -1,0 +1,427 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Solubility Calculation of Solute in Solvent 
+ Job-Date   : 03/21/2017
+ Job-Time   : 16:18:56
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+ Reading vapor pressure and property information for compound 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap
+ Note: Vapor Pressure / property file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap is empty
+ Free energy of fusion for pure compound 1 (DGFUS = 3.94649 kcal/mol)
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204754.5909 kcal/mol
+ E_gas                  :   -2204740.7759 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.8150 kcal/mol
+ E_diel                 :        -18.7411 kcal/mol
+ Averaging corr dE      :          1.1081 kcal/mol
+ EvdW in continuum      :       -358.6958 kcal/mol
+ Area                   :        347.5579 A^2
+ Volume                 :        402.8905 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0028 a.u.
+ Dipole moment (t,x,y,z):          7.1747  0.488760  7.156487 -0.149195 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.26E+02  4.58E+01  2.09E+02  1.75E+02  5.53E+02              
+ H-bond moment (accept) :          6.7617
+ H-bond moment (donor)  :          2.3419
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204751.2414 kcal/mol
+ E_gas                  :   -2204738.3753 kcal/mol
+ E_COSMO-E_gas+dE       :        -12.8661 kcal/mol
+ E_diel                 :        -17.6608 kcal/mol
+ Averaging corr dE      :          1.0677 kcal/mol
+ EvdW in continuum      :       -351.4171 kcal/mol
+ Area                   :        340.9253 A^2
+ Volume                 :        403.0683 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0031 a.u.
+ Dipole moment (t,x,y,z):          7.7437 -4.364802 -6.198433  1.578924 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.16E+02  3.56E+01  1.86E+02  1.45E+02  4.85E+02              
+ H-bond moment (accept) :          5.5908
+ H-bond moment (donor)  :          2.1978
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204749.4696 kcal/mol
+ E_gas                  :   -2204735.8858 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.5838 kcal/mol
+ E_diel                 :        -18.5107 kcal/mol
+ Averaging corr dE      :          1.0974 kcal/mol
+ EvdW in continuum      :       -356.7686 kcal/mol
+ Area                   :        345.9657 A^2
+ Volume                 :        403.3632 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0024 a.u.
+ Dipole moment (t,x,y,z):          7.3409 -4.690418 -5.646647 -0.062138 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.23E+02  4.47E+01  2.02E+02  1.75E+02  5.37E+02              
+ H-bond moment (accept) :          6.4083
+ H-bond moment (donor)  :          2.1788
+
+
+ Reading COSMO information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/t/toluene_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/t/toluene_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/t/toluene.vap
+ Free energy of fusion for pure compound 2 (DGFUS = 0.00000 kcal/mol)
+ Enthalpy of fusion for pure compound 2 (DHFUS = 1.58604 kcal/mol)
+ Wagner equation coefficients ([mbar]/[K]) for compound 2:     41080.0000       591.7500        -7.2861         1.3809        -2.8343        -2.7917
+ Vapor Pressure [mbar] / Temperature [°C] input for compound 2:
+                0.1000           -57.1000
+               10.0000             1.5000
+             1000.0000           110.1000
+ Antoine equation coefficients (in [mbar]/[K]) for compound 2:        17.7023      3920.1202       -20.0916
+ Minimum interpolative temperature for vapor pressure estimation of compound 2:     216.050 K
+ Maximum interpolative temperature for vapor pressure estimation of compound 2:     383.250 K
+ Minimum temperature for vapor pressure estimation of pure compound 2 (TPVMIN = 309.00000 K)
+ Maximum temperature for vapor pressure estimation of pure compound 2 (TPVMAX = 592.00000 K)
+ UNIQUAC volume parameter for compound 2 (UNIQUAC_RI = 3.92280)
+ UNIQUAC surface parameter for compound 2 (UNIQUAC_QI = 2.96800)
+ Boiling temperature of compound 2 (TBOIL = 383.75000 K)
+ Melting temperature of compound 2 (TMELT = 178.25000 K)
+ Critical temperature of compound 2 (TCRIT = 591.80000 K)
+ Critical pressure of compound 2 (PCRIT = 41086.00000 mbar)
+
+ Compound Information for compound 2 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/t/toluene_c0.cosmo)
+ Atomic weights         : 111111111111111
+ E_COSMO+dE             :    -170477.9596 kcal/mol
+ E_gas                  :    -170475.4823 kcal/mol
+ E_COSMO-E_gas+dE       :         -2.4773 kcal/mol
+ E_diel                 :         -3.1436 kcal/mol
+ Averaging corr dE      :          0.1971 kcal/mol
+ EvdW in continuum      :       -134.8222 kcal/mol
+ Area                   :        141.8115 A^2
+ Volume                 :        135.3238 A^3
+ Molecular Weight       :         92.1390 a.m.u.
+ Total COSMO charge     :          0.0009 a.u.
+ Dipole moment (t,x,y,z):          0.6336  0.630811 -0.059882  0.000095 Debye                            
+ Sigma moments (1-6)    :          0.0000  2.36E+01  0.076478  7.050911  0.031096  2.475455              
+ H-bond moment (accept) :          0.0000
+ H-bond moment (donor)  :          0.0000
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    4
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing solids solubilities: Heats of fusion used as given in the input file
+ Computed solubilities will be refined iteratively: Threshold = 1.00E-05
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096   toluene
+ Mole Fraction        :     1.0000    0.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.43676 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.76165
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.02764 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.69267 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.30393 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.16842 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.84183 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096   toluene
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  2  (toluene)
+ Chemical potential of the compound in the mixture :        -3.91757 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.41219
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -170481.87718 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.12218 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.50037 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.02749 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.65004 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096   toluene
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.13134 kcal/mol
+ Log10(partial pressure [mbar])                    :        -8.78143
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204759.72222 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -13.86262 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.61231 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00810 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.50808 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+ Compound:  2  (toluene)
+ Chemical potential of the compound in the mixture :        -3.88020 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.52513
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -170481.83981 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.09474 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.50662 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.02824 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.62961 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096   toluene
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.26865 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.14531
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204759.85953 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -13.95076 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.58469 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00602 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.56426 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -4.55848
+ w_Solubility [g(Solute)/g(Solution)]              :  1.12866018E-04
+
+ Compound:  2  (toluene)
+ Chemical potential of the compound in the mixture :        -3.91757 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.41219
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -170481.87718 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.12218 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.50037 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.02749 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.65004 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+ Log10(x_Solubility)                               :         0.00000
+
+
+
+
+ Results for mixture 5
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096   toluene
+ Mole Fraction        :  2.764E-05    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.63860 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.42111
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.22949 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -14.32916 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.21120 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00270 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.56451 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -4.28268
+ w_Solubility [g(Solute)/g(Solution)]              :  2.12978949E-04
+
+ Compound:  2  (toluene)
+ Chemical potential of the compound in the mixture :        -3.91757 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.41219
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -170481.87718 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.12217 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.50041 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.02749 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.65007 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+
+
+ Results for mixture 6
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096   toluene
+ Mole Fraction        :  5.216E-05    0.9999
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.66587 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.44144
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.25675 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -14.35911 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.18423 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00024 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.56462 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -4.26235
+ w_Solubility [g(Solute)/g(Solution)]              :  2.23181655E-04
+
+ Compound:  2  (toluene)
+ Chemical potential of the compound in the mixture :        -3.91757 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.41219
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -170481.87718 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.12215 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.50045 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.02749 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.65009 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+
+
+ Results for mixture 7
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096   toluene
+ Mole Fraction        :  5.466E-05    0.9999
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.66787 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.44293
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.25876 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -14.36138 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.18227 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00054 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.56463 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -4.26085
+ w_Solubility [g(Solute)/g(Solution)]              :  2.23951602E-04
+
+ Compound:  2  (toluene)
+ Chemical potential of the compound in the mixture :        -3.91757 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.41219
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -170481.87718 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.12215 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.50045 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.02749 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.65009 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+
+
+ Results for mixture 8
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096   toluene
+ Mole Fraction        :  5.485E-05    0.9999
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.66802 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.44304
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.25890 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -14.36155 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.18212 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00056 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.56463 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -4.26074
+ w_Solubility [g(Solute)/g(Solution)]              :  2.24008363E-04
+
+ Compound:  2  (toluene)
+ Chemical potential of the compound in the mixture :        -3.91757 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.41219
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -170481.87718 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.12215 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.50045 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.02749 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.65009 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+
+
+ Results for mixture 9
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096   toluene
+ Mole Fraction        :  5.486E-05    0.9999
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.66803 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.44305
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.25891 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -14.36156 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.18211 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00056 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.56463 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -4.26074
+ w_Solubility [g(Solute)/g(Solution)]              :  2.24012540E-04
+
+ Compound:  2  (toluene)
+ Chemical potential of the compound in the mixture :        -3.91757 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.41219
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -170481.87718 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.12215 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.50045 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.02749 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.65009 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+----------------
+ END job       1
+----------------

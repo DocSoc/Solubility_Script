@@ -1,0 +1,9 @@
+
+ Property  job 1 : Solubility ;
+ Settings  job 1 : T= 293.15 K ; x(2)= 1.0000 ; 
+ Units     job 1 : Energies in kcal/mol ; Volume in A^3 ; Temperature in K ; Concentrations x : mole fraction ;
+ General   job 1 : Mass fraction solubility w_solub is in g/g ; Molar solubility S is in mol/l (solution) ; Solvent density =  867.076 g/l ;
+ 
+  Nr Compound                  log10(x_solub)           mu(self)          mu(solv)            DG_fus         mu(water)    N_Ring            Volume   N_Amino         MolWeight            w_solub              log10(S)
+   1 AZ13530968                   -4.13939484        -7.43676122       -6.10811500        4.22380570       -5.91018987        18          402.8918         0          376.2926       0.0002724908           -3.20206547
+   2 CPME                          0.00000000        -3.52265934       -3.52265934        0.00000000       -3.48387359         5          144.5943         0          100.1595                 NA            0.00000000

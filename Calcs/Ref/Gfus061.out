@@ -1,0 +1,263 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Calculation of Gfus of AZ13530968 in DMSO [Dimethylsulfoxide] (ID:61). !!
+ Job-Date   : 03/21/2017
+ Job-Time   : 11:17:23
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047545908809612E+06 kcal/mol
+ E_gas                  : -2.2047407758595427E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.3815021418500692E+01 kcal/mol
+ E_diel                 : -1.8741097682544183E+01 kcal/mol
+ Averaging corr dE      :  1.1080556917143740E+00 kcal/mol
+ EvdW in continuum      : -3.5869582409676792E+02 kcal/mol
+ Area                   :  3.4755790236900066E+02 A^2
+ Volume                 :  4.0289052007962806E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  2.8206111837914350E-03 a.u.
+ Dipole moment (t,x,y,z):   7.17471E+00  4.88760E-01  7.15649E+00 -1.49195E-01 Debye                     
+ Sigma moments (1-6)    :   6.62526E-14  1.26082E+02  4.57635E+01  2.08980E+02  1.75017E+02  5.52993E+02 
+ H-bond moment (accept) :  6.7616750700730961E+00
+ H-bond moment (donor)  :  2.3418698075613533E+00
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047512413992281E+06 kcal/mol
+ E_gas                  : -2.2047383753013550E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.2866097873076797E+01 kcal/mol
+ E_diel                 : -1.7660782740455844E+01 kcal/mol
+ Averaging corr dE      :  1.0676646047629947E+00 kcal/mol
+ EvdW in continuum      : -3.5141710084911767E+02 kcal/mol
+ Area                   :  3.4092533972000086E+02 A^2
+ Volume                 :  4.0306834173301530E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  3.0803784690760063E-03 a.u.
+ Dipole moment (t,x,y,z):   7.74371E+00 -4.36480E+00 -6.19843E+00  1.57892E+00 Debye                     
+ Sigma moments (1-6)    :   1.61537E-14  1.15954E+02  3.55562E+01  1.85701E+02  1.44749E+02  4.84586E+02 
+ H-bond moment (accept) :  5.5908276593953437E+00
+ H-bond moment (donor)  :  2.1977940140201802E+00
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047494696116853E+06 kcal/mol
+ E_gas                  : -2.2047358857822344E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.3583829450886697E+01 kcal/mol
+ E_diel                 : -1.8510678826816303E+01 kcal/mol
+ Averaging corr dE      :  1.0973693821534591E+00 kcal/mol
+ EvdW in continuum      : -3.5676861025593655E+02 kcal/mol
+ Area                   :  3.4596571778000055E+02 A^2
+ Volume                 :  4.0336322930821598E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  2.4033856911052707E-03 a.u.
+ Dipole moment (t,x,y,z):   7.34088E+00 -4.69042E+00 -5.64665E+00 -6.21380E-02 Debye                     
+ Sigma moments (1-6)    :   7.86905E-14  1.23492E+02  4.46705E+01  2.02476E+02  1.74512E+02  5.37388E+02 
+ H-bond moment (accept) :  6.4082977499049703E+00
+ H-bond moment (donor)  :  2.1788107554402876E+00
+
+
+ Reading COSMO information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/d/dimethylsulfoxide_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/d/dimethylsulfoxide_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/d/dimethylsulfoxide.vap
+ Free energy of fusion for pure compound 2 (DGFUS = 0.0000000000000000E+00 kcal/mol)
+ Enthalpy of fusion for pure compound 2 (DHFUS = 3.3293499043977053E+00 kcal/mol)
+ Vapor Pressure [mbar] / Temperature [°C] input for compound 2:
+               10.0000            65.0000
+              100.0000           115.9000
+             1000.0000           188.6000
+ Antoine equation coefficients (in [mbar]/[K]) for compound 2:        17.6602      4432.0368       -49.5610
+ Minimum interpolative temperature for vapor pressure estimation of compound 2:     338.150 K
+ Maximum interpolative temperature for vapor pressure estimation of compound 2:     461.750 K
+ Boiling temperature of compound 2 (TBOIL = 4.6214999999999998E+02 K)
+ Melting temperature of compound 2 (TMELT = 2.9164999999999998E+02 K)
+ Experimental dielectric constant for molecule 4   EPSILON = 4.6799999999999997E+01
+ Critical temperature of compound 2 (TCRIT = 7.2000000000000000E+02 K)
+ Critical pressure of compound 2 (PCRIT = 5.7000000000000000E+04 mbar)
+
+ Compound Information for compound 2 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/d/dimethylsulfoxide_c0.cosmo)
+ Atomic weights         : 1111111111
+ E_COSMO+dE             : -3.4724263079285552E+05 kcal/mol
+ E_gas                  : -3.4723326954915642E+05 kcal/mol
+ E_COSMO-E_gas+dE       : -9.3612436990952119E+00 kcal/mol
+ E_diel                 : -1.4104220563799528E+01 kcal/mol
+ Averaging corr dE      :  4.6719907713259695E-01 kcal/mol
+ EvdW in continuum      : -1.1983767746842123E+02 kcal/mol
+ Area                   :  1.1288233283000008E+02 A^2
+ Volume                 :  9.9414159020398714E+01 A^3
+ Molecular Weight       :  7.8134172000000007E+01 a.m.u.
+ Total COSMO charge     :  8.1439362872153255E-05 a.u.
+ Dipole moment (t,x,y,z):   5.91738E+00  5.89073E+00  2.38546E-02  5.60431E-01 Debye                     
+ Sigma moments (1-6)    :   1.21014E-14  7.85836E+01  7.18142E+01  1.60184E+02  2.40501E+02  4.37938E+02 
+ H-bond moment (accept) :  5.0599592143499121E+00
+ H-bond moment (donor)  :  0.0000000000000000E+00
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    4
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing liquid-liquid solubilities: Heats of fusion are assumed to be zero
+ Computing heat of fusion from given reference solubility of AZ13530968         
+ Reference solubility in given solvent =  1.744E-02 [g/g]   
+ log(x_Ref) =   -2.441
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             dimethylsulfoxide     
+ Mole Fraction        :  1.0000000000000000E+00 0.0000000000000000E+00
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -7.1710377574966913E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0164398645559938E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047617619187185E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.8434460779094859E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  5.3767897493174202E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -3.0728051661645113E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -2.0754257339033753E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000002E+00 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             dimethylsulfoxide     
+ Mole Fraction        :  0.0000000000000000E+00 1.0000000000000000E+00
+
+ Compound:  2  (dimethylsulfoxide)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture :  7.5497743943025053E-02 kcal/mol
+ Log10(partial pressure [mbar])                    : -3.4175899836852874E-02
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -3.4724255529511155E+05 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -2.4553618384043467E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  3.7696157833128972E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -1.0649127293721140E-01 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -6.1184863487800323E+00 kcal/mol
+ Ring correction                                   :  0.0000000000000000E+00 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             dimethylsulfoxide     
+ Mole Fraction        :  0.0000000000000000E+00 1.0000000000000000E+00
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  0.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -7.5309815414580612E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0540378345638771E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047621218625028E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.3830148726800106E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  8.6559981466274145E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -2.5366235623072897E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -1.9964176505519788E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000006E+00 kcal/mol
+
+ Compound:  2  (dimethylsulfoxide)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture :  5.8581539579465103E-02 kcal/mol
+ Log10(partial pressure [mbar])                    : -9.0498947139681984E-02
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -3.4724257221131591E+05 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -2.4709927934121141E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  3.7623403154352406E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -1.0752484388759925E-01 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -6.1258082649597556E+00 kcal/mol
+ Ring correction                                   :  0.0000000000000000E+00 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             dimethylsulfoxide     
+ Mole Fraction        :  3.6217699164643926E-03 9.9637823008353565E-01
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  3.6217699164643926E-03
+ Chemical potential of the compound in the mixture : -7.4677768519890080E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0380460632437723E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047620586578134E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.3847705774636658E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  8.6135259419791304E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -2.5301285964775837E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -1.9946416498358186E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000002E+00 kcal/mol
+ Log10(x_Solubility)                               : -2.4410791429738672E+00
+ w_Solubility [g(Solute)/g(Solution)]              :  1.7505771241055054E-02
+
+ Compound:  2  (dimethylsulfoxide)
+ Mole Fraction of the compound in the mixture      :  9.9637823008353565E-01
+ Chemical potential of the compound in the mixture :  7.5533938147808066E-02 kcal/mol
+ Log10(partial pressure [mbar])                    : -3.4149546073752202E-02
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -3.4724255525891739E+05 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -2.4768617312273822E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  3.7591960931599626E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -1.1460865549884758E-01 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -6.1214491688884971E+00 kcal/mol
+ Ring correction                                   :  0.0000000000000000E+00 kcal/mol
+ Log10(x_Solubility)                               :  0.0000000000000000E+00
+
+
+----------------
+ END job       1
+----------------

@@ -1,0 +1,9 @@
+
+ Property  job 1 : Solubility ;
+ Settings  job 1 : T= 293.15 K ; x(2)= 1.0000 ; 
+ Units     job 1 : Energies in kcal/mol ; Volume in A^3 ; Temperature in K ; Concentrations x : mole fraction ;
+ General   job 1 : Mass fraction solubility w_solub is in g/g ; Molar solubility S is in mol/l (solution) ; Solvent density = 1000.782 g/l ;
+ 
+  Nr Compound                  log10(x_solub)           mu(self)          mu(solv)            DG_fus         mu(water)    N_Ring            Volume   N_Amino         MolWeight            w_solub              log10(S)
+   1 AZ13530968                   -3.19632414        -7.43676122       -7.46879421        4.31948002       -7.34440348        18          402.8916         0          376.2926       0.0020240987           -2.26865251
+   2 Diethylcarbonate              0.00000000        -2.16449140       -2.16449140        0.00000000       -2.11698453         0          153.1386         0          118.1317                 NA            0.00000000

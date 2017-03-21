@@ -1,0 +1,299 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Calculation of Gfus of AZ13530968 in Ethanol (ID:65). !!
+ Job-Date   : 03/21/2017
+ Job-Time   : 11:17:38
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047545908809612E+06 kcal/mol
+ E_gas                  : -2.2047407758595427E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.3815021418500692E+01 kcal/mol
+ E_diel                 : -1.8741097682544183E+01 kcal/mol
+ Averaging corr dE      :  1.1080556917143740E+00 kcal/mol
+ EvdW in continuum      : -3.5869582409676792E+02 kcal/mol
+ Area                   :  3.4755790236900066E+02 A^2
+ Volume                 :  4.0289052007962806E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  2.8206111837914350E-03 a.u.
+ Dipole moment (t,x,y,z):   7.17471E+00  4.88760E-01  7.15649E+00 -1.49195E-01 Debye                     
+ Sigma moments (1-6)    :   6.62526E-14  1.26082E+02  4.57635E+01  2.08980E+02  1.75017E+02  5.52993E+02 
+ H-bond moment (accept) :  6.7616750700730961E+00
+ H-bond moment (donor)  :  2.3418698075613533E+00
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047512413992281E+06 kcal/mol
+ E_gas                  : -2.2047383753013550E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.2866097873076797E+01 kcal/mol
+ E_diel                 : -1.7660782740455844E+01 kcal/mol
+ Averaging corr dE      :  1.0676646047629947E+00 kcal/mol
+ EvdW in continuum      : -3.5141710084911767E+02 kcal/mol
+ Area                   :  3.4092533972000086E+02 A^2
+ Volume                 :  4.0306834173301530E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  3.0803784690760063E-03 a.u.
+ Dipole moment (t,x,y,z):   7.74371E+00 -4.36480E+00 -6.19843E+00  1.57892E+00 Debye                     
+ Sigma moments (1-6)    :   1.61537E-14  1.15954E+02  3.55562E+01  1.85701E+02  1.44749E+02  4.84586E+02 
+ H-bond moment (accept) :  5.5908276593953437E+00
+ H-bond moment (donor)  :  2.1977940140201802E+00
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             : -2.2047494696116853E+06 kcal/mol
+ E_gas                  : -2.2047358857822344E+06 kcal/mol
+ E_COSMO-E_gas+dE       : -1.3583829450886697E+01 kcal/mol
+ E_diel                 : -1.8510678826816303E+01 kcal/mol
+ Averaging corr dE      :  1.0973693821534591E+00 kcal/mol
+ EvdW in continuum      : -3.5676861025593655E+02 kcal/mol
+ Area                   :  3.4596571778000055E+02 A^2
+ Volume                 :  4.0336322930821598E+02 A^3
+ Molecular Weight       :  3.7629256400000003E+02 a.m.u.
+ Total COSMO charge     :  2.4033856911052707E-03 a.u.
+ Dipole moment (t,x,y,z):   7.34088E+00 -4.69042E+00 -5.64665E+00 -6.21380E-02 Debye                     
+ Sigma moments (1-6)    :   7.86905E-14  1.23492E+02  4.46705E+01  2.02476E+02  1.74512E+02  5.37388E+02 
+ H-bond moment (accept) :  6.4082977499049703E+00
+ H-bond moment (donor)  :  2.1788107554402876E+00
+
+
+ Reading COSMO information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/e/ethanol_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/e/ethanol_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/e/ethanol.vap
+ Free energy of fusion for pure compound 2 (DGFUS = 0.0000000000000000E+00 kcal/mol)
+ Enthalpy of fusion for pure compound 2 (DHFUS = 1.1785372848948374E+00 kcal/mol)
+ Wagner equation coefficients ([mbar]/[K]) for compound 2:     61370.0000       514.0000        -8.5184         0.3416        -5.7368         8.3258
+ Vapor Pressure [mbar] / Temperature [°C] input for compound 2:
+                0.1000           -56.0000
+               10.0000            -7.0000
+             1000.0000            78.0000
+ Antoine equation coefficients (in [mbar]/[K]) for compound 2:        19.4441      3966.3450       -34.7611
+ Minimum interpolative temperature for vapor pressure estimation of compound 2:     217.150 K
+ Maximum interpolative temperature for vapor pressure estimation of compound 2:     351.150 K
+ Minimum temperature for vapor pressure estimation of pure compound 2 (TPVMIN = 2.9300000000000000E+02 K)
+ Maximum temperature for vapor pressure estimation of pure compound 2 (TPVMAX = 5.1400000000000000E+02 K)
+ UNIQUAC volume parameter for compound 2 (UNIQUAC_RI = 2.1055000000000001E+00)
+ UNIQUAC surface parameter for compound 2 (UNIQUAC_QI = 1.9720000000000000E+00)
+ Boiling temperature of compound 2 (TBOIL = 3.5134999999999997E+02 K)
+ Melting temperature of compound 2 (TMELT = 1.5904999999999998E+02 K)
+ Experimental dielectric constant for molecule 4   EPSILON = 2.4899999999999999E+01
+ Critical temperature of compound 2 (TCRIT = 5.1391999999999996E+02 K)
+ Critical pressure of compound 2 (PCRIT = 6.1480000000000000E+04 mbar)
+
+ Compound Information for compound 2 conformer 1 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/e/ethanol_c0.cosmo)
+ Atomic weights         : 111111111
+ E_COSMO+dE             : -9.7339771533340798E+04 kcal/mol
+ E_gas                  : -9.7335033673839192E+04 kcal/mol
+ E_COSMO-E_gas+dE       : -4.7378595016052714E+00 kcal/mol
+ E_diel                 : -6.0942146752902442E+00 kcal/mol
+ Averaging corr dE      :  3.5765365939496341E-01 kcal/mol
+ EvdW in continuum      : -8.6449674489260246E+01 kcal/mol
+ Area                   :  8.9306931093000017E+01 A^2
+ Volume                 :  7.1438367401240185E+01 A^3
+ Molecular Weight       :  4.6068672000000007E+01 a.m.u.
+ Total COSMO charge     : -1.8336594836556585E-04 a.u.
+ Dipole moment (t,x,y,z):   2.20902E+00  1.47638E+00 -1.64210E+00 -5.96945E-02 Debye                     
+ Sigma moments (1-6)    :   3.89966E-15  4.64588E+01  1.84344E+01  8.76064E+01  5.07677E+01  2.05649E+02 
+ H-bond moment (accept) :  2.7670044221509609E+00
+ H-bond moment (donor)  :  1.3506905728282972E+00
+
+
+ Reading COSMO information for molecule 5 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/e/ethanol_c1.cosmo
+ Reading gas phase energy information for molecule 5 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/e/ethanol_c1.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/e/ethanol.vap
+ Wagner equation coefficients ([mbar]/[K]) for compound 2:     61370.0000       514.0000        -8.5184         0.3416        -5.7368         8.3258
+ Vapor Pressure [mbar] / Temperature [°C] input for compound 2:
+                0.1000           -56.0000
+               10.0000            -7.0000
+             1000.0000            78.0000
+ Antoine equation coefficients (in [mbar]/[K]) for compound 2:        19.4441      3966.3450       -34.7611
+ UNIQUAC volume parameter for compound 2 (UNIQUAC_RI = 2.1055000000000001E+00)
+ UNIQUAC surface parameter for compound 2 (UNIQUAC_QI = 1.9720000000000000E+00)
+ Experimental dielectric constant for molecule 5   EPSILON = 2.4899999999999999E+01
+
+ Compound Information for compound 2 conformer 2 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/e/ethanol_c1.cosmo)
+ Atomic weights         : 111111111
+ E_COSMO+dE             : -9.7339733055131786E+04 kcal/mol
+ E_gas                  : -9.7335021940240331E+04 kcal/mol
+ E_COSMO-E_gas+dE       : -4.7111148914555088E+00 kcal/mol
+ E_diel                 : -6.0842628787984694E+00 kcal/mol
+ Averaging corr dE      :  3.7041408287907762E-01 kcal/mol
+ EvdW in continuum      : -8.6385828596905711E+01 kcal/mol
+ Area                   :  8.9409261135999998E+01 A^2
+ Volume                 :  7.1227945111398540E+01 A^3
+ Molecular Weight       :  4.6068672000000007E+01 a.m.u.
+ Total COSMO charge     :  2.6249186663283021E-05 a.u.
+ Dipole moment (t,x,y,z):   2.09317E+00 -2.09150E+00  8.34333E-02 -8.33971E-04 Debye                     
+ Sigma moments (1-6)    :  -3.94546E-14  4.68968E+01  1.79284E+01  9.13325E+01  5.12895E+01  2.19510E+02 
+ H-bond moment (accept) :  2.9314859611919917E+00
+ H-bond moment (donor)  :  1.4636479845741714E+00
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    5
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing liquid-liquid solubilities: Heats of fusion are assumed to be zero
+ Computing heat of fusion from given reference solubility of AZ13530968         
+ Reference solubility in given solvent =  5.057E-02 [g/g]   
+ log(x_Ref) =   -2.208
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             ethanol               
+ Mole Fraction        :  1.0000000000000000E+00 0.0000000000000000E+00
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -7.1710377574966913E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0164398645559938E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047617619187185E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.8434460779094859E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  5.3767897493174202E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -3.0728051661645113E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -2.0754257339033753E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000002E+00 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             ethanol               
+ Mole Fraction        :  0.0000000000000000E+00 1.0000000000000000E+00
+
+ Compound:  2  (ethanol)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -2.3126071395687031E+00 kcal/mol
+ Log10(partial pressure [mbar])                    :  1.8901573287054145E+00
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -9.7342084140480365E+04 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -5.4145716402745334E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  1.4454141748015878E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -3.0077226269643642E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -3.8745570282368358E+00 kcal/mol
+ Ring correction                                   :  0.0000000000000000E+00 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             ethanol               
+ Mole Fraction        :  0.0000000000000000E+00 1.0000000000000000E+00
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  0.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -8.2019238140215300E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.1032182607336070E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047627928047753E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.8865489604250012E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  5.2487223495831552E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -6.2774704928539755E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -1.7847308148539646E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000006E+00 kcal/mol
+
+ Compound:  2  (ethanol)
+ Mole Fraction of the compound in the mixture      :  1.0000000000000000E+00
+ Chemical potential of the compound in the mixture : -2.3333583863093548E+00 kcal/mol
+ Log10(partial pressure [mbar])                    :  1.8419124882079529E+00
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -9.7342104891727111E+04 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -5.4371270773102438E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  1.4402927899672238E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -3.0205433022966921E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -3.8792114166106311E+00 kcal/mol
+ Ring correction                                   :  0.0000000000000000E+00 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    300.150 K
+
+ Compound Nr.         :                       1                      2
+ Compound             :  AZ13530968             ethanol               
+ Mole Fraction        :  6.1909924773011658E-03 9.9380900752269885E-01
+
+ Compound:  1  (AZ13530968)
+ Mole Fraction of the compound in the mixture      :  6.1909924773011658E-03
+ Chemical potential of the compound in the mixture : -8.1028180147734510E+00 kcal/mol
+ Log10(partial pressure [mbar])                    : -1.0842847483132712E+01
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -2.2047626936989757E+06 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -1.8836058036837223E+01 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  5.2632229902346248E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -6.2140781482498850E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -1.7896282980909625E+01 kcal/mol
+ Ring correction                                   : -2.2232394000000002E+00 kcal/mol
+ Log10(x_Solubility)                               : -2.2082397236996738E+00
+ w_Solubility [g(Solute)/g(Solution)]              :  5.0883536806070807E-02
+
+ Compound:  2  (ethanol)
+ Mole Fraction of the compound in the mixture      :  9.9380900752269885E-01
+ Chemical potential of the compound in the mixture : -2.3126586995487006E+00 kcal/mol
+ Log10(partial pressure [mbar])                    :  1.8901197867976294E+00
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    : -9.7342084192040347E+04 kcal/mol
+ Total mean interaction energy in the mix (H_int)  : -5.4237284171231082E+00 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :  1.4440607525469065E+00 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       : -2.9999999420335803E+00 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         : -3.8901331650978768E+00 kcal/mol
+ Ring correction                                   :  0.0000000000000000E+00 kcal/mol
+ Log10(x_Solubility)                               :  0.0000000000000000E+00
+
+
+----------------
+ END job       1
+----------------

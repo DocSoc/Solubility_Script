@@ -5,6 +5,7 @@
 BEGIN { $| = 1 }	# Turn on autoflush for STDOUT.
 my $debug = 1; # DEVELOPMENT ONLY.
 my $LiveRun = 0; # DEVELOPMENT ONLY.  Set 1 for running the COSMOtherm Calculations.  Ensure COSMOtherm module has been loaded for the current terminal session.
+my $Cluster = 3; # Local (0), Cluster (1), No calculation (3). 
 
 # Load any required packages:
 	if($debug == 1) {use Data::Dumper qw(Dumper)} # Load the Data Dumper for checking data structures of complex variables.
@@ -53,8 +54,7 @@ my $LiveRun = 0; # DEVELOPMENT ONLY.  Set 1 for running the COSMOtherm Calculati
 				my $ldir;		# Holds the path of the license file (Used by COSMOtherm).
 			# COSMOtherm Database location Variables.
 				my @COSMO_DB;
-				# The following is a temporary solution.
-				$COSMO_DB[0] = "/apps/cosmologic/COSMOthermX16/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE"; # Points to the COSMOlogic database (AUTOMATE THIS)
+			# $COSMO_DB[0] path is set later when all key parameters are known.
 				$COSMO_DB[1] = "/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE"; # Points to the AZ database.
 			
 		# Project related variables:
@@ -75,7 +75,8 @@ my $LiveRun = 0; # DEVELOPMENT ONLY.  Set 1 for running the COSMOtherm Calculati
 			my $CalcsDir = "Calcs";
 			my $Solute; # Holds the name of the solute.
 			
-			my $Curr_Ref_Solub;
+			my $Curr_Ref_Solub; # Hold the Current Reference Solubility.
+			my %revkey;
 		
 
 ### MAIN ROUTINE STARTS HERE ###
@@ -87,13 +88,13 @@ my $LiveRun = 0; # DEVELOPMENT ONLY.  Set 1 for running the COSMOtherm Calculati
 			# Loads the Control parameters (setting appropriate paths),
 			# Loads the Project information and
 			# Reads in Solvent Properties.
-	{
+
 		$scriptdur[0] = time(); # Note start time.
 		User(); # Determine who's running the script (for reports and personalisation).
 		Hello(); # Welcome User.
 		print "\tStarting Log file: $LogFileName\n";
 		# Start log file.
-			open (FH_LOG, ">$LogFileName") or die "Can't open the Log File $!"; # Open the log file.
+			open (FH_LOG, ">$LogFileName") or die "Can't open the Log File $!. LINE:" . __LINE__ . "\n"; # Open the log file.
 			LogFileHeader(); # Write general details of the script to the log file.
 			LogMessage("STARTING SCRIPT", 1);
 			LogMessage("Initialiation", 1);
@@ -106,6 +107,7 @@ my $LiveRun = 0; # DEVELOPMENT ONLY.  Set 1 for running the COSMOtherm Calculati
 		print "DONE.\n";
 		print "\tCOSMOtherm Directory Locations...";
 		CTD_Path(); # Formally set Application Year (numerical) and Parametermisation.  Defines Parameter and License files locations.
+		$COSMO_DB[0] = "$cosmologicdir/COSMOthermX$AppYear/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE"; # Path to COSMOlogic can now be set.
 		print "DONE.\n";
 		print "\tRead Master Solvent Data '$SolvData'...";
 		Read_Solv_Data(); # Read in Master Solvent Data.
@@ -116,19 +118,17 @@ my $LiveRun = 0; # DEVELOPMENT ONLY.  Set 1 for running the COSMOtherm Calculati
 		print "\tRead Solute File '$SoluteFileName'...";
 		$Solute = (Read_Solutes($SoluteFileName))[0]; # An array is returned (future codes).  Only the first element is required.
 		print "DONE.\n";
-	} # END ## INITIALISATION ##
+	## END INITIALISATION ##
 	## REFERENCE SOLUBILITY DATA ##
 		# This section of code:
 			# Reads in the experimental reference solubility information.
-	{
 		print "\tRead Experimental Reference Solvent Solubility Data '$RefSolFileName'...";
 		$RefSolNum = Read_RefSol_Data();
 		print "DONE.\n";
-	}## END REFERENCE SOLUBILITY DATA ##
+	## END REFERENCE SOLUBILITY DATA ##
 	## PERFORM THE REFERENCE SOLUBILITY CALCULATIONS IN COSMOTHERM ##
 		# This section of code...
 			# Creates the Calculation Directory and Reference Subdirectory.
-	{
 	LogMessage("Starting Gfus Calculations.", 1);
 		print "";
 		# Make a directory to store all of the calculations.
@@ -136,42 +136,88 @@ my $LiveRun = 0; # DEVELOPMENT ONLY.  Set 1 for running the COSMOtherm Calculati
 		# Make a subdirectory for the references calculations.
 			mkdir "$CalcsDir/Ref", 0777;
 		# For each of the solvents for which there is a reference solubility measurement, set up calculations...
-		
-		# Get the solvent numbers.
-			my @RefSolvsID;
-			for(my $i=0; $i< $RefSolNum; $i++) {$RefSolvsID[$i] = $RefSolub[$i][1]} # Pull back the reference solvent IDs.
-		# Loop through the list of solvents and deterine the DGfus values.
-		print "\tFree-Energy of Fusion Calculations.\n";
-		foreach my $CurrSolv (@RefSolvsID) {
-			$CurrFile = sprintf("Gfus%.3d", $CurrSolv);
-			$CurrSolvName = ${$Solvents{$CurrSolv}}[0];
-			print "\t\tFile: $CurrFile\tReference Solvent: '$CurrSolvName'.\n";
-			open (FH_OUTPUT, ">$CalcsDir/Ref/$CurrFile.inp") or die "Can't open Reference Calculation File. $!\n";
-			# Write ctd line.
-			COSMO_Files ($ctd, $cdir, $ldir); # Add ctd parameters, directory and license locations.
-			COSMO_Print(1); # Gfus Print options.
-			COSMO_Comment(1, $CurrSolv);
-			COSMO_Solute(1,$Solute);
-			COSMO_Solv($CurrSolv);
-			
-			$Curr_Ref_Solub = 0.10000001;
-			
-			COSMO_Route(1);
-			close FH_OUTPUT; # Close the Current Reference Solvent COSMOtherm .INP file.
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		} # END foreach loop for @RefSolvsID.
-		
+			print "\tFree-Energy of Fusion Calculations.\n";
+			for (my $i = 0; $i < $RefSolNum; $i++) {
+				$CurrSolv = $RefSolub[$i][1]; # Pulls back the Solvent ID Number.
+				$CurrFile = sprintf("Gfus%.3d", $CurrSolv); # Creates the File name based upon the Solvent ID Number.
+				$CurrSolvName = ${$Solvents{$CurrSolv}}[0]; # Pulls back the Solvent common name.
+				
+				# Create a hash keyed to Solvent ID to determine reference solvent position.
+					$revkey{$CurrSolv} = $i;
+				print "\t\tFile: $CurrFile\tReference Solvent: '$CurrSolvName'.\n"; # Inform user which INP file is being set up.
+				open (FH_OUTPUT, ">$CalcsDir/Ref/$CurrFile.inp") or die "Can't open Reference Calculation File. $!\n";
+					# What a LogMessage() here if the file doesn't open.
+				COSMO_Files ($ctd, $cdir, $ldir); # Add ctd parameters, directory and license locations.
+				COSMO_Print(1); # Gfus Print options.
+				COSMO_Comment(1, $CurrSolv); # Add an appropriate comment line.
+				COSMO_Solute(1, $Solute); # Add Solute line(s) based upon the calculation option.
+				COSMO_Solv($CurrSolv); # Add Solvent line(s).
+				$Curr_Ref_Solub = $RefSolub[$i][8]; # Pull back the correct solubility for the current solvent. 
+				COSMO_Route(1); # Add Option 1 (Gfus) Routecard.
+				close FH_OUTPUT; # Close the Current Reference Solvent COSMOtherm .INP file.
+				# Run/Submit Calculation.
+					if($Cluster == 0) {
+						COSMO_Submit(1); # COSMOtherm calculation run locally. (Will wait until calculation returns).
+					}
+					elsif($Cluster == 1) {
+						COSMO_Submit(2); # COSMOtherm calculation submitted to cluster. (Moves on before calculations are complete).
+					}
+					else {
+						# No calculations are run.  DEVELOPMENT.
+					}
+			} # END for loop $i.
 	LogMessage("Ending Gfus Calculations.", 1);
-	}
+	print "\tExtracting Free-Energy Results.\n";
+		LogMessage("MESSG: Extracting Gfus results.", 1);
+	# Collect Gfus results from the resultant TAB files.
+		$CurrCalcPath = "Calcs/Ref/"; # SMARTEN UP.
+		my @Files = <$CurrCalcPath*.tab>;
+		foreach $File (@Files) {
+			my $Filename = (split(/\//, $File))[-1]; # Filename is last element of the array.
+			$Filename =~ m/([0-9]{3})/; # Find and extract the numeric portion of the filename.
+			my $SolvID = $1+0; # Solvent ID Number (convert text to numeric).
+			my $SolvName = $Solvents{$SolvID}[0];
+			my $Gfus = Read_Gfus($File);
+			$RefSolub[($revkey{$SolvID})][9] = $Gfus;  # Use position 9 to hold the value of Gfus.
+			
+			LogMessage("MESSG: Gfus = $Gfus kcal/mol SolventID:$SolvID '$SolvName'", 3);
+		} # END foreach loop.
+		LogMessage("MESSG: Extracting Gfus Completed.", 1); 
+	
+	# Best Reference Solvent Selection.
+		print "\tCalculations to determine which is the best reference solvent.\n";
+		mkdir "$CalcsDir/Select", 0777;
+		my @RefSolvs; # Holds the list of reference solvents.
+		for (my $i = 0; $i < $RefSolNum; $i++) {$RefSolvs[$i] = $RefSolub[$i][1]}
+		for (my $Ref = 0; $Ref < scalar(@RefSolvs); $Ref++) {
+			my @temp = @RefSolvs;	
+			splice @temp, $Ref, 1;
+			foreach my $Sol (@temp) {
+				my $FN = sprintf("Sol%.3d%.3d", $RefSolvs[$Ref], $Sol);			
+				print "\t\tFile: $FN\n"; # Inform user of progress.
+				# LogMessage(); # What calc has been set up.
+				open (FH_OUTPUT, ">$CalcsDir/Select/$FN.inp") or die "Can't create INP file $!. LINE:" . __LINE__ . "\n";
+				COSMO_Files ($ctd, $cdir, $ldir); # Add ctd parameters, directory and license locations.
+				COSMO_Print(2); # Select Print options.
+				COSMO_Comment(2, $Sol, $RefSolvs[$Ref]); # Comment line.
+				my $Gfus = $RefSolub[($revkey{$RefSolvs[$Ref]})][9];
+				COSMO_Solute(2, $Solute, $Gfus); # Add Solute line(s) based upon the calculation option.
+				COSMO_Solv($Sol); # Add Solvent line(s).
+				COSMO_Route(2); # Add Option 2 (Solubility) Routecard.
+				close FH_OUTPUT;
+		#		print "Submitting..."; # Inform user of progress.
+		#		print "Complete.\n"; # Inform user of progress.
+			} # END foreach loop.
+		} # END Solvents loop.
+		#print "\n";
+	
+	
+	
+	
+	
+	
+	
+
 
 #sleep(1);
 
@@ -638,13 +684,13 @@ sub COSMO_Print {
 				exit;
 			}
 	# Print selected options to current filehandle:
-		if($Options ~~ [1]) {print FH_OUTPUT " unit"}
-		if($Options ~~ [1]) {print FH_OUTPUT " notempty"}
-		if($Options ~~ [1]) {print FH_OUTPUT " wtln"}
-		if($Options ~~ [1]) {print FH_OUTPUT " ndgf"}
-		if($Options ~~ [1]) {print FH_OUTPUT " EHfile"}
+		if($Options ~~ [1,2]) {print FH_OUTPUT " unit"}
+		if($Options ~~ [1,2]) {print FH_OUTPUT " notempty"}
+		if($Options ~~ [1,2]) {print FH_OUTPUT " wtln"}
+		if($Options ~~ [1,2]) {print FH_OUTPUT " ndgf"}
+		if($Options ~~ [1,2]) {print FH_OUTPUT " ehfile"}
 		if($Options ~~ [1]) {print FH_OUTPUT " long"}
-		if($Options ~~ [2]) {print FH_OUTPUT " Boogie"}
+		if($Options ~~ [3]) {print FH_OUTPUT " Boogie"}
 		# Expansion of options: List the option numbers within the [] brackets.
 			if($Options ~~ [1,2,3]) {}
 		print FH_OUTPUT " \n"; # EoL.
@@ -653,8 +699,8 @@ sub COSMO_Print {
 
 sub COSMO_Comment {
 	# Writes the appropriate Comment line to the current filehandle FH_OUTPUT.
-		# Pass: Option number, Solvent number.
-		# Options: 1: Gfus Calculations. 2: 3: NOT DEFINED (intended for future versions).
+		# Pass: Option number, Solvent number , Reference Solvent Number.
+		# Options: 1: Gfus Calculations. 2: Selection Calculations. 3: NOT DEFINED (intended for future versions).
 		# Return: NONE.
 		# Dependences: LogMessage()
 		# Global Variables: FH_OUTPUT
@@ -673,19 +719,20 @@ sub COSMO_Comment {
 				my $SolventName = $Solvents{$_[1]}[0];
 				print FH_OUTPUT "!! Calculation of Gfus of $Compound in $SolventName (ID:$_[1]). !!\n";
 			} # END of Option 1.
-		# Option 2 (Partition Calculation of Solute between Solvent-Water).
+		# Option 2 (Selection).
 			if($_[0] == 2) {
-				LogMessage("MESSG: COSMO_Comment Option 2 (Partition Calcs) selected.", 3);
-				if(scalar(@_) < 2) {
+				LogMessage("MESSG: COSMO_Comment Option 2 (Selection Calcs) selected.", 3);
+				if(scalar(@_) < 3) {
 					my $ErrMes = "ERROR: COSMO_Comment(). Not enough parameters passed for Option 2.";
 					LogMessage($ErrMes, 1);
 					print "$ErrMes\n";
 					exit;
 				}
-				print FH_OUTPUT "!! Partition Coefficient Calculations of SOLUTE(S) between $_[1] and water. !!\n";
+				print FH_OUTPUT "!! Solubility Calculation of Solute in Solvent \#$_[1] using Solvent \#$_[2] as reference.. !!\n";
 			} # END of Option 2.
 		LogMessage("Leave: COSMO_Comment()", 3);
 } # END COSMO_Comment()
+
 
 sub COSMO_Solute {
 	# Writes the solute path/filename information to the current COSMOtherm INP file.
@@ -704,7 +751,7 @@ sub COSMO_Solute {
 	} # END Option 1.
 	elsif($Opt == 2) {
 		# Option 2: Write solute with DGfus etc values.
-			my @Temp = split(/\[/, $str); # Split the solute.
+			my @Temp = split(/\[/, $Solute); # Split the solute.
 			my $Props = "[ ";
 			if($DGfus eq "") {
 				my $msg = "ERROR: No Gfus Value available. LINE:" . __LINE__;
@@ -712,7 +759,7 @@ sub COSMO_Solute {
 				LogMessage("$msg", 1);
 				exit;
 			} else {
-				$Props = $Props . " DGfus = $DGfus ";
+				$Props = $Props . " VPfile DGfus = $DGfus ";
 				LogMessage("PARAM: Gfus = $DGfus", 3);
 			}
 		if($DHfus ne "" && $Tmelt ne "") {
@@ -791,6 +838,7 @@ sub COSMO_Route {
 	elsif($Opt == 2) {
 		# Option 2:
 		LogMessage("MESSG: Routecard 2 selected.", 3);
+		print FH_OUTPUT "solub=2 tc=$TExpt_C Iterative \n"
 	}
 	elsif($Opt == 3) {
 		# Option 3:
@@ -804,9 +852,33 @@ sub COSMO_Route {
 	return;
 } # END COSMO_Route()
 
+sub COSMO_Submit {
+	# This subroute controls how and where the COSMOtherm Calculation is run (LOCAL vs CLUSTER).
+	print ""; # DUMMY!
+}
 
-
-
+sub Read_Gfus {
+	# Extracts the Gfus value from file.
+		# Pass: Filename to be opened.
+		# Return: Gfus value.
+		# Dependences: NONE.
+		# Global Varaibles: NONE.
+	# (c) David Hose. Feb. 2017.
+	my $FN = $_[0];
+	my $Gfus; # Holds the free energy of fusion value.
+	open (FH_GFUS_READ, "<$FN") or die "Can't open $!. LINE:" . __LINE__ ."\n"; # Open the Gfus calculation file.
+	# LogMessage upon error required here.
+	while(<FH_GFUS_READ>) {
+	# Find the line containing the solute (Compound Number 1).
+		if($_ =~ /^\s{3}1\s\S/i) {
+			my @temp = split(/\s+/, $_);
+			$Gfus = $temp[6];
+			last; # Skip rest of file.
+		}
+	} # END FH_GFUS_READ while loop.
+	close FH_GFUS_READ; # Close the input file.
+	return $Gfus;
+} # END Read_Gfus()
 
 
 
@@ -870,7 +942,7 @@ sub CTRL_Read {
 	close FH_CTRL; # Close the Control File.
 	LogMessage("PARAM: COSMOtherm Year $AppYear.", 3);
 	LogMessage("PARAM: Parameterisation $ParamYear", 3);
-	LogMessage("PARAM: Temperature $Temperature degC.", 3);
+	LogMessage("PARAM: Temperature $TExpt_C degC.", 3);
 	LogMessage("Leave: CTRL_Read()", 2);
 } # END CTRL_Read().
 
@@ -1015,7 +1087,7 @@ sub Read_RefSol_Data {
 								$RefSolub[$RefSolNum][5] = Mean(@Sol); # Calculate and add the mean of the measurements.
 								$RefSolub[$RefSolNum][6] = StDev(@Sol); # Calculate and add the standard deviation of the measurements.
 								$RefSolub[$RefSolNum][7] = StDev(@Sol) / Mean(@Sol); # Relative standard deviation.
-								$RefSolub[$RefSolNum][8] = ConvmgmL2gg($temp[1], $RefSolub[$RefSolNum][5], $DenOpt, $Temperature);;
+								$RefSolub[$RefSolNum][8] = ConvmgmL2gg($temp[1], $RefSolub[$RefSolNum][5], $DenOpt, $Temperature);
 							$RefSolNum++; # Increment row counter.
 		} # END while loop over FH_REFSOL.
 		close FH_REFSOL; # Close Reference Solubility File.

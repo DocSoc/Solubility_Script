@@ -1,0 +1,9 @@
+ctd = BP_TZVPD_FINE_C30_1701.ctd cdir = "/apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES" LDIR = "/apps/cosmologic/COSMOthermX17/licensefiles/" 
+ unit notempty wtln ndgf EHfile long 
+!! Calculation of Gfus of AZ13530968 in CPME [Cyclopentyl Methyl Ether] (ID:50). !!
+f = AZ13530968_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  Comp = AZ13530968 [ 
+f = AZ13530968_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  
+f = AZ13530968_c2.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  ] Comp = AZ13530968 
+f = CPME_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/c" Comp = CPME [ VPfile DGfus = 0 
+f = CPME_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/c" ]
+solub=2 WSOL2 solute=1 tc=27 ref_sol_g=0.00686745697800398 
