@@ -1,4 +1,4 @@
-ctd = BP_TZVPD_FINE_C30_1701.ctd cdir = "/apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES" LDIR = "/apps/cosmologic/COSMOthermX17/licensefiles/" 
+ctd = BP_TZVPD_FINE_C30_1701.ctd cdir = "apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES" LDIR = "apps/cosmologic/COSMOthermX17/licensefiles/" 
  unit notempty wtln ndgf ehfile long 
 !! Calculation of Gfus of AZ13530968 in Diethyl Carbonate (ID:55). !!
 f = AZ13530968_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  Comp = AZ13530968 [ 

@@ -1,8 +1,8 @@
-ctd = BP_TZVPD_FINE_C30_1701.ctd cdir = "/apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES" LDIR = "/apps/cosmologic/COSMOthermX17/licensefiles/" 
+ctd = BP_TZVPD_FINE_C30_1701.ctd cdir = "apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES" LDIR = "apps/cosmologic/COSMOthermX17/licensefiles/" 
  unit notempty wtln ndgf ehfile 
 !! Solubility Calculation of Solute in Solvent #116 using Solvent #104 as reference.. !!
 f = AZ13530968_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  Comp = AZ13530968 [  VPfile DGfus = 3.80410657  
 f = AZ13530968_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  
 f = AZ13530968_c2.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  ] Comp = AZ13530968 
-f = h2o_c0.cosmo fdir="/apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/h" VPfile DGfus = 0 
+f = h2o_c0.cosmo fdir="apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/h" VPfile DGfus = 0 
 solub=2 tc=20 Iterative 

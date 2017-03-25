@@ -18,8 +18,8 @@ my $Cluster = 3; # Local (0), Cluster (1), No calculation (3).
 			my $verauthor = "David Hose"; 	# Subversion Author.**
 			my $version = "0.1a";			# Script Version.**
 			my $versiondate = "Mar 2017";	# Date of current version of the script.**
-			my @Temp = split(/\//, $0);
-			my $scriptname = $Temp[-1]; # Pulls the name of the script from perl's special variables.
+			my @Temp = split(/\//, $0);		# Automatically get the name of the script using one of perl's special variables.
+			my $scriptname = $Temp[-1];		# Last element of the array in the script name.
 			my $scriptpath = join '/', @Temp[0..$#Temp-1]; # Path to the script.  This isn't working as intended in UNIX environ.
 	## Key file locations:
 		## Network files (Key master files).
@@ -39,7 +39,9 @@ my $Cluster = 3; # Local (0), Cluster (1), No calculation (3).
 			my $CTRLFileName = "control.dat";				# DEVELOPMENT DEFAULT. # Control file. (Application and Parameter years, and temperature.
 			my $ProjectFileName = "project.dat";			# DEVELOPMENT DEFAULT. # Project Information file.
 			my $SoluteFileName = "Solubility_Test.list";	# DEVELOPMENT DEFAULT. # Solute List.
-
+			my $RefSolFileName = "refsolvsolub.dat";		# Holds the filename that contains the solubility information.
+			my $SolventFile = "solventlist.dat";			# Holds the list of Solvents for which predictions are to be made in.
+			
 	## General variables:
 		# Misc:
 			my @usr;		# Holds ID information about the user
@@ -54,8 +56,8 @@ my $Cluster = 3; # Local (0), Cluster (1), No calculation (3).
 				my $ldir;		# Holds the path of the license file (Used by COSMOtherm).
 			# COSMOtherm Database location Variables.
 				my @COSMO_DB;
-			# $COSMO_DB[0] path is set later when all key parameters are known.
-				$COSMO_DB[1] = "/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE"; # Points to the AZ database.
+				# $COSMO_DB[0] path is set later when all key parameters are known.  Points to the COSMOlogic database.
+				$COSMO_DB[1] = "/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE"; # Points to the Company database.
 			
 		# Project related variables:
 			my $ProjectName;	# Project Name (AZDxxxx or pre-nomination name).
@@ -68,15 +70,20 @@ my $Cluster = 3; # Local (0), Cluster (1), No calculation (3).
 			my %SolventProps;	# This hash holds all of the solvent properties information (key = Solvent ID).
 		# Script control...
 			my $DenOpt = 1;		# Defines which density to use for the solute. 1 = 1.335, 2, = 1.000, 3 = Solvent Density.
-			my $TExpt_C;	# The temperature of the solubility measurement.
-			my $RefSolFileName = "refsolvsolub.dat";	# Holds the filename that contains the solubility information.
-			my @RefSolub; 	# 2D Array that holds the reference solubility data.  This data will be in mg/mL.
+			my $TExpt_C;		# The temperature of the solubility measurement.
+			
+			#my @RefSolub; 	# 2D Array that holds the reference solubility data.  This data will be in mg/mL.
+			my %RefSolub;
 			my $RefSolNum;	# Holds the number of reference solvent solubilities.
 			my $CalcsDir = "Calcs";
 			my $Solute; # Holds the name of the solute.
 			
+			my @TestSolvents; # Hold the list of Solvents in which solubility predictions are to be made.
 			my $Curr_Ref_Solub; # Hold the Current Reference Solubility.
-			my %revkey;
+			
+			my %SelectSolub;
+			
+			
 		
 
 ### MAIN ROUTINE STARTS HERE ###
@@ -89,70 +96,75 @@ my $Cluster = 3; # Local (0), Cluster (1), No calculation (3).
 			# Loads the Project information and
 			# Reads in Solvent Properties.
 
-		$scriptdur[0] = time(); # Note start time.
+		$scriptdur[0] = time(); # Note start time for script.
 		User(); # Determine who's running the script (for reports and personalisation).
 		Hello(); # Welcome User.
-		print "\tStarting Log file: $LogFileName\n";
 		# Start log file.
-			open (FH_LOG, ">$LogFileName") or die "Can't open the Log File $!. LINE:" . __LINE__ . "\n"; # Open the log file.
+			print "\tStarting Log file: $LogFileName\n";
+			open (FH_LOG, ">$LogFileName") or die "Can't open the Log File $!. LINE:". __LINE__ ."\n"; # Open the log file.
 			LogFileHeader(); # Write general details of the script to the log file.
 			LogMessage("STARTING SCRIPT", 1);
 			LogMessage("Initialiation", 1);
-		print "\tConfirm COSMOtherm installed...";
-		COSMOthermInstalled(); # Check that COSMOtherm is installed if not exit.
-		@Years = YearVersions(); # Determine the Year codes of the available COSMOtherm versions.
-		print "DONE.\n";
-		print "\tRead Control Parameters '$CTRLFileName'...";
-		CTRL_Read(); # Read in CONTROL Parameters (Application Year, Parameterisation, and Temperature).
-		print "DONE.\n";
-		print "\tCOSMOtherm Directory Locations...";
-		CTD_Path(); # Formally set Application Year (numerical) and Parametermisation.  Defines Parameter and License files locations.
-		$COSMO_DB[0] = "$cosmologicdir/COSMOthermX$AppYear/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE"; # Path to COSMOlogic can now be set.
-		print "DONE.\n";
-		print "\tRead Master Solvent Data '$SolvData'...";
-		Read_Solv_Data(); # Read in Master Solvent Data.
-		print "DONE.\n";
-		print "\tRead Project Information '$ProjectFileName'...";
-		Read_Project(); # Read in Project Information.
-		print "DONE.\n";
-		print "\tRead Solute File '$SoluteFileName'...";
-		$Solute = (Read_Solutes($SoluteFileName))[0]; # An array is returned (future codes).  Only the first element is required.
-		print "DONE.\n";
+		# Initialisation: Checks and populate variables.
+			print "\tConfirm COSMOtherm installed...";
+				COSMOthermInstalled(); # Check that COSMOtherm is installed if not exit.
+				@Years = YearVersions(); # Determine the Year codes of the available COSMOtherm versions.
+			print "DONE.\n";
+			print "\tRead Control Parameters '$CTRLFileName'...";
+				CTRL_Read(); # Read in CONTROL Parameters (Application Year, Parameterisation, and Temperature).
+			print "DONE.\n";
+			print "\tCOSMOtherm Directory Locations...";
+				CTD_Path(); # Formally set Application Year (numerical) and Parametermisation.  Defines Parameter and License files locations.
+				$COSMO_DB[0] = "$cosmologicdir/COSMOthermX$AppYear/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE"; # Path to COSMOlogic can now be set.
+			print "DONE.\n";
+			print "\tRead Master Solvent Data '$SolvData'...";
+				Read_Solv_Data(); # Read in Master Solvent Data.
+			print "DONE.\n";
+			print "\tRead Project Information '$ProjectFileName'...";
+				Read_Project(); # Read in Project Information.
+			print "DONE.\n";
+			print "\tRead Solute File '$SoluteFileName'...";
+				$Solute = (Read_Solutes($SoluteFileName))[0]; # An array is returned (future codes).  Only the first element is required.
+			print "DONE.\n";
+			print "\tRead Solvent File '$SolventFile'...";
+				@TestSolvents = Read_Solvents($SolventFile); # Create a list of solvents to read prediction upon.
+			print "DONE.\n";
 	## END INITIALISATION ##
 	## REFERENCE SOLUBILITY DATA ##
 		# This section of code:
 			# Reads in the experimental reference solubility information.
 		print "\tRead Experimental Reference Solvent Solubility Data '$RefSolFileName'...";
-		$RefSolNum = Read_RefSol_Data();
+			$RefSolNum = Read_RefSol_Data();
 		print "DONE.\n";
 	## END REFERENCE SOLUBILITY DATA ##
 	## PERFORM THE REFERENCE SOLUBILITY CALCULATIONS IN COSMOTHERM ##
 		# This section of code...
 			# Creates the Calculation Directory and Reference Subdirectory.
-	LogMessage("Starting Gfus Calculations.", 1);
-		print "";
+		LogMessage("MESSG: Starting Gfus Calculations.", 1);
 		# Make a directory to store all of the calculations.
 			mkdir "$CalcsDir", 0777;
 		# Make a subdirectory for the references calculations.
 			mkdir "$CalcsDir/Ref", 0777;
 		# For each of the solvents for which there is a reference solubility measurement, set up calculations...
 			print "\tFree-Energy of Fusion Calculations.\n";
-			for (my $i = 0; $i < $RefSolNum; $i++) {
-				$CurrSolv = $RefSolub[$i][1]; # Pulls back the Solvent ID Number.
+			my $cnt = 0; # A counter.
+			my $cals = scalar(@RefSolubKeys); # Number of calculations to be run.
+			foreach my $CurrSolv (@RefSolubKeys) {
+				#$CurrSolv = $RefSolub[$i][1]; # Pulls back the Solvent ID Number.
+				LogMessage("MESSG: Free-Energy Calculation in Solvent $CurrSolv.", 3);
+				my $msg; # Holds an error message,
+				$cnt++; # Increment counter.
 				$CurrFile = sprintf("Gfus%.3d", $CurrSolv); # Creates the File name based upon the Solvent ID Number.
 				$CurrSolvName = ${$Solvents{$CurrSolv}}[0]; # Pulls back the Solvent common name.
-				
-				# Create a hash keyed to Solvent ID to determine reference solvent position.
-					$revkey{$CurrSolv} = $i;
-				print "\t\tFile: $CurrFile\tReference Solvent: '$CurrSolvName'.\n"; # Inform user which INP file is being set up.
-				open (FH_OUTPUT, ">$CalcsDir/Ref/$CurrFile.inp") or die "Can't open Reference Calculation File. $!\n";
-					# What a LogMessage() here if the file doesn't open.
+				print "\t\t[". sprintf("%2.d", $cnt)  .":". sprintf("%2.d", $cals) ."] $CurrFile\tReference Solvent: '$CurrSolvName'.\n"; # Inform user which INP file is being set up.
+				open (FH_OUTPUT, ">$CalcsDir/Ref/$CurrFile.inp") or $msg = "Can't open Reference Calculation File. $! LINE:". __LINE__;
+				LogErrMessg($msg) if ($msg ne ""); # Handle the error.
 				COSMO_Files ($ctd, $cdir, $ldir); # Add ctd parameters, directory and license locations.
 				COSMO_Print(1); # Gfus Print options.
 				COSMO_Comment(1, $CurrSolv); # Add an appropriate comment line.
 				COSMO_Solute(1, $Solute); # Add Solute line(s) based upon the calculation option.
 				COSMO_Solv($CurrSolv); # Add Solvent line(s).
-				$Curr_Ref_Solub = $RefSolub[$i][8]; # Pull back the correct solubility for the current solvent. 
+				$Curr_Ref_Solub = $RefSolub{$CurrSolv}[1]; # Pull back the correct solubility for the current solvent.
 				COSMO_Route(1); # Add Option 1 (Gfus) Routecard.
 				close FH_OUTPUT; # Close the Current Reference Solvent COSMOtherm .INP file.
 				# Run/Submit Calculation.
@@ -165,58 +177,148 @@ my $Cluster = 3; # Local (0), Cluster (1), No calculation (3).
 					else {
 						# No calculations are run.  DEVELOPMENT.
 					}
-			} # END for loop $i.
-	LogMessage("Ending Gfus Calculations.", 1);
-	print "\tExtracting Free-Energy Results.\n";
+			} # END for loop @RefSolubKeys (Current Solvent)
+		LogMessage("MESSG: Ending Gfus Calculations.", 1);
+		print "\tExtracting Free-Energy Results.\n";
 		LogMessage("MESSG: Extracting Gfus results.", 1);
-	# Collect Gfus results from the resultant TAB files.
-		$CurrCalcPath = "Calcs/Ref/"; # SMARTEN UP.
-		my @Files = <$CurrCalcPath*.tab>;
-		foreach $File (@Files) {
-			my $Filename = (split(/\//, $File))[-1]; # Filename is last element of the array.
-			$Filename =~ m/([0-9]{3})/; # Find and extract the numeric portion of the filename.
-			my $SolvID = $1+0; # Solvent ID Number (convert text to numeric).
-			my $SolvName = $Solvents{$SolvID}[0];
-			my $Gfus = Read_Gfus($File);
-			$RefSolub[($revkey{$SolvID})][9] = $Gfus;  # Use position 9 to hold the value of Gfus.
-			
-			LogMessage("MESSG: Gfus = $Gfus kcal/mol SolventID:$SolvID '$SolvName'", 3);
-		} # END foreach loop.
+		# Collect Gfus results from the resultant TAB files.
+			$CurrCalcPath = "Calcs/Ref/"; # SMARTEN UP.
+			my @Files = <$CurrCalcPath*.tab>;
+			# Numerically sort filenames?!
+			foreach $File (@Files) {
+				my $Filename = (split(/\//, $File))[-1]; # Filename is last element of the array.
+				$Filename =~ m/([0-9]{3})/; # Find and extract the numeric portion of the filename.
+				my $SolvID = $1+0; # Reference Solvent ID Number ($1) and convert text to numeric.
+				my $SolvName = $Solvents{$SolvID}[0]; # Pull back the reference solvent's name.
+				my $Gfus = Read_Gfus($File); # Extract the Gfus value from the file.
+				$RefSolub{$SolvID}[3] = $Gfus; # Store the value of Gfus in RefSolub hash. Use position 3 of the array.
+				LogMessage("MESSG: Gfus = $Gfus kcal/mol SolventID:$SolvID '$SolvName'", 3);
+			} # END foreach loop.
 		LogMessage("MESSG: Extracting Gfus Completed.", 1); 
+	## END PERFORM THE REFERENCE SOLUBILITY CALCULATIONS IN COSMOTHERM ##
 	
 	# Best Reference Solvent Selection.
 		print "\tCalculations to determine which is the best reference solvent.\n";
 		mkdir "$CalcsDir/Select", 0777;
-		my @RefSolvs; # Holds the list of reference solvents.
-		for (my $i = 0; $i < $RefSolNum; $i++) {$RefSolvs[$i] = $RefSolub[$i][1]}
-		for (my $Ref = 0; $Ref < scalar(@RefSolvs); $Ref++) {
-			my @temp = @RefSolvs;	
-			splice @temp, $Ref, 1;
-			foreach my $Sol (@temp) {
-				my $FN = sprintf("Sol%.3d%.3d", $RefSolvs[$Ref], $Sol);			
-				print "\t\tFile: $FN\n"; # Inform user of progress.
+		#my @RefSolvs; # Holds the list of reference solvents.
+		$cnt = 0; # A counter.
+		my $cals = scalar(@RefSolubKeys)**2 - scalar(@RefSolubKeys);
+		for (my $i = 0; $i < scalar(@RefSolubKeys); $i++) {
+			my $CurrRefSolv = $RefSolubKeys[$i];
+			my $Gfus = $RefSolub{$CurrRefSolv}[3];
+			my @tmp = @RefSolubKeys;
+			my $msg; # Holds an error message.
+			splice @tmp, $i, 1;
+			foreach $SelectSolv (@tmp) {
+				$cnt++; # Increment counter.
+				my $FN = sprintf("Sol%.3d%.3d", $CurrRefSolv, $SelectSolv); # Creates the appropriate filename.
+				
+				#print "\t\t[". sprintf("%2.d", $cnt)  .":". sprintf("%2.d", $cals) ."] $CurrFile\tReference Solvent: '$CurrSolvName'.\n"; # Inform user which INP file is being set up.
+				
+				print "\t\t[". sprintf("%3.d", $cnt)  .":". sprintf("%3.d", $cals) ."]  $FN\n"; # Inform user of progress.
 				# LogMessage(); # What calc has been set up.
-				open (FH_OUTPUT, ">$CalcsDir/Select/$FN.inp") or die "Can't create INP file $!. LINE:" . __LINE__ . "\n";
+				LogMessage("MESSG: SOMETHING.", 1);
+				open (FH_OUTPUT, ">$CalcsDir/Select/$FN.inp") or $msg = "Can't create INP file. $!. LINE:" . __LINE__;
+				LogErrMessg($msg) if ($msg ne ""); # Handle the error.
 				COSMO_Files ($ctd, $cdir, $ldir); # Add ctd parameters, directory and license locations.
 				COSMO_Print(2); # Select Print options.
-				COSMO_Comment(2, $Sol, $RefSolvs[$Ref]); # Comment line.
-				my $Gfus = $RefSolub[($revkey{$RefSolvs[$Ref]})][9];
+				COSMO_Comment(2, $SelectSolv, $CurrRefSolv); # Comment line.
 				COSMO_Solute(2, $Solute, $Gfus); # Add Solute line(s) based upon the calculation option.
-				COSMO_Solv($Sol); # Add Solvent line(s).
+				COSMO_Solv($SelectSolv); # Add Solvent line(s).
 				COSMO_Route(2); # Add Option 2 (Solubility) Routecard.
 				close FH_OUTPUT;
-		#		print "Submitting..."; # Inform user of progress.
-		#		print "Complete.\n"; # Inform user of progress.
+				# Submit Calculation.
 			} # END foreach loop.
-		} # END Solvents loop.
-		#print "\n";
+		} # END for loop.
+		
+		if($debug == 1) {
+			open (TEST, ">Test.txt");
+			print TEST "############\nDump of \%RefSolub Variable.\n############\n\n";
+			print TEST Dumper %RefSolub;
+			close TEST;
+		}
+		
+		print "\tProcess Data...\n";
+		$CurrCalcPath = "Calcs/Select/"; # Path to the calculations. SMARTEN UP
+		# Find all of the TAB files.
+			my @Files = <$CurrCalcPath*.tab>;
+			@Files = sort @Files; # Ensure that the files are in ASCIIbetical order. So all of the reference solvents will be grouped together, then ordered by Select solvent.
+		# Extract the Predicted Solublities:
+			foreach my $i (@Files) {
+				$i =~ m/(\d{3})/; # Identify the Reference solvent. First instance of three consecutive digits (this is the reference solvent).
+				my $CurrRefSolv = $1 + 0; # Convert from 'text' to numerical value.
+				my $Res = Read_Solub($i); # Extract the solubility from the TAB file.
+				push ( @{$SelectSolub{$CurrRefSolv}}, $Res); # Place the extracted solubility into the SelectSolub hash.
+			}
+		if($debug == 1) {
+			open (TEST, ">>Test.txt");
+			print TEST "############\nDump of \%SelectSolub Variable.\n############\n\n";
+			print TEST Dumper \%SelectSolub;
+			close TEST;
+		}
+
+		# Loop through all of the reference solvents in turn and calculate the Mean, Stdev and APScore.
+			my @RefLogSols; # Holds the log of reference solubilities.
+			my @Means; # Holds the Means.
+			my @StDevs; # Holds the StDev.
+			
+			# DEVELOPMENT ONLY...
+				if($debug == 1) {
+				open (FH_DUMPER, ">Exported.txt") or die "Can' Export Data.";
+				print FH_DUMPER "\t1\t2\t3\t4\t5\t6\t7\t8\t9\t10\t11\t12\t13\t14\t15\t16\t17\t18\n";
+				print FH_DUMPER "\t19\t29\t30\t39\t41\t42\t50\t55\t61\t65\t66\t75\t80\t104\t108\t110\t116\t124\n";
+				print FH_DUMPER "\t21.84\t4.28\t0.9\t44.37\t3.32\t2.34\t5.88\t3.75\t18.83\t38.55\t10.57\t6.36\t22.16\t1.6\t31.79\t0.15\t0.4\t35.64\n";
+				print FH_DUMPER "RefSols\t@RefSols\n";
+			}
 	
-	
-	
-	
-	
-	
-	
+			for (my $key = 0; $key < scalar(@RefSolubKeys); $key++) {
+				print "\t\tReference Solvent: $RefSolubKeys[$key]\t";	
+				print FH_DUMPER "Ref: $RefSolubKeys[$key]\n" if($debug ==1);	# DEVELOPMENT.
+				# Extract all of the predicted solubilities, based upon the reference solvent.		
+					@CurrPredSol = @{$SelectSolub{$RefSolubKeys[$key]}}; # In this case solvent 19 is the first solvent.
+					print FH_DUMPER "Predictions\t@CurrPredSol\n" if($debug ==1); # DEVELOPMENT.
+				# Create an array of all of the LOG predicted solubilities.
+					my @LogPredSol = @CurrPredSol;
+					foreach my $i (@LogPredSol) {$i = log($i)} # Take logs.
+						print FH_DUMPER "LogPredictions\t@LogPredSol\n" if($debug ==1); # DEVELOPMENT.
+						my @CurrExpt = @RefSols;
+						splice @CurrExpt, $key, 1;
+						print FH_DUMPER "Expt\t@CurrExpt\n" if($debug ==1); # DEVELOPMENT.
+						my @CurrLogExpt = @RefLogSols;
+						splice @CurrLogExpt, $key, 1;
+						print FH_DUMPER "LogExpt\t@CurrLogExpt\n" if($debug ==1); # DEVELOPMENT.
+				# Calculate the Predicted - Experimental.
+					my @DiffPredObs = map { $CurrLogExpt[$_] - $LogPredSol[$_] } 0 .. $#LogPredSol;
+					print FH_DUMPER "PredvsObs\t@DiffPredObs\n\n" if($debug ==1); # DEVELOPMENT.
+				# Calculate the Mean and Stdev.
+					my $CurrMean = Mean(@DiffPredObs);
+					my $CurrStdev = StDev(@DiffPredObs);
+					my $CurrAPS = APScore($CurrMean, $CurrStdev);
+					print "Mean = " . sprintf("%6.2f", $CurrMean) . "\t Stdev = ". sprintf("%5.2f", $CurrStdev)."\tAPS = " . sprintf("%5.3f", $CurrAPS) ."\n";
+					push @Means, $CurrMean;
+					push @StDevs, $CurrStdev;
+					push @APS, $CurrAPS;
+			} # END for loop $key
+			close FH_DUMPER if($debug ==1); # DEVELOPMENT.
+		# Determine which is the best Reference Solvent.
+			$Idx_Min = minindex(\@APS); # Determine the index in the array that contains the lowest APS.
+			$BestSolv_ID = $RefSolubKeys[$Idx_Min];
+			print "\tBest solvent: $Solvents{$BestSolv_ID}[1] ($BestSolv_ID)\n";
+			# Also report to LogFile.
+	if($debug == 1) {
+		open (TEST, ">>Test.txt");
+		print TEST "############\nDump of \@Means Variable.\n############\n\n";
+		print TEST Dumper \@Means;
+		print TEST "############\nDump of \@StDevs Variable.\n############\n\n";
+		print TEST Dumper \@StDevs;
+		print TEST "############\nDump of \@APS Variable.\n############\n\n";
+		print TEST Dumper \@APS;
+		close TEST;
+	}
+
+
+
+
 
 
 #sleep(1);
@@ -253,7 +355,7 @@ sub Hello {
 		|                      .oooO                                   |
 		|                      (   )   Oooo.                           |
 		.-----------------------\\ (----(   )---------------------------.
-		                         \\_)     ) /
+		                         \\_)    ) /
 		                               (_/
 
 		Script:  $scriptname
@@ -271,7 +373,7 @@ sub Goodbye {
 		# Return: NONE.
 		# Dependences: NONE.
 		# Global Variables: @scriptdur.
-	# (c) David Hose, Feb 2017.
+	# (c) David Hose, February 2017.
 	$scriptdur[2] = $scriptdur[1] - $scriptdur[0];
 	my $runtime = Duration($scriptdur[2]);
 	print <<ENDGOODBYE;
@@ -306,7 +408,7 @@ sub User() {
 		# Return: NONE.
 		# Dependences: NONE.
 		# Global Variables: @usr
-	# (c) David Hose. Feb 2017.
+	# (c) David Hose. February 2017.
 	@usr = ((getpwuid($<))[0], (getpwuid($<))[6]); # Store user's login ID and Real Name.
 	$usr[1] =~ s/\./ /g; # Replace peroids in the real name if present.
 	$usr[2] = (split(/\s/, $usr[1]))[0]; # Separate out the first name of the user.
@@ -324,10 +426,9 @@ sub LogFileHeader {
 		# Return: NONE.
 		# Dependences: LogTime(). use Cwd;
 		# Global Variables: FH_LOG
-	# (c) David Hose. March, 2017.
-	# Variables:
-		chomp(my $hostname = `hostname -s`);
-		my $dir = getcwd();
+	# (c) David Hose. March 2017.
+	chomp(my $hostname = `hostname -s`);
+	my $dir = getcwd();
 	# Header section:
 		print FH_LOG "GENERAL INFORMATION\n\n";
 		print FH_LOG "Executed on ", LogTime(), "\n\n";
@@ -354,12 +455,25 @@ sub LogMessage {
 		# Return: Date / Time.
 		# Dependences: NONE
 		# Global Variables: $LogLevel
-	# (c) David Hose. March, 2017.
+	# (c) David Hose. March 2017.
 	# Variables:
 		my $Message = $_[0];
 		my $LogFlag = $_[1];
 	print FH_LOG "", TimeNow(2), " : $Message\n" if ($LogFlag <= $LogLevel);
 } # END LogMessage()
+
+sub LogErrMessg {
+	# Reports an error message to both screen and LogFile.
+		# Pass: Error Message.
+		# Return: NONE.
+		# Dependences: LogMessage().
+		# Global Variables: NONE.
+	# (c) David Hose. March 2017.
+	my $msg = $_[0];
+	LogMessage("ERROR: $msg", 1); # Print error to the LogFile.
+	print "ERROR: $msg\nTerminating script.\n\n";
+	exit; # Hard exit.
+} # END LogErrMessg()
 
 ## TIME RELATED FUNCTIONS ##
 
@@ -369,7 +483,7 @@ sub LogTime {
 		# Return: Date / Time.
 		# Dependences: NONE
 		# Global Variables: NONE
-	# (c) David Hose. March, 2017.
+	# (c) David Hose. March 2017.
 		my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
 		my $Time =  sprintf("%4d/%02d/%02d at %02d:%02d:%02d", ($year+1900), $mon, $mday, $hour, $min, $sec);
 		return ($Time);
@@ -381,7 +495,7 @@ sub TimeNow {
 		# Return: Time in appropriate format.
 		# Dependences: LogMessage()
 		# Global Variables: NONE.
-	# (c) David Hose. March, 2017.
+	# (c) David Hose. March 2017.
 			# Pass:
 			# $_[0] The required format option. 1 = HH:MM, 2 = HH:MM:SS.
 		# Variables:
@@ -403,7 +517,7 @@ sub Duration {
 		# Return: $Time (duration in human form)
 		# Dependences: LogMessage()
 		# Global Variables: NONE.
-	# (c) David Hose. March, 2017.
+	# (c) David Hose. March 2017.
 		# Variables:
 			my ($DayLabel, $HourLabel, $MinuteLabel, $SecondLabel);
 			my $secs = shift; # Number of seconds to be processed.
@@ -471,7 +585,7 @@ sub TimeSalute {
 		if($wday == 5 && $hour >= 12 && $hour < 16) {$TimeMsg = $TimeMsg . " It's POETS day!"}
 		if($wday == 5 && $hour >= 16) {$TimeMsg = $TimeMsg . " It's Friday night! GO HOME!"}
 	# Output the message.
-		print "$TimeMsg";
+		print "\t$TimeMsg";
 } # END TimeSalute()
 
 ## COSMOtherm RELATED ##
@@ -482,17 +596,13 @@ sub COSMOthermInstalled {
 		# Return: NONE.
 		# Dependances: LogMessage(), Usage().
 		# Global Variables: $appsdir
-	# (c) David Hose. March, 2017.
+	# (c) David Hose. March 2017.
 	# Variables:
 		my $Flag = 0; # A flag.
 		my $msg; # An error message.
-	LogMessage("Enter: COSMOthermInstalled()", 2);
+	LogMessage("ENTER: COSMOthermInstalled()", 2);
 	opendir(DIR, $appsdir) or $msg = "Can't open the APPS directory '$appsdir'. $!. LINE:". __LINE__;
-	if($msg ne "") {
-		LogMessage("ERROR: $msg", 1);
-		print "$msg\n";
-		exit;
-	}
+	LogErrMessg($msg) if ($msg ne ""); # Handle the error.
 	while (my $entry = readdir(DIR)) {
 		next unless (-d "$appsdir/$entry"); # Only check for directories.
 		$Flag = 1 if($entry eq "cosmologic"); # If the 'cosmologic' directory is found, set the flag.
@@ -506,7 +616,7 @@ sub COSMOthermInstalled {
 			Usage();
 			exit; # Catch All exit.
 		}
-	LogMessage("Leave: COSMOthermInstalled()", 2);
+	LogMessage("LEAVE: COSMOthermInstalled()", 2);
 } # END COSMOthermInstalled()
 
 sub YearVersions {
@@ -516,19 +626,15 @@ sub YearVersions {
 		# Return: @YearList
 		# Dependences: LogMessage()
 		# Global Variables: $cosmologicdir
-	# (c) David Hose. March, 2017.
+	# (c) David Hose. March 2017.
 	# Variables:
 		my $msg; # An error message.
 		my @YearList; # Holds the list of years found (reverse chronological order).
 		my $Flag = 0;
 	# Sub:
-		LogMessage("Enter: YearVersions()",2);
+		LogMessage("ENTER: YearVersions()",2);
 		opendir(DIR, $cosmologicdir) or $msg = "Can't open directory '$cosmologicdir'. $!. LINE:". __LINE__;
-		if($msg ne "") {
-			LogMessage("ERROR: $msg\n", 1);
-			print "$msg";
-			exit;
-		}
+		LogErrMessg($msg) if ($msg ne ""); # Handle the error.
 		while (my $file = readdir(DIR)) {
 			next unless (-d "$cosmologicdir/$file"); # Only check for directories.
 			next unless ($file =~ m/COSMOthermX/); # Only check for 'COSMOthermX## directories.
@@ -538,7 +644,7 @@ sub YearVersions {
 		closedir (DIR);
 		@YearList = reverse(sort @YearList); # Place the years into reverse chronological order.
 		LogMessage("PARAM: Available COSMOtherm years: @YearList", 2);
-		LogMessage("Leave: YearVersions()",2);
+		LogMessage("LEAVE: YearVersions()",2);
 		return(@YearList); # Returns all years available in reverse chronological order.
 } # END YearVersions()
 
@@ -548,8 +654,8 @@ sub CTD_Path {
 		# Return: NONE.
 		# Dependences: LogMessage()
 		# Global Variables: $AppYear, cdir, $ldir, $ctd, $cosmodbpath
-	# (c) David Hose. March, 2017.
-	LogMessage("Enter: CTD_Path()", 2);
+	# (c) David Hose. March 2017.
+	LogMessage("ENTER: CTD_Path()", 2);
 	# Determine if the chosen COSMOtherm application year is available.
 		# If choice year is 'default' use the most recent application year that has been loaded.
 			$AppYear = $Years[0] if ($AppYear =~ /^Default/i);
@@ -560,7 +666,7 @@ sub CTD_Path {
 				my $msg = "ERROR: Application Year (20$AppYear) is not available.";
 				LogMessage("$msg", 1);
 				print "$msg\n";
-				LogMessage("Leave: CTD_Path() via Usage().", 1);
+				LogMessage("LEAVE: CTD_Path() via Usage().", 1);
 				Usage(); # Gracefully terminate via Usage and add comment to the log.
 			} # END if($AppYear ~~ @Years).
 		# Set the Application Year directory.
@@ -579,7 +685,7 @@ sub CTD_Path {
 						my $msg = "Can't run parameters (20$ParamYear) that are newer than the Application (20$AppYear)";
 						print "$msg\n";
 						LogMessage("ERROR: $msg", 1);
-						LogMessage("Leave: CTD_Path() via Usage()", 1);
+						LogMessage("LEAVE: CTD_Path() via Usage()", 1);
 						Usage(); # Gracefully terminate via Usage and add comment to the log.
 					}
 				# Add OLDPARAM directory sub-level.
@@ -593,7 +699,7 @@ sub CTD_Path {
 					my $msg = "Sorry there are no parameterisation files available for the year 20$ParamYear (2012 - 20$Years[0]).";
 					print "$msg\n";
 					LogMessage("ERROR: $msg", 1);
-					LogMessage("Leave: CTD_Path() via Usage()", 1);
+					LogMessage("LEAVE: CTD_Path() via Usage()", 1);
 					Usage(); # Gracefully terminate via Usage and add comment to the log.
 				}
 			}
@@ -604,7 +710,7 @@ sub CTD_Path {
 	LogMessage("PARAM: License file path: $ldir", 2);
 	LogMessage("PARAM: Parameterisation path: $cdir", 2);
 	LogMessage("PARAM: Parameterisation file: $ctd", 2);
-	LogMessage("Leave: CTD_Path()", 2);
+	LogMessage("LEAVE: CTD_Path()", 2);
 } # END CTD_Path().
 
 sub COSMO_Files {
@@ -625,7 +731,7 @@ sub COSMO_Files {
 		# Global Variables: FH_OUTPUT
 	# (c) David Hose. March 2017.
 	# Sub:
-		LogMessage("Enter: COSMO_Files()", 3);
+		LogMessage("ENTER: COSMO_Files()", 3);
 		# Check that the correct number of parameters has been passed.
 			if(scalar(@_) != 3) {
 				my $ErrMsg = "ERROR: COSMO_Files() Invalid number of parameters passed (" . scalar(@_) . ").";
@@ -638,7 +744,7 @@ sub COSMO_Files {
 			print FH_OUTPUT "cdir = \"$cdir\" "; # Parameterisation directory.
 			print FH_OUTPUT "LDIR = \"$license\" "; # License file directory.
 			print FH_OUTPUT "\n"; # EoL.
-		LogMessage("Leave: COSMO_Files()", 3);
+		LogMessage("LEAVE: COSMO_Files()", 3);
 } # END COSMO_Files()
 
 sub COSMO_Print {
@@ -668,7 +774,7 @@ sub COSMO_Print {
 		my $Options = $_[0];
 		my $MaxOpts = 2; # Set this to the maximum number of options available (Change fo future expansions of options).
 	# Sub:
-		LogMessage("Enter: COSMO_Print()", 3);
+		LogMessage("ENTER: COSMO_Print()", 3);
 		# Check that the correct number of parameters has been passed.
 		if(scalar(@_) != 1) {
 				my $ErrMsg = "ERROR: COSMO_Print() Invalid number of parameters passed (" . scalar(@_) . ").";
@@ -694,7 +800,7 @@ sub COSMO_Print {
 		# Expansion of options: List the option numbers within the [] brackets.
 			if($Options ~~ [1,2,3]) {}
 		print FH_OUTPUT " \n"; # EoL.
-		LogMessage("Leave: COSMO_Print()", 3);
+		LogMessage("LEAVE: COSMO_Print()", 3);
 } # END COSMO_Print()
 
 sub COSMO_Comment {
@@ -706,7 +812,7 @@ sub COSMO_Comment {
 		# Global Variables: FH_OUTPUT
 	# (c) David Hose, March 2017.
 	# Sub:
-		LogMessage("Enter: COSMO_Comment()", 3);
+		LogMessage("ENTER: COSMO_Comment()", 3);
 		# Option 1 (DGfus Calculaions):
 			if($_[0] == 1) {
 				LogMessage("MESSG: COSMO_Comment Option 1 (Gfus Calculation) selected.", 3);
@@ -730,7 +836,7 @@ sub COSMO_Comment {
 				}
 				print FH_OUTPUT "!! Solubility Calculation of Solute in Solvent \#$_[1] using Solvent \#$_[2] as reference.. !!\n";
 			} # END of Option 2.
-		LogMessage("Leave: COSMO_Comment()", 3);
+		LogMessage("LEAVE: COSMO_Comment()", 3);
 } # END COSMO_Comment()
 
 
@@ -741,12 +847,12 @@ sub COSMO_Solute {
 		# Dependences: LogMessage()
 		# Global Variable: NONE.
 	# (c) David Hose. March 2017.
-	LogMessage("Enter: COSMO_Solute()", 1);
+	LogMessage("ENTER: COSMO_Solute()", 1);
 	my ($Opt, $Solute, $DGfus, $DHfus, $Tmelt) = @_;
 	if($Opt == 1) {
 		# Option 1: Write solute line 'as-is'.
 			print FH_OUTPUT "$Solute";
-			LogMessage("Leave: COSMO_Solute()", 1);
+			LogMessage("LEAVE: COSMO_Solute()", 1);
 			return;	
 	} # END Option 1.
 	elsif($Opt == 2) {
@@ -769,11 +875,11 @@ sub COSMO_Solute {
 		}
 		my $Temp = join("", $Temp[0], $Props, $Temp[1]);
 		print FH_OUTPUT "$Temp";
-		LogMessage("Leave: COSMO_Solute()", 1);
+		LogMessage("LEAVE: COSMO_Solute()", 1);
 		return;
 	} # END Option 2.
 	elsif($Opt == 3) {
-		LogMessage("Leave: COSMO_Solute()", 1);
+		LogMessage("LEAVE: COSMO_Solute()", 1);
 		return;
 	} # END Option 3.
 	else {
@@ -785,13 +891,13 @@ sub COSMO_Solute {
 } # END COSMO_Solute()
 
 sub COSMO_Solv {
-	#
+	# 
 		# Pass: Solvent ID.
 		# Return: Solvent Path/filename.
 		# Dependences: LogMessage()
 		# Global Variables: FH_OUTPUT
 	# (c) David Hose. March 2017.
-		LogMessage("Enter: Read_Solv()", 1); # Log file message.
+		LogMessage("ENTER: Read_Solv()", 1); # Log file message.
 		$Solv_ID = $_[0]; # Pick up the solvent number ID.
 		@Data = @{$Solvents{$Solv_ID}}; # Pull out COSMOtherm solvent data from the Solvent Hash.
 		$Subdir = lc(substr($Data[1], 0, 1));	# Grab the first character of the name (of sub-folder) and ensures that it's in lower case.
@@ -813,7 +919,7 @@ sub COSMO_Solv {
 		LogMessage("MESSG: DB: $fdir",3);
 		LogMessage("MESSG: Conformers: $Data[7]",3);
 		#LogMessage("",3);
-		LogMessage("Enter: Read_Solv()", 1);
+		LogMessage("LEAVE: Read_Solv()", 1);
 		return;
 } # END Select_Solv()
 
@@ -827,7 +933,7 @@ sub COSMO_Route {
 		# Dependences: LogMessage()
 		# Global Variables: FH_OUTPUT, see options above.
 	# (c) David Hose. March 2017.
-	LogMessage("Enter: COSMO_Route()", 3);
+	LogMessage("ENTER: COSMO_Route()", 3);
 	my $Opt = $_[0];
 	if($Opt == 1) {
 		# Option 1: Gfus calculation.
@@ -848,7 +954,7 @@ sub COSMO_Route {
 		LogMessage("ERROR: No valid Route option selected.", 1);
 		exit;
 	}
-	LogMessage("Leave: COSMO_Route()", 3);
+	LogMessage("LEAVE: COSMO_Route()", 3);
 	return;
 } # END COSMO_Route()
 
@@ -863,11 +969,12 @@ sub Read_Gfus {
 		# Return: Gfus value.
 		# Dependences: NONE.
 		# Global Varaibles: NONE.
-	# (c) David Hose. Feb. 2017.
+	# (c) David Hose. February 2017.
 	my $FN = $_[0];
+	my $msg; # Holds an error message.
 	my $Gfus; # Holds the free energy of fusion value.
-	open (FH_GFUS_READ, "<$FN") or die "Can't open $!. LINE:" . __LINE__ ."\n"; # Open the Gfus calculation file.
-	# LogMessage upon error required here.
+	open (FH_GFUS_READ, "<$FN") or $msg = "Can't open Gfus File. $!. LINE:" . __LINE__; # Open the Gfus calculation file.
+	LogErrMessg($msg) if ($msg ne ""); # Handle the error.
 	while(<FH_GFUS_READ>) {
 	# Find the line containing the solute (Compound Number 1).
 		if($_ =~ /^\s{3}1\s\S/i) {
@@ -880,7 +987,29 @@ sub Read_Gfus {
 	return $Gfus;
 } # END Read_Gfus()
 
-
+sub Read_Solub {
+	# Extracts the Solubility value from file.
+		# Pass: Filename to be opened.
+		# Return: Solubility value.
+		# Dependences: NONE.
+		# Global Varaibles: NONE.
+	# (c) David Hose. February 2017.
+	my $FN = $_[0];
+	my $Solub; # Holds the free energy of fusion value.
+	my $msg; # Holds an error message.
+	open (FH_SOLUB_READ, "<$FN") or $msg = "Can't open. $!. LINE:" . __LINE__; # Open the Solubility calculation file.
+	LogErrMessg($msg) if ($msg ne ""); # Handle the error.
+	while(<FH_SOLUB_READ>) {
+	# Find the line containing the solute (Compound Number 1).
+		if($_ =~ /^\s{3}1\s\S/i) {
+			my @temp = split(/\s+/, $_);
+			$Solub = $temp[12];
+			last; # Skip rest of file.
+		}
+	} # END FH_GFUS_READ while loop.
+	close FH_SOLUB_READ; # Close the input file.
+	return $Solub;
+} # END Read_Solub()
 
 
 
@@ -893,16 +1022,12 @@ sub CTRL_Read {
 		# Return: NONE
 		# Dependences: LogMessage()
 		# Global Variables: $CTRLFileName, $AppYear., $ParamYear, $Temperature
-	# (c) David Hose. March, 2017.
-		LogMessage("Enter: CTRL_Read()", 2);
+	# (c) David Hose. March 2017.
+		LogMessage("ENTER: CTRL_Read()", 2);
 		my $msg; # An error message.
 		# Open Control File.
 			open (FH_CTRL, "<", $CTRLFileName) or $msg = "Can't open Control File '$CTRLFileName'. $!. LINE:". __LINE__;
-			if($msg ne "") {
-				LogMessage("ERROR: $msg\n", 1);
-				print "$msg";
-				exit;
-			}
+			LogErrMessg($msg) if ($msg ne ""); # Handle the error.
 		# Read in contents of control file.
 			while (<FH_CTRL>) {
 				chomp;
@@ -926,7 +1051,7 @@ sub CTRL_Read {
 											$msg = "ERROR: Temperature entered is greater than 100.  Expecting temperature in degC";
 											LogMessage("$msg", 1);
 											print "$msg\n";
-											LogMessage("Leave: CTRL_Read() via Usage().", 1);
+											LogMessage("LEAVE: CTRL_Read() via Usage().", 1);
 											Usage(); # Controlled exit.
 										}		
 								$TExpt_C = $temp[1];
@@ -934,7 +1059,7 @@ sub CTRL_Read {
 									$msg = "ERROR: No numerical value entered for the temperature!";
 											LogMessage("$msg", 1);
 											print "$msg\n";
-											LogMessage("Leave: CTRL_Read() via Usage().", 1);
+											LogMessage("LEAVE: CTRL_Read() via Usage().", 1);
 											Usage(); # Controlled exit.
 								}
 				} # END 'Temperature' if.
@@ -943,7 +1068,7 @@ sub CTRL_Read {
 	LogMessage("PARAM: COSMOtherm Year $AppYear.", 3);
 	LogMessage("PARAM: Parameterisation $ParamYear", 3);
 	LogMessage("PARAM: Temperature $TExpt_C degC.", 3);
-	LogMessage("Leave: CTRL_Read()", 2);
+	LogMessage("LEAVE: CTRL_Read()", 2);
 } # END CTRL_Read().
 
 sub Read_Solv_Data {
@@ -953,15 +1078,11 @@ sub Read_Solv_Data {
 		# Return: NONE.
 		# Dependences: LogMessage().
 		# Global Variables: $netpath, $Solvent_Data, %Solvents, %Densities and %SolventProps.
-	# (c) David Hose. Feb 2017.
-		my $msg; # An error message.
-		LogMessage("Enter: Read_Solv_Data()", 2);
+	# (c) David Hose. February 2017.
+		my $msg; # Holds an error message.
+		LogMessage("ENTER: Read_Solv_Data()", 2);
 		open (FH_SOLV, "<" . $netpath . "/" . $SolvData) or $msg = "Can't Open Solvent Data '$SolvData'. $!. LINE:". __LINE__; # Open Solvent Master Data File.
-			if($msg ne "") {
-				LogMessage("ERROR: $msg\n", 1);
-				print "$msg";
-				exit;
-			}
+		LogErrMessg($msg) if ($msg ne ""); # Handle the error.
 		LOOP_SOLV: while(<FH_SOLV>) {
 			chomp;
 			next LOOP_SOLV if($_ =~ /^\D/); # Skip header.
@@ -978,7 +1099,7 @@ sub Read_Solv_Data {
 		} # END LOOP_SOLV while loop.
 		close FH_SOLV; # Close Solvent Master Data File.
 		LogMessage("MESSG: \%Solvents, \%Densities and \%SolventProps have been set up.", 3);
-		LogMessage("Leave: Read_Solv_Data()");
+		LogMessage("LEAVE: Read_Solv_Data()");
 } # END Read_Solv_Data()
 
 sub Read_Project {
@@ -987,15 +1108,11 @@ sub Read_Project {
 		# Return: NONE.
 		# Dependences: LogMessage()
 		# Global Variables: $ProjectFileName, $ProjectName, $Compound, $AltName and $Client.
-	# (c) David Hose. Feb 2017.
-	my $msg; # An error message.
-		LogMessage("Enter: Read_Project()", 2);
+	# (c) David Hose. February 2017.
+	my $msg; # Holds an error message.
+		LogMessage("ENTER: Read_Project()", 2);
 		open (FH_PROJ, "<", $ProjectFileName) or $msg = "Can't open Project File '$ProjectFileName'. $!. LINE:". __LINE__; # Open Project File.
-			if($msg ne "") {
-				LogMessage("ERROR: $msg\n", 1);
-				print "$msg";
-				exit;
-			}
+		LogErrMessg($msg) if ($msg ne ""); # Handle the error.
 	# Read in contents of control file.
 		while (<FH_PROJ>) {
 			chomp;
@@ -1046,7 +1163,7 @@ sub Read_Project {
 			LogMessage("PARAM: Compound: $Compound", 3);
 			LogMessage("PARAM: Alternative Name: $AltName", 3);
 			LogMessage("PARAM: Client: $Client", 3);
-			LogMessage("Leave: Read_Project()", 2);
+			LogMessage("LEAVE: Read_Project()", 2);
 } # END Read_Project()
 
 sub Read_RefSol_Data {
@@ -1055,43 +1172,40 @@ sub Read_RefSol_Data {
 		# Return: The number of reference solvent solubilities that has been read in.
 		# Dependences: NObs(), Mean() and StDev().
 		# Global Variables: $RefSolFileName and @RefSolub.
-	# (c) David Hose. Feb 2017.
-	# Open Control File.
-		open (FH_REFSOL, "<", $RefSolFileName) or die "Can't open Reference Solubility File $!.\n";
+	# (c) David Hose. February 2017.
+	my $msg; # Error message.
+	my @tmp; # Temporary array.
+	my $RefSolNum = 0; # Tracks the row numnber of the array and hence number of solubility measurements.
+	LogMessage("ENTER: Read_RefSol_Data()", 3);
+	open (FH_REFSOL, "<", $RefSolFileName) or $msg = "Can't open Reference Solubility File. $!. LINE:". __LINE__; # Open Reference Solubility File.
+	LogErrMessg($msg) if ($msg ne ""); # Handle the error.
 	# Read in contents of control file.
-		my $RefSolNum = 0; # Tracks the row numnber of the array and hence number of solubility measurements.
 		REF_LOOP:	while(<FH_REFSOL>) {
-							next REF_LOOP if($_ =~ /^\W/); # Skip header (will start line with text).
-							chomp;
-							@temp = split(/\t/, $_);
-							# Is there any valid data to be used?  If not read next line.
-								# $temp[1] holds the Solvent ID number.
-								# If it is blank or hold none digit data, therefore no solvent ID. Skip line.
-									next REF_LOOP if($temp[1] eq "" || $temp[1] =~ /^\D+/); # 
-								# $temp[2..4] holds the Solubility Values.
-								# If all of the elements in this subarray contains either blanks "" or "NA", then there is no solubility data.  Skip line.
-									next REF_LOOP if(($temp[2] eq "" || $temp[2] =~ /na/i) && ($temp[3] eq "" || $temp[3] =~ /na/i) && ($temp[4] eq "" || $temp[4] =~ /na/i));
-							# Clean solubility data if required (for lines that have 0 < obs < 3.
-								# Replace 'NA' (in lines that have either 1 or 2 'NA's with blanks.
-									$temp[2] =~ s/na//i;
-									$temp[3] =~ s/na//i;
-									$temp[4] =~ s/na//i;
-							# Build the Reference Solubility Data for this solvent's measurements.
-								$RefSolub[$RefSolNum][0] = $RefSolNum + 1; # Entry Number.
-								$RefSolub[$RefSolNum][1] = $temp[1]; # Solvent Number.
-								$RefSolub[$RefSolNum][2] = $temp[2]; # Measurement #1.
-								$RefSolub[$RefSolNum][3] = $temp[3]; # Measurement #2.
-								$RefSolub[$RefSolNum][4] = $temp[4]; # Measurement #3.
-							# Process the solubility data for calculation of mean and stdev.
-								my @Sol = grep /\S/, @temp[2..4]; # Create / clear array holding the solubility data and remove blank elements.
-								$RefSolub[$RefSolNum][5] = Mean(@Sol); # Calculate and add the mean of the measurements.
-								$RefSolub[$RefSolNum][6] = StDev(@Sol); # Calculate and add the standard deviation of the measurements.
-								$RefSolub[$RefSolNum][7] = StDev(@Sol) / Mean(@Sol); # Relative standard deviation.
-								$RefSolub[$RefSolNum][8] = ConvmgmL2gg($temp[1], $RefSolub[$RefSolNum][5], $DenOpt, $Temperature);
-							$RefSolNum++; # Increment row counter.
+						next REF_LOOP if($_ =~ /^\W/); # Skip header (header starts line with text and not a number).
+						chomp;
+						@tmp = split(/\t/, $_);
+						# Is there any valid data to be used?  If not read next line.
+							# $tmp[1] holds the Solvent ID number. If it is blank or hold none digit data, therefore no solvent ID. Skip line.
+								next REF_LOOP if($tmp[1] eq "" || $tmp[1] =~ /^\D+/); # 
+							# $temp[2] holds the Solubility Value. If it contains either blanks "" or "NA", then there is no solubility data.  Skip line.
+								next REF_LOOP if(($tmp[2] eq "" || $tmp[2] =~ /na/i));
+						# Build the Reference Solubility Data for this solvent's measurements.
+							my $Key = $tmp[1]; # Key the hash for the Solvent ID number.
+							$RefSolub{$Key}[0] = $tmp[2]; # The average solubility value (mg/mL) supplied by Simon.
+							$RefSolub{$Key}[1] = ConvmgmL2gg($tmp[1], $tmp[2], $DenOpt, $Temperature); # The solubility value (g/g).
+							$RefSolub{$Key}[2] = log($RefSolub{$Key}[1]); # Take logs of the solubility.
+						$RefSolNum++; # Increment row counter.
 		} # END while loop over FH_REFSOL.
 		close FH_REFSOL; # Close Reference Solubility File.
-		return $RefSolNum; # Returns the number of reference solvents solubilities.
+		# Set up arrays for analysis.
+			@RefSolubKeys = sort { $a <=> $b } (keys %RefSolub); # Extract the hash keys and numerical sort them.
+			$RefSolNum = scalar(@RefSolubKeys); # Number of reference solvents.
+			foreach my $i (@RefSolubKeys) {
+				push @RefSols, @{$RefSolub{$i}}[1];
+				push @RefLogSols, @{$RefSolub{$i}}[2];
+			}
+		LogMessage("LEAVE: Read_RefSol_Data()", 3);
+		return ($RefSolNum); # Returns the number of reference solvents found.
 } # END Read_RefSol_Data()
 
 sub Read_Solutes {
@@ -1100,7 +1214,7 @@ sub Read_Solutes {
 		# Return: An array of the solutes.
 		# Dependences: LogMessage()
 		# Global Variables: NONE.
-	# (c) David Hose. March, 2017.
+	# (c) David Hose. March 2017.
 	my $File = $_[0];
 	my $Line;				# Holds the current line that has been read in from the Solute list file.
 	my @SOLUTES;			# This holds of the solutes file and path information.
@@ -1108,18 +1222,14 @@ sub Read_Solutes {
 	my $ConformerCnt = 0;	# This counts the number of conformers for a specific SOLUTE.
 	my $FirstConformer;		# Hold file and path information about the first conformer of a SOLUTE.
 	my $SoluteTempArray;	# A temp array.
-	my $msg; # An error message.
+	my $msg; # Holds an error message.
 	# Comments for LogFile.
-		LogMessage("Enter: Read_Solutes.", 1);
+		LogMessage("ENTER: Read_Solutes.", 1);
 		LogMessage("Opening Solute File '$File'",3);
-	open (FH_SOLUTE, "<$File") or die "Can't open the Solute list file '$File', $! LINE:" . __LINE__ . "\n"; # Open the solute list file.
-	if($msg ne "") {
-		LogMessage("ERROR: $msg", 1);
-		print "$msg\n";
-		exit;
-	}
+	open (FH_SOLUTE, "<$File") or $msg = "Can't open the Solute list file '$File', $! LINE:" . __LINE__; # Open the solute list file.
+	LogErrMessg($msg) if ($msg ne ""); # Handle the error.
 	# Loop through the lines of the file.
-		SOLUTELINE:	while(<FH_SOLUTE>) {
+		SOLUTELINE: while(<FH_SOLUTE>) {
 			chomp;
 			$Line = $_;
 			# This section deals with compounds that have multiple conformers or are composites of multiple compounds (tautomers, etc.)
@@ -1180,10 +1290,64 @@ sub Read_Solutes {
 		} # END while SOLUTELINE loop.
 	close FH_SOLUTE; # Close solute list file.
 	shift @SOLUTES; # Discard blank first entry.
-	LogMessage("Leave: Read_Solutes.", 1); # Comment for LogFile.
 	LogMessage("PARAM: $SOLUTES[0]", 3);
+	LogMessage("LEAVE: Read_Solutes.", 1); # Comment for LogFile.
 	return(@SOLUTES);
 } # END Read_Solutes()
+
+sub Read_Solvents {
+	# Reads in a list of Solvent ID's for which the solubility of the solute is to be predicted in.
+		# Pass: Filename.
+		# Return: Solvent List.
+		# Dependences:
+		# Global Variables:
+	# (c) David Hose. March 2017.
+		my $FN = $_[0]; # The filename of the list of solvents that solubility predictions have to be made.
+		my $msg; # Holds an error message.
+		my $str; # Holds the string of Solvent IDs. (form 1,2,5-10,115,...).
+		my @tmp; # Temp array to process the string.
+		my @Solvents; # This will hold the list of Solvent IDs to be returned.
+		LogMessage("ENTER: Read_Pred_Solv()", 1);
+		open (FH_SOLLIST, "<$SolventFile") or $msg = "Can't open Solvent List '$FN'. $! LINE:" . __LINE__;
+		LogErrMessg($msg) if ($msg ne ""); # Handle the error.
+		# Create a single line string of the Solvent ID numbers separated by commas (the solvents could be listed over multiple lines).
+		while (<FH_SOLLIST>) {
+			chomp;
+			$str = "$str,$_";
+		}
+		close FH_SOLLIST;
+	# Case 1 - "ALL" available Solvents are to be run.
+		if($str =~ /^,all/i) {$str = "1-9,11-91,93-272"} # This should exclude those solvents that don't have TZVPD-Fine cosmo files.
+	# Case 2 - Immiscible Solvents.
+		if($str =~ /^,immisc/i) {
+			$str = "1, 3, 4, 6, 7, 11, 14, 15, 18-26, 31-48, 50-55, 59, 60, 62-64, 66-68, 73, 74, 75, 81-84, 88-90, 92-96, 100-102, 104-106, 109-113, 117, 118, 122, 124, 125, 128-130, 132-137, 140-146, 154, 156, 158-161, 163, 165-170, 177-188, 190, 192-216, 218-221, 223, 224, 226, 230-232, 234, 236-243, 246, 264-269, 270, 272";
+		} # CHECK for compounds that don't have TZVPD-Fine cosmo files.
+	# Case 3 - Miscible Solvents.
+		if($str =~ /^,misc/i) {
+			$str = "2, 5, 8, 9, 12, 13, 16, 27-30, 49, 56, 58, 61, 65, 69, 70-72, 76-80, 85-87, 97-99, 103, 107, 108, 114-116, 119-121, 123, 126, 127, 131, 138, 147-150, 155, 157, 162, 164, 171, 172, 176, 189, 191, 217, 227-229, 233, 235, 244, 254, 260";
+		} # CHECK for compounds that don't have TZVPD-Fine cosmo files.
+	# Case 4 - General case & process the strings created by Cases 1 - 3..
+		$str =~ s/\s//g; # Remove spaces ', '.
+		@tmp = split(/,/, $str); # Split string by commas.
+		# Loop through each element of @Temp looking for 'digit(s)-digit(s)' format that indicates a range. (9-14 means {9, 10, 11, 12, 13, 14}).
+			foreach $i (@tmp) {
+				if ($i =~ /\d+\-\d+/) {
+					my $seq = "";
+					$i =~ m/(\d+)\-(\d+)/;
+					for ($j = $1; $j <= $2; $j++) {$seq = "$seq,$j"}
+					$i = $seq; # Overwrite the current element with the required sequence.
+				}	
+			} # END foreach loop.
+		$str = join(",", @tmp); # Rejoin the elements together (to integrate the new sequence(s)).
+		@Solvents = split(/,/, $str); # Split string by commas.
+		@Solvents = grep { $_ ne '' } @Solvents; # Remove any blank elements which might be present.
+		@Solvents = sort { $a <=> $b } (@Solvents); # Sort the solvent IDs numerically.
+		LogMessage("LEAVE: Read_Pred_Solv()", 1);
+		return (@Solvents);
+} # END Read_Pred_Solv()
+
+
+
 
 ## SOLUBILITY AND DENSITY CALCULATIONS ##
 
@@ -1244,7 +1408,7 @@ sub GetSolRho {
 	return($Density);
 } # END GetSolRho()
 
-## STATISTICAL CALCULATIONS ##
+## STATISTICAL & MISC CALCULATIONS ##
 
 sub NObs {
 	# Determine the number of values in the array.
@@ -1252,7 +1416,7 @@ sub NObs {
 		# Return: Number entries in the array.
 		# Dependences: NONE.
 		# Global Variables: NONE.
-	# (c) David Hose, Feb, 2017.
+	# (c) David Hose, February 2017.
 		my $nobs = scalar(@_);
 } # END NObs()
 
@@ -1262,7 +1426,7 @@ sub Mean {
 		# Return: The mean.
 		# Dependences: NObs()
 		# Global Variables: NONE.
-	# (c) David Hose, Feb, 2017.
+	# (c) David Hose, February 2017.
 		my $m = 0;
 		foreach $i (@_) {$m = $m + $i}
 		$m = $m / NObs(@_);
@@ -1275,7 +1439,7 @@ sub StDev {
 		# Return: The standard deviation.
 		# Dependences: NObs(), Mean()
 		# Global Variables: NONE.
-	# (c) David Hose, Feb, 2017.
+	# (c) David Hose, February 2017.
 	if(NObs(@_) == 1) {
 		# If the number of observations are 1, this leads to a div-by-zero error. To prevent runtime errors return a StDev value of 0.
 			return(0);
@@ -1288,5 +1452,20 @@ sub StDev {
 		return (sprintf("%.2f", $stdev)); # Return value to 2 dp.
 	}
 } # END StDev()
+
+sub APScore {
+	# Predefined weighting values (for tuning).
+			my $WtA = 1.0;		# Weighting to be given to the accuracy (mean).
+			my $WtP = 1.0;		# Weighting to be given to the precision (spread).
+			my $APScore = sqrt(($WtA*$_[0])**2 + ($WtP*$_[1])**2);
+			return $APScore;
+} # END APScore()
+
+sub minindex {
+	# Determine the index of the array that contains the lowest value.
+	  my( $aref, $idx_min ) = ( shift, 0 );
+	  $aref->[$idx_min] < $aref->[$_] or $idx_min = $_ for 1 .. $#{$aref};
+	  return $idx_min;
+}
 
 ### END OF SCRIPT ###
