@@ -1,0 +1,455 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Solubility Calculation of Solute in Solvent 
+ Job-Date   : 03/31/2017
+ Job-Time   : 14:48:44
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+ Reading vapor pressure and property information for compound 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap
+ Note: Vapor Pressure / property file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap is empty
+ Free energy of fusion for pure compound 1 (DGFUS = 3.64493 kcal/mol)
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204754.5909 kcal/mol
+ E_gas                  :   -2204740.7759 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.8150 kcal/mol
+ E_diel                 :        -18.7411 kcal/mol
+ Averaging corr dE      :          1.1081 kcal/mol
+ EvdW in continuum      :       -358.6958 kcal/mol
+ Area                   :        347.5579 A^2
+ Volume                 :        402.8905 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0028 a.u.
+ Dipole moment (t,x,y,z):          7.1747  0.488760  7.156487 -0.149195 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.26E+02  4.58E+01  2.09E+02  1.75E+02  5.53E+02              
+ H-bond moment (accept) :          6.7617
+ H-bond moment (donor)  :          2.3419
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204751.2414 kcal/mol
+ E_gas                  :   -2204738.3753 kcal/mol
+ E_COSMO-E_gas+dE       :        -12.8661 kcal/mol
+ E_diel                 :        -17.6608 kcal/mol
+ Averaging corr dE      :          1.0677 kcal/mol
+ EvdW in continuum      :       -351.4171 kcal/mol
+ Area                   :        340.9253 A^2
+ Volume                 :        403.0683 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0031 a.u.
+ Dipole moment (t,x,y,z):          7.7437 -4.364802 -6.198433  1.578924 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.16E+02  3.56E+01  1.86E+02  1.45E+02  4.85E+02              
+ H-bond moment (accept) :          5.5908
+ H-bond moment (donor)  :          2.1978
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204749.4696 kcal/mol
+ E_gas                  :   -2204735.8858 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.5838 kcal/mol
+ E_diel                 :        -18.5107 kcal/mol
+ Averaging corr dE      :          1.0974 kcal/mol
+ EvdW in continuum      :       -356.7686 kcal/mol
+ Area                   :        345.9657 A^2
+ Volume                 :        403.3632 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0024 a.u.
+ Dipole moment (t,x,y,z):          7.3409 -4.690418 -5.646647 -0.062138 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.23E+02  4.47E+01  2.02E+02  1.75E+02  5.37E+02              
+ H-bond moment (accept) :          6.4083
+ H-bond moment (donor)  :          2.1788
+
+
+ Reading COSMO information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol.vap
+ Free energy of fusion for pure compound 2 (DGFUS = 0.00000 kcal/mol)
+ Enthalpy of fusion for pure compound 2 (DHFUS = 2.38002 kcal/mol)
+ Antoine equation coefficients ([mbar]/[K]) for compound 2:        20.5377      6022.1800       -28.2500
+ Vapor Pressure [mbar] / Temperature [°C] input for compound 2:
+                0.1000            24.0000
+               10.0000            86.1000
+             1000.0000           196.9000
+ Antoine equation coefficients (in [mbar]/[K]) for compound 2:        18.6524      4620.0227       -76.6759
+ Minimum interpolative temperature for vapor pressure estimation of compound 2:     297.150 K
+ Maximum interpolative temperature for vapor pressure estimation of compound 2:     470.050 K
+ Minimum temperature for vapor pressure estimation of pure compound 2 (TPVMIN = 364.00000 K)
+ Maximum temperature for vapor pressure estimation of pure compound 2 (TPVMAX = 494.00000 K)
+ UNIQUAC volume parameter for compound 2 (UNIQUAC_RI = 2.40880)
+ UNIQUAC surface parameter for compound 2 (UNIQUAC_QI = 2.24800)
+ Boiling temperature of compound 2 (TBOIL = 470.45000 K)
+ Melting temperature of compound 2 (TMELT = 260.15000 K)
+ Experimental dielectric constant for molecule 4   EPSILON = 40.20000
+ Critical temperature of compound 2 (TCRIT = 719.70000 K)
+ Critical pressure of compound 2 (PCRIT = 77011.00000 mbar)
+
+ Compound Information for compound 2 conformer 1 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol_c0.cosmo)
+ Atomic weights         : 1111111111
+ E_COSMO+dE             :    -144566.9283 kcal/mol
+ E_gas                  :    -144559.3402 kcal/mol
+ E_COSMO-E_gas+dE       :         -7.5880 kcal/mol
+ E_diel                 :        -10.0398 kcal/mol
+ Averaging corr dE      :          0.6134 kcal/mol
+ EvdW in continuum      :        -98.2274 kcal/mol
+ Area                   :         98.5067 A^2
+ Volume                 :         81.7861 A^3
+ Molecular Weight       :         62.0681 a.m.u.
+ Total COSMO charge     :         -0.0002 a.u.
+ Dipole moment (t,x,y,z):          3.0594 -1.496278 -2.073414  1.679853 Debye                            
+ Sigma moments (1-6)    :          0.0000  7.57E+01  2.27E+01  1.36E+02  5.41E+01  2.99E+02              
+ H-bond moment (accept) :          3.9729
+ H-bond moment (donor)  :          2.3058
+
+
+ Reading COSMO information for molecule 5 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol_c1.cosmo
+ Reading gas phase energy information for molecule 5 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol_c1.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol.vap
+ Antoine equation coefficients ([mbar]/[K]) for compound 2:        20.5377      6022.1800       -28.2500
+ Vapor Pressure [mbar] / Temperature [°C] input for compound 2:
+                0.1000            24.0000
+               10.0000            86.1000
+             1000.0000           196.9000
+ Antoine equation coefficients (in [mbar]/[K]) for compound 2:        18.6524      4620.0227       -76.6759
+ UNIQUAC volume parameter for compound 2 (UNIQUAC_RI = 2.40880)
+ UNIQUAC surface parameter for compound 2 (UNIQUAC_QI = 2.24800)
+ Experimental dielectric constant for molecule 5   EPSILON = 40.20000
+
+ Compound Information for compound 2 conformer 2 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol_c1.cosmo)
+ Atomic weights         : 1111111111
+ E_COSMO+dE             :    -144566.6137 kcal/mol
+ E_gas                  :    -144559.3042 kcal/mol
+ E_COSMO-E_gas+dE       :         -7.3095 kcal/mol
+ E_diel                 :         -9.3001 kcal/mol
+ Averaging corr dE      :          0.6479 kcal/mol
+ EvdW in continuum      :        -98.2804 kcal/mol
+ Area                   :         98.6444 A^2
+ Volume                 :         81.5742 A^3
+ Molecular Weight       :         62.0681 a.m.u.
+ Total COSMO charge     :  -4.2159877E-05 a.u.
+ Dipole moment (t,x,y,z):          3.0170 -2.898073 -0.817724 -0.186426 Debye                            
+ Sigma moments (1-6)    :          0.0000  7.37E+01  2.06E+01  1.34E+02  4.82E+01  2.99E+02              
+ H-bond moment (accept) :          3.8327
+ H-bond moment (donor)  :          2.4206
+
+
+ Reading COSMO information for molecule 6 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol_c2.cosmo
+ Reading gas phase energy information for molecule 6 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol_c2.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol.vap
+ Antoine equation coefficients ([mbar]/[K]) for compound 2:        20.5377      6022.1800       -28.2500
+ Vapor Pressure [mbar] / Temperature [°C] input for compound 2:
+                0.1000            24.0000
+               10.0000            86.1000
+             1000.0000           196.9000
+ Antoine equation coefficients (in [mbar]/[K]) for compound 2:        18.6524      4620.0227       -76.6759
+ UNIQUAC volume parameter for compound 2 (UNIQUAC_RI = 2.40880)
+ UNIQUAC surface parameter for compound 2 (UNIQUAC_QI = 2.24800)
+ Experimental dielectric constant for molecule 6   EPSILON = 40.20000
+
+ Compound Information for compound 2 conformer 3 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol_c2.cosmo)
+ Atomic weights         : 1111111111
+ E_COSMO+dE             :    -144566.4223 kcal/mol
+ E_gas                  :    -144558.6309 kcal/mol
+ E_COSMO-E_gas+dE       :         -7.7914 kcal/mol
+ E_diel                 :         -9.9049 kcal/mol
+ Averaging corr dE      :          0.6494 kcal/mol
+ EvdW in continuum      :        -98.7514 kcal/mol
+ Area                   :         98.9885 A^2
+ Volume                 :         82.2188 A^3
+ Molecular Weight       :         62.0681 a.m.u.
+ Total COSMO charge     :         -0.0003 a.u.
+ Dipole moment (t,x,y,z):          0.0409 -0.015750 -0.034318 -0.015597 Debye                            
+ Sigma moments (1-6)    :          0.0000  8.19E+01  1.91E+01  1.55E+02  4.11E+01  3.53E+02              
+ H-bond moment (accept) :          4.2945
+ H-bond moment (donor)  :          3.2049
+
+
+ Reading COSMO information for molecule 7 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol_c3.cosmo
+ Reading gas phase energy information for molecule 7 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol_c3.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol.vap
+ Antoine equation coefficients ([mbar]/[K]) for compound 2:        20.5377      6022.1800       -28.2500
+ Vapor Pressure [mbar] / Temperature [°C] input for compound 2:
+                0.1000            24.0000
+               10.0000            86.1000
+             1000.0000           196.9000
+ Antoine equation coefficients (in [mbar]/[K]) for compound 2:        18.6524      4620.0227       -76.6759
+ UNIQUAC volume parameter for compound 2 (UNIQUAC_RI = 2.40880)
+ UNIQUAC surface parameter for compound 2 (UNIQUAC_QI = 2.24800)
+ Experimental dielectric constant for molecule 7   EPSILON = 40.20000
+
+ Compound Information for compound 2 conformer 4 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/g/glycol_c3.cosmo)
+ Atomic weights         : 1111111111
+ E_COSMO+dE             :    -144565.9245 kcal/mol
+ E_gas                  :    -144556.9042 kcal/mol
+ E_COSMO-E_gas+dE       :         -9.0202 kcal/mol
+ E_diel                 :        -12.5908 kcal/mol
+ Averaging corr dE      :          0.6381 kcal/mol
+ EvdW in continuum      :        -99.2081 kcal/mol
+ Area                   :         99.7859 A^2
+ Volume                 :         81.8750 A^3
+ Molecular Weight       :         62.0681 a.m.u.
+ Total COSMO charge     :   1.5820438E-05 a.u.
+ Dipole moment (t,x,y,z):          2.8236  0.041354 -2.822795  0.051809 Debye                            
+ Sigma moments (1-6)    :          0.0000  9.08E+01  3.06E+01  1.88E+02  8.99E+01  4.62E+02              
+ H-bond moment (accept) :          5.7145
+ H-bond moment (donor)  :          3.2619
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    7
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing solids solubilities: Heats of fusion used as given in the input file
+ Computed solubilities will be refined iteratively: Threshold = 1.00E-05
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096    glycol
+ Mole Fraction        :     1.0000    0.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.43676 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.76165
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.02764 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.69267 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.30393 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.16842 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.84183 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096    glycol
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  2  (glycol)
+ Chemical potential of the compound in the mixture :        -2.63543 kcal/mol
+ Log10(partial pressure [mbar])                    :        -0.53719
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -144569.56371 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -7.18417 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.96549 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -5.11559 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.40053 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096    glycol
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.54203 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.81547
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204761.13291 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.34475 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.46916 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -6.45444 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.36975 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+ Compound:  2  (glycol)
+ Chemical potential of the compound in the mixture :        -2.55868 kcal/mol
+ Log10(partial pressure [mbar])                    :        -0.35520
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -144569.48696 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -7.08790 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.98422 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -5.04896 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.38714 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096    glycol
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.76617 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.26172
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204761.35705 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.57100 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.40206 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -6.55502 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.42721 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.21726
+ w_Solubility [g(Solute)/g(Solution)]              :  3.66494508E-03
+
+ Compound:  2  (glycol)
+ Chemical potential of the compound in the mixture :        -2.63543 kcal/mol
+ Log10(partial pressure [mbar])                    :        -0.53719
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -144569.56371 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -7.18417 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.96549 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -5.11559 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.40053 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+ Log10(x_Solubility)                               :         0.00000
+
+
+
+
+ Results for mixture 5
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096    glycol
+ Mole Fraction        :     0.0006    0.9994
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.77160 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.26577
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204761.36248 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.58202 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.39470 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -6.55317 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.43272 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.21321
+ w_Solubility [g(Solute)/g(Solution)]              :  3.69920074E-03
+
+ Compound:  2  (glycol)
+ Chemical potential of the compound in the mixture :        -2.63542 kcal/mol
+ Log10(partial pressure [mbar])                    :        -0.53718
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -144569.56369 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -7.18502 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.96498 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -5.11450 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.40196 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 6
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096    glycol
+ Mole Fraction        :     0.0006    0.9994
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.77165 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.26581
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204761.36254 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.58210 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.39466 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -6.55315 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.43277 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.21317
+ w_Solubility [g(Solute)/g(Solution)]              :  3.69952225E-03
+
+ Compound:  2  (glycol)
+ Chemical potential of the compound in the mixture :        -2.63542 kcal/mol
+ Log10(partial pressure [mbar])                    :        -0.53718
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -144569.56369 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -7.18503 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.96497 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -5.11449 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.40197 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 7
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096    glycol
+ Mole Fraction        :     0.0006    0.9994
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.77166 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.26581
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204761.36254 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.58210 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.39466 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -6.55315 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.43277 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.21317
+ w_Solubility [g(Solute)/g(Solution)]              :  3.69952526E-03
+
+ Compound:  2  (glycol)
+ Chemical potential of the compound in the mixture :        -2.63542 kcal/mol
+ Log10(partial pressure [mbar])                    :        -0.53718
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -144569.56369 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -7.18503 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.96497 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -5.11449 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.40197 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+----------------
+ END job       1
+----------------

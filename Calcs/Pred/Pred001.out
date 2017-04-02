@@ -1,0 +1,424 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Solubility Calculation of Solute in Solvent 
+ Job-Date   : 03/31/2017
+ Job-Time   : 14:46:01
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+ Reading vapor pressure and property information for compound 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap
+ Note: Vapor Pressure / property file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap is empty
+ Free energy of fusion for pure compound 1 (DGFUS = 3.64493 kcal/mol)
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204754.5909 kcal/mol
+ E_gas                  :   -2204740.7759 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.8150 kcal/mol
+ E_diel                 :        -18.7411 kcal/mol
+ Averaging corr dE      :          1.1081 kcal/mol
+ EvdW in continuum      :       -358.6958 kcal/mol
+ Area                   :        347.5579 A^2
+ Volume                 :        402.8905 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0028 a.u.
+ Dipole moment (t,x,y,z):          7.1747  0.488760  7.156487 -0.149195 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.26E+02  4.58E+01  2.09E+02  1.75E+02  5.53E+02              
+ H-bond moment (accept) :          6.7617
+ H-bond moment (donor)  :          2.3419
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204751.2414 kcal/mol
+ E_gas                  :   -2204738.3753 kcal/mol
+ E_COSMO-E_gas+dE       :        -12.8661 kcal/mol
+ E_diel                 :        -17.6608 kcal/mol
+ Averaging corr dE      :          1.0677 kcal/mol
+ EvdW in continuum      :       -351.4171 kcal/mol
+ Area                   :        340.9253 A^2
+ Volume                 :        403.0683 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0031 a.u.
+ Dipole moment (t,x,y,z):          7.7437 -4.364802 -6.198433  1.578924 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.16E+02  3.56E+01  1.86E+02  1.45E+02  4.85E+02              
+ H-bond moment (accept) :          5.5908
+ H-bond moment (donor)  :          2.1978
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204749.4696 kcal/mol
+ E_gas                  :   -2204735.8858 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.5838 kcal/mol
+ E_diel                 :        -18.5107 kcal/mol
+ Averaging corr dE      :          1.0974 kcal/mol
+ EvdW in continuum      :       -356.7686 kcal/mol
+ Area                   :        345.9657 A^2
+ Volume                 :        403.3632 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0024 a.u.
+ Dipole moment (t,x,y,z):          7.3409 -4.690418 -5.646647 -0.062138 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.23E+02  4.47E+01  2.02E+02  1.75E+02  5.37E+02              
+ H-bond moment (accept) :          6.4083
+ H-bond moment (donor)  :          2.1788
+
+
+ Reading COSMO information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/1/1,1,1-trichloroethane_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/1/1,1,1-trichloroethane_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/1/1,1,1-trichloroethane.vap
+ Free energy of fusion for pure compound 2 (DGFUS = 0.00000 kcal/mol)
+ Wagner equation coefficients ([mbar]/[K]) for compound 2:     43000.0000       545.0000        -7.3132         2.0464        -3.7775        -0.4547
+ Vapor Pressure [mbar] / Temperature [°C] input for compound 2:
+               10.0000           -25.3000
+              100.0000            14.2000
+             1000.0000            73.7000
+ Antoine equation coefficients (in [mbar]/[K]) for compound 2:        16.0030      2678.7671       -52.3250
+ Minimum interpolative temperature for vapor pressure estimation of compound 2:     247.850 K
+ Maximum interpolative temperature for vapor pressure estimation of compound 2:     346.850 K
+ Minimum temperature for vapor pressure estimation of pure compound 2 (TPVMIN = 247.00000 K)
+ Maximum temperature for vapor pressure estimation of pure compound 2 (TPVMAX = 545.00000 K)
+ UNIQUAC volume parameter for compound 2 (UNIQUAC_RI = 3.54120)
+ UNIQUAC surface parameter for compound 2 (UNIQUAC_QI = 3.03200)
+ Boiling temperature of compound 2 (TBOIL = 347.15000 K)
+ Melting temperature of compound 2 (TMELT = 242.75000 K)
+
+ Compound Information for compound 2 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/1/1,1,1-trichloroethane_c0.cosmo)
+ Atomic weights         : 11111111
+ E_COSMO+dE             :    -915442.0498 kcal/mol
+ E_gas                  :    -915439.6937 kcal/mol
+ E_COSMO-E_gas+dE       :         -2.3561 kcal/mol
+ E_diel                 :         -3.1934 kcal/mol
+ Averaging corr dE      :          0.1966 kcal/mol
+ EvdW in continuum      :       -164.4564 kcal/mol
+ Area                   :        134.2813 A^2
+ Volume                 :        126.1763 A^3
+ Molecular Weight       :        133.4050 a.m.u.
+ Total COSMO charge     :          0.0012 a.u.
+ Dipole moment (t,x,y,z):          2.6403 -2.640258 -0.003610  0.000341 Debye                            
+ Sigma moments (1-6)    :          0.0000  2.10E+01 -5.336665  7.304038 -4.151790  3.844784              
+ H-bond moment (accept) :          0.0000
+ H-bond moment (donor)  :          0.0000
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    4
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing solids solubilities: Heats of fusion used as given in the input file
+ Computed solubilities will be refined iteratively: Threshold = 1.00E-05
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,1-tri
+ Mole Fraction        :     1.0000    0.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.43676 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.76165
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.02764 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.69267 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.30393 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.16842 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.84183 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,1-tri
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  2  (1,1,1-trichloroethane)
+ Chemical potential of the compound in the mixture :        -3.98761 kcal/mol
+ Log10(partial pressure [mbar])                    :         2.00278
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -915446.03743 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.30993 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.52937 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00000 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.83930 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,1-tri
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.84244 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.30267
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.43333 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -15.17391 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.52342 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.05481 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.66231 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+ Compound:  2  (1,1,1-trichloroethane)
+ Chemical potential of the compound in the mixture :        -3.94822 kcal/mol
+ Log10(partial pressure [mbar])                    :         2.10730
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -915445.99804 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.28383 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.53436 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00000 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.81819 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,1-tri
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.98378 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.67844
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.57466 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -15.26373 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.49437 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.05743 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.71859 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.80054
+ w_Solubility [g(Solute)/g(Solution)]              :  4.46366400E-04
+
+ Compound:  2  (1,1,1-trichloroethane)
+ Chemical potential of the compound in the mixture :        -3.98761 kcal/mol
+ Log10(partial pressure [mbar])                    :         2.00278
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -915446.03743 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.30993 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.52937 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00000 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.83930 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+ Log10(x_Solubility)                               :         0.00000
+
+
+
+
+ Results for mixture 5
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,1-tri
+ Mole Fraction        :     0.0002    0.9998
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.30733 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.91966
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.89822 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -15.61251 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.16566 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.07705 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.71850 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.55932
+ w_Solubility [g(Solute)/g(Solution)]              :  7.77701953E-04
+
+ Compound:  2  (1,1,1-trichloroethane)
+ Chemical potential of the compound in the mixture :        -3.98761 kcal/mol
+ Log10(partial pressure [mbar])                    :         2.00278
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -915446.03743 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.30978 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.52961 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00001 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.83938 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 6
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,1-tri
+ Mole Fraction        :     0.0003    0.9997
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.32504 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.93286
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.91593 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -15.64157 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.15088 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.09138 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.71850 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.54612
+ w_Solubility [g(Solute)/g(Solution)]              :  8.01696605E-04
+
+ Compound:  2  (1,1,1-trichloroethane)
+ Chemical potential of the compound in the mixture :        -3.98760 kcal/mol
+ Log10(partial pressure [mbar])                    :         2.00278
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -915446.03742 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.30967 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.52978 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00002 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.83944 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 7
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,1-tri
+ Mole Fraction        :     0.0003    0.9997
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.32606 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.93362
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.91694 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -15.64339 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.15008 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.09241 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.71850 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.54536
+ w_Solubility [g(Solute)/g(Solution)]              :  8.03096562E-04
+
+ Compound:  2  (1,1,1-trichloroethane)
+ Chemical potential of the compound in the mixture :        -3.98760 kcal/mol
+ Log10(partial pressure [mbar])                    :         2.00278
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -915446.03742 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.30966 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.52979 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00002 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.83944 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 8
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,1-tri
+ Mole Fraction        :     0.0003    0.9997
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.32612 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.93366
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.91700 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -15.64350 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.15004 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.09247 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.71850 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.54532
+ w_Solubility [g(Solute)/g(Solution)]              :  8.03177310E-04
+
+ Compound:  2  (1,1,1-trichloroethane)
+ Chemical potential of the compound in the mixture :        -3.98760 kcal/mol
+ Log10(partial pressure [mbar])                    :         2.00278
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -915446.03742 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.30966 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.52979 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00002 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.83944 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 9
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,1-tri
+ Mole Fraction        :     0.0003    0.9997
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -6.32612 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.93366
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.91700 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -15.64350 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.15003 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.09247 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.71850 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.54531
+ w_Solubility [g(Solute)/g(Solution)]              :  8.03181964E-04
+
+ Compound:  2  (1,1,1-trichloroethane)
+ Chemical potential of the compound in the mixture :        -3.98760 kcal/mol
+ Log10(partial pressure [mbar])                    :         2.00278
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -915446.03742 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.30966 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.52979 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00002 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -7.83944 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+----------------
+ END job       1
+----------------

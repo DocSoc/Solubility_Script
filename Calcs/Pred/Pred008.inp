@@ -1,0 +1,13 @@
+ctd = BP_TZVPD_FINE_C30_1701.ctd cdir = "apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES" LDIR = "apps/cosmologic/COSMOthermX17/licensefiles/" 
+ unit notempty wtln ndgf ehfile 
+!! Solubility Calculation of Solute in Solvent #8 using Gfus = 3.64493397 kcal/mol. !!
+f = AZ13530968_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  Comp = AZ13530968 [  VPfile DGfus = 3.64493397  
+f = AZ13530968_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  
+f = AZ13530968_c2.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a"  ] Comp = AZ13530968 
+f = 1-2-Dimethoxyethane_c0.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1" Comp = 1-2-Dimethoxyethane [ VPfile DGfus = 0 
+f = 1-2-Dimethoxyethane_c1.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1"
+f = 1-2-Dimethoxyethane_c2.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1"
+f = 1-2-Dimethoxyethane_c3.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1"
+f = 1-2-Dimethoxyethane_c4.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1"
+f = 1-2-Dimethoxyethane_c5.cosmo fdir="/dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1" ]
+solub=2 tc=20 Iterative 

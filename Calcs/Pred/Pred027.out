@@ -1,0 +1,2130 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Solubility Calculation of Solute in Solvent 
+ Job-Date   : 03/31/2017
+ Job-Time   : 14:50:18
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+ Reading vapor pressure and property information for compound 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap
+ Note: Vapor Pressure / property file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap is empty
+ Free energy of fusion for pure compound 1 (DGFUS = 3.64493 kcal/mol)
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204754.5909 kcal/mol
+ E_gas                  :   -2204740.7759 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.8150 kcal/mol
+ E_diel                 :        -18.7411 kcal/mol
+ Averaging corr dE      :          1.1081 kcal/mol
+ EvdW in continuum      :       -358.6958 kcal/mol
+ Area                   :        347.5579 A^2
+ Volume                 :        402.8905 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0028 a.u.
+ Dipole moment (t,x,y,z):          7.1747  0.488760  7.156487 -0.149195 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.26E+02  4.58E+01  2.09E+02  1.75E+02  5.53E+02              
+ H-bond moment (accept) :          6.7617
+ H-bond moment (donor)  :          2.3419
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204751.2414 kcal/mol
+ E_gas                  :   -2204738.3753 kcal/mol
+ E_COSMO-E_gas+dE       :        -12.8661 kcal/mol
+ E_diel                 :        -17.6608 kcal/mol
+ Averaging corr dE      :          1.0677 kcal/mol
+ EvdW in continuum      :       -351.4171 kcal/mol
+ Area                   :        340.9253 A^2
+ Volume                 :        403.0683 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0031 a.u.
+ Dipole moment (t,x,y,z):          7.7437 -4.364802 -6.198433  1.578924 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.16E+02  3.56E+01  1.86E+02  1.45E+02  4.85E+02              
+ H-bond moment (accept) :          5.5908
+ H-bond moment (donor)  :          2.1978
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204749.4696 kcal/mol
+ E_gas                  :   -2204735.8858 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.5838 kcal/mol
+ E_diel                 :        -18.5107 kcal/mol
+ Averaging corr dE      :          1.0974 kcal/mol
+ EvdW in continuum      :       -356.7686 kcal/mol
+ Area                   :        345.9657 A^2
+ Volume                 :        403.3632 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0024 a.u.
+ Dipole moment (t,x,y,z):          7.3409 -4.690418 -5.646647 -0.062138 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.23E+02  4.47E+01  2.02E+02  1.75E+02  5.37E+02              
+ H-bond moment (accept) :          6.4083
+ H-bond moment (donor)  :          2.1788
+
+
+ Reading COSMO information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/a/aceticacid_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/a/aceticacid_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/a/aceticacid.vap
+ Free energy of fusion for pure compound 2 (DGFUS = 0.00000 kcal/mol)
+ Enthalpy of fusion for pure compound 2 (DHFUS = 2.80354 kcal/mol)
+ Wagner equation coefficients ([mbar]/[K]) for compound 2:     57860.0000       592.7100        -7.8318         0.0006         0.2471        -8.5046
+ Minimum temperature for vapor pressure estimation of pure compound 2 (TPVMIN = 304.00000 K)
+ Maximum temperature for vapor pressure estimation of pure compound 2 (TPVMAX = 593.00000 K)
+ UNIQUAC volume parameter for compound 2 (UNIQUAC_RI = 2.20240)
+ UNIQUAC surface parameter for compound 2 (UNIQUAC_QI = 2.07200)
+ Boiling temperature of compound 2 (TBOIL = 391.05000 K)
+ Melting temperature of compound 2 (TMELT = 289.75000 K)
+ Experimental dielectric constant for molecule 4   EPSILON = 6.30000
+ Critical temperature of compound 2 (TCRIT = 592.71000 K)
+ Critical pressure of compound 2 (PCRIT = 57860.00000 mbar)
+
+ Compound Information for compound 2 conformer 1 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/a/aceticacid_c0.cosmo)
+ Atomic weights         : 11111111
+ E_COSMO+dE             :    -143834.7858 kcal/mol
+ E_gas                  :    -143828.0544 kcal/mol
+ E_COSMO-E_gas+dE       :         -6.7314 kcal/mol
+ E_diel                 :         -8.6291 kcal/mol
+ Averaging corr dE      :          0.5037 kcal/mol
+ EvdW in continuum      :        -95.5561 kcal/mol
+ Area                   :         93.2207 A^2
+ Volume                 :         75.4438 A^3
+ Molecular Weight       :         60.0522 a.m.u.
+ Total COSMO charge     :   5.2462605E-05 a.u.
+ Dipole moment (t,x,y,z):          2.4399  0.803726 -1.976304 -1.183775 Debye                            
+ Sigma moments (1-6)    :          0.0000  6.55E+01 -0.899497  1.14E+02 -4.34E+01  2.69E+02              
+ H-bond moment (accept) :          1.5445
+ H-bond moment (donor)  :          2.8597
+
+
+ Reading COSMO information for molecule 5 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/a/aceticacid_c1.cosmo
+ Reading gas phase energy information for molecule 5 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/a/aceticacid_c1.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/a/aceticacid.vap
+ Wagner equation coefficients ([mbar]/[K]) for compound 2:     57860.0000       592.7100        -7.8318         0.0006         0.2471        -8.5046
+ UNIQUAC volume parameter for compound 2 (UNIQUAC_RI = 2.20240)
+ UNIQUAC surface parameter for compound 2 (UNIQUAC_QI = 2.07200)
+ Experimental dielectric constant for molecule 5   EPSILON = 6.30000
+
+ Compound Information for compound 2 conformer 2 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/a/aceticacid_c1.cosmo)
+ Atomic weights         : 11111111
+ E_COSMO+dE             :    -143833.5618 kcal/mol
+ E_gas                  :    -143823.2426 kcal/mol
+ E_COSMO-E_gas+dE       :        -10.3193 kcal/mol
+ E_diel                 :        -14.1986 kcal/mol
+ Averaging corr dE      :          0.4344 kcal/mol
+ EvdW in continuum      :        -95.4523 kcal/mol
+ Area                   :         92.9188 A^2
+ Volume                 :         75.4586 A^3
+ Molecular Weight       :         60.0522 a.m.u.
+ Total COSMO charge     :   6.9553752E-05 a.u.
+ Dipole moment (t,x,y,z):          5.8169  2.911014  5.035306  0.088510 Debye                            
+ Sigma moments (1-6)    :          0.0000  7.98E+01 -3.824483  1.52E+02 -7.13E+01  4.00E+02              
+ H-bond moment (accept) :          2.0983
+ H-bond moment (donor)  :          3.6896
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    5
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing solids solubilities: Heats of fusion used as given in the input file
+ Computed solubilities will be refined iteratively: Threshold = 1.00E-05
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     1.0000    0.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.43676 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.76165
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.02764 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.69267 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.30393 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.16842 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.84183 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.57611 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.53883
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.36191 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.14478 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.77848 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.18312 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -3.88442 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.99969 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.34995
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.59057 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -19.59543 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.42804 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -8.15494 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -17.87390 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.51581 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.68325
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.30161 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.08270 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.79754 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.15409 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -3.87261 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.22092 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.83726
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.81180 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -19.76888 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.36800 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -8.21187 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -17.92974 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.64172
+ w_Solubility [g(Solute)/g(Solution)]              :         0.64944
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.57611 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.53883
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.36191 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.14478 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.77848 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.18312 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -3.88442 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+ Log10(x_Solubility)                               :         0.00000
+
+
+
+
+ Results for mixture 5
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.2282    0.7718
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -8.61497 kcal/mol
+ Log10(partial pressure [mbar])                    :       -11.64002
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204763.20585 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.69784 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.69537 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -6.98807 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.41339 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.83896
+ w_Solubility [g(Solute)/g(Solution)]              :         0.08435
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.80406 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.36889
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.58986 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.50573 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.73447 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.98499 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.32600 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 6
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0145    0.9855
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.12890 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.76866
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.71978 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -19.94374 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.29344 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -8.16067 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.08142 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.71031
+ w_Solubility [g(Solute)/g(Solution)]              :         0.60260
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.57768 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.53766
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.36348 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.19383 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.77070 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.17515 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -3.92734 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 7
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.1948    0.8052
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -8.83253 kcal/mol
+ Log10(partial pressure [mbar])                    :       -11.80221
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204763.42342 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.72863 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.76322 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.22810 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.27144 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.67677
+ w_Solubility [g(Solute)/g(Solution)]              :         0.11873
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.74433 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.41342
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.53013 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.48565 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.73192 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.01314 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.28231 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 8
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0210    0.9790
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.08555 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.73634
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.67643 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.01205 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.26529 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -8.13656 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.14578 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.74263
+ w_Solubility [g(Solute)/g(Solution)]              :         0.58047
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.57886 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.53678
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.36466 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.21418 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.76748 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.17112 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -3.94570 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 9
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.1809    0.8191
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -8.92864 kcal/mol
+ Log10(partial pressure [mbar])                    :       -11.87386
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204763.51952 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.72911 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.79353 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.32279 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.20732 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.60512
+ w_Solubility [g(Solute)/g(Solution)]              :         0.13757
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.72147 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.43046
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.50727 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.47570 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.73168 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.02609 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.26252 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 10
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0248    0.9752
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.06018 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.71743
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.65106 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.04945 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.24962 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -8.12242 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.18171 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.76155
+ w_Solubility [g(Solute)/g(Solution)]              :         0.56753
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.57969 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.53616
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.36549 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22539 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.76571 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.16869 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -3.95599 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 11
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.1732    0.8268
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -8.98270 kcal/mol
+ Log10(partial pressure [mbar])                    :       -11.91416
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204763.57358 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.72598 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.81072 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.37339 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.17064 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.56482
+ w_Solubility [g(Solute)/g(Solution)]              :         0.14927
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.70949 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.43940
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.49529 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.46973 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.73176 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.03346 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.25121 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 12
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0272    0.9728
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.04382 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.70523
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.63470 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.07265 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.23979 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -8.11327 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.20427 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.77374
+ w_Solubility [g(Solute)/g(Solution)]              :         0.55920
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.58027 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.53573
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.36607 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.23238 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.76460 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.16710 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -3.96246 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 13
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.1684    0.8316
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.01667 kcal/mol
+ Log10(partial pressure [mbar])                    :       -11.93949
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204763.60756 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.72275 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.82160 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.40428 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.14732 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.53949
+ w_Solubility [g(Solute)/g(Solution)]              :         0.15705
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.70227 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.44478
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.48807 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.46581 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.73189 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.03812 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.24402 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying restart 1
+
+
+
+ Results for mixture 14
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0986    0.9014
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.52827 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.32089
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.11915 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.55123 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.99922 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.80092 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.75567 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.15809
+ w_Solubility [g(Solute)/g(Solution)]              :         0.31877
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.61965 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.50637
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.40545 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.38562 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74078 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.10744 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.12454 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 15
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0695    0.9305
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.74378 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.48156
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.33467 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.39976 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.08751 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.93874 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.55423 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.99742
+ w_Solubility [g(Solute)/g(Solution)]              :         0.41206
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.59817 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.52238
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.38397 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.33422 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74856 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.13430 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.06444 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 16
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.1006    0.8994
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.51357 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.30993
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.10446 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.55961 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.99361 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.79101 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.76838 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.16905
+ w_Solubility [g(Solute)/g(Solution)]              :         0.31292
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.62139 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.50507
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.40719 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.38865 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74035 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.10554 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.12836 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 17
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0678    0.9322
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.75646 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.49100
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.34734 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.38903 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.09312 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.94646 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.54136 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.98797
+ w_Solubility [g(Solute)/g(Solution)]              :         0.41793
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.59714 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.52315
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.38294 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.33073 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74910 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.13580 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.06064 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 18
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.1028    0.8972
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.49711 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.29766
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.08799 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.56874 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.98736 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.77983 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.78248 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.18132
+ w_Solubility [g(Solute)/g(Solution)]              :         0.30644
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.62338 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.50359
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.40918 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.39197 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.73987 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.10339 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.13261 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 19
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0659    0.9341
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.77026 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.50129
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.36114 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.37708 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.09928 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.95482 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.52719 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.97769
+ w_Solubility [g(Solute)/g(Solution)]              :         0.42438
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.59604 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.52397
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.38184 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.32687 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74971 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.13743 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.05645 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 20
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.1053    0.8947
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.47877 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.28399
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.06965 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.57857 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.98047 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.76726 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.79802 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.19499
+ w_Solubility [g(Solute)/g(Solution)]              :         0.29934
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.62564 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.50190
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.41144 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.39560 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.73935 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.10099 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.13730 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 21
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0638    0.9362
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.78515 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51239
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.37603 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.36388 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.10601 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.96379 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.51172 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.96659
+ w_Solubility [g(Solute)/g(Solution)]              :         0.43138
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.59489 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.52483
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.38069 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.32261 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.75037 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.13918 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.05189 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 22
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.1080    0.8920
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.45849 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.26887
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.04937 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.58905 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.97291 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.75322 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.81502 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.21011
+ w_Solubility [g(Solute)/g(Solution)]              :         0.29161
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.62822 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.49998
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.41402 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.39953 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.73881 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.09832 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.14244 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 23
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0616    0.9384
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.80104 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.52424
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.39192 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.34944 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.11327 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.97331 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.49499 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95474
+ w_Solubility [g(Solute)/g(Solution)]              :         0.43891
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.59370 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.52572
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.37950 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.31798 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.75109 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.14102 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.04697 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 24
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.1110    0.8890
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.43627 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.25230
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.02715 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.60005 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.96472 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.73767 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.83343 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.22667
+ w_Solubility [g(Solute)/g(Solution)]              :         0.28329
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.63111 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.49783
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.41691 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.40372 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.73823 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.09537 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.14800 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 25
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0593    0.9407
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.81779 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.53673
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.40867 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.33381 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.12103 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.98328 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.47711 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.94225
+ w_Solubility [g(Solute)/g(Solution)]              :         0.44691
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.59248 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.52662
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.37828 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.31299 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.75188 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.14295 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.04171 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 26
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.1142    0.8858
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.41221 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.23437
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.00309 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.61142 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.95593 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.72063 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.85311 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.24461
+ w_Solubility [g(Solute)/g(Solution)]              :         0.27447
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.63434 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.49542
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.42014 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.40813 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.73763 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.09217 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.15397 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 27
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0868    0.9132
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.61623 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.38647
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.20712 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.49609 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.03382 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.85879 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.67709 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.09251
+ w_Solubility [g(Solute)/g(Solution)]              :         0.35522
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60999 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51357
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39579 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36631 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74364 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.11867 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.10097 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 28
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0799    0.9201
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.66701 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.42432
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.25790 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.46020 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.05465 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.89115 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.62955 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.05466
+ w_Solubility [g(Solute)/g(Solution)]              :         0.37731
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60498 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51731
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39078 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.35416 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74549 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12500 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.08679 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 29
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0851    0.9149
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.62895 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.39594
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.21983 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48740 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.03897 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.86696 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.66535 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.08304
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36068
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60870 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51453
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39450 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36334 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74409 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12027 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09746 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 30
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0889    0.9111
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.60033 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.37461
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.19121 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.50671 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.02744 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.84850 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.69163 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.10437
+ w_Solubility [g(Solute)/g(Solution)]              :         0.34845
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.61165 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51234
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39745 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36996 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74309 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.11667 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.10532 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 31
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0860    0.9140
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.62180 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.39061
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.21268 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.49231 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.03607 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.86237 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.67196 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.08837
+ w_Solubility [g(Solute)/g(Solution)]              :         0.35760
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60942 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51400
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39522 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36502 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74384 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.11937 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09944 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 32
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63788 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40260
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22876 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48117 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04262 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87267 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65704 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07638
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36454
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60781 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51520
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39361 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36123 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74441 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12138 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09498 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 33
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0822    0.9178
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.64993 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.41158
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.24081 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.47262 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04756 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.88034 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.64574 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.06739
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36979
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60662 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51608
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39242 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.35834 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74485 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12288 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09161 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 34
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0835    0.9165
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.64089 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40485
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.23177 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.47905 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04385 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87459 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65422 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07413
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36585
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60751 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51542
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39331 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36051 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74452 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12176 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09414 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 35
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0844    0.9156
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63411 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.39979
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22499 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48381 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04108 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87026 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.66055 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07919
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36291
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60818 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51492
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39398 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36212 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74427 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12091 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09603 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 36
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0837    0.9163
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63920 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40358
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.23008 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48025 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04316 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87351 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65580 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07539
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36512
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60767 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51530
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39347 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36091 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74446 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12155 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09461 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 37
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0832    0.9168
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.64301 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40643
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.23389 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.47755 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04472 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87594 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65224 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07255
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36678
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60730 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51558
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39310 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36000 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74460 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12202 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09355 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 38
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0836    0.9164
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.64015 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40430
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.23103 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.47957 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04355 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87412 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65491 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07468
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36553
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60758 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51537
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39338 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36068 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74449 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12167 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09435 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 39
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0838    0.9162
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63800 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40270
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22889 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48108 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04267 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87275 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65692 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07628
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36460
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60779 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51521
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39359 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36120 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74441 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12140 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09495 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 40
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0841    0.9159
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63640 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40150
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22728 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48221 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04201 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87172 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65842 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07748
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36390
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60795 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51509
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39375 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36158 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74436 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12120 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09539 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 41
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63760 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40240
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22848 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48137 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04250 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87249 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65729 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07658
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36442
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60783 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51518
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39363 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36129 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74440 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12135 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09506 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 42
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0838    0.9162
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63851 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40307
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22939 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48073 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04287 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87307 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65645 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07591
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36482
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60774 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51525
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39354 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36108 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74443 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12146 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09481 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 43
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63783 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40257
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22871 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48121 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04260 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87264 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65708 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07641
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36452
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60781 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51520
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39361 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36124 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74441 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12138 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09500 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 44
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63732 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40219
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22820 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48157 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04239 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87231 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65756 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07679
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36430
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60786 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51516
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39366 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36136 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74439 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12131 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09514 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 45
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63770 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40247
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22858 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48130 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04254 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87256 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65720 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07651
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36447
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60782 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51519
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39362 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36127 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74440 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12136 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09503 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 46
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0838    0.9162
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63799 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40268
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22887 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48110 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04266 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87274 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65693 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07629
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36459
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60779 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51521
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39359 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36120 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74441 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12140 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09495 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 47
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63777 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40252
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22865 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48125 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04257 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87260 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65713 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07646
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36450
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60782 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51519
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39362 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36125 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74441 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12137 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09501 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 48
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63761 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40240
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22849 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48136 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04251 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87250 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65728 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07658
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36443
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60783 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51518
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39363 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36129 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74440 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12135 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09506 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 49
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63773 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40249
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22861 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48128 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04256 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87258 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65717 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07649
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36448
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60782 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51519
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39362 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36126 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74440 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12137 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09502 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 50
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63782 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40256
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22870 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48121 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04259 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87263 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65709 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07642
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36452
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60781 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51520
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39361 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36124 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74441 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12138 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09500 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 51
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63789 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40261
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22877 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48116 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04262 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87268 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65702 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07637
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36455
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60780 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51520
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39360 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36122 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74441 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12139 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09498 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 52
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63784 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40257
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22872 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48120 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04260 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87265 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65707 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07640
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36453
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60781 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51520
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39361 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36124 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74441 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12138 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09499 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 53
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63780 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40255
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22868 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48123 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04259 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87262 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65711 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07643
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36451
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60781 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51520
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39361 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36124 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74441 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12138 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09500 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 54
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63783 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40257
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22871 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48121 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04260 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87264 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65708 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07641
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36452
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60781 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51520
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39361 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36124 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74441 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12138 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09499 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 55
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63785 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40258
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22873 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48119 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04261 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87265 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65706 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07640
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36453
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60781 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51520
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39361 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36123 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74441 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12138 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09499 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 56
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63784 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40257
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22872 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48120 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04260 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87264 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65708 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07641
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36453
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60781 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51520
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39361 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36124 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74441 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12138 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09499 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 57
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 aceticaci
+ Mole Fraction        :     0.0839    0.9161
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.63782 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.40256
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.22870 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -20.48121 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.04259 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -7.87264 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.65709 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.07642
+ w_Solubility [g(Solute)/g(Solution)]              :         0.36452
+
+ Compound:  2  (aceticacid)
+ Chemical potential of the compound in the mixture :        -1.60781 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.51520
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -143836.39361 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.36124 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.74441 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.12138 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -4.09500 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+----------------
+ END job       1
+----------------

@@ -14,7 +14,7 @@
 			<key>filename</key>
 			<string>Solubillity.pl</string>
 			<key>lastUsed</key>
-			<date>2017-03-24T23:17:08Z</date>
+			<date>2017-03-26T22:25:15Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
@@ -46,7 +46,7 @@
 			<key>filename</key>
 			<string>LogErrMessg.pl</string>
 			<key>lastUsed</key>
-			<date>2017-03-24T21:25:30Z</date>
+			<date>2017-03-26T18:50:54Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -56,6 +56,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{206, 64}, {1372, 988}}</string>
+	<string>{{206, 40}, {1372, 988}}</string>
 </dict>
 </plist>

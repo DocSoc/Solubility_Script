@@ -1,0 +1,426 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Solubility Calculation of Solute in Solvent 
+ Job-Date   : 03/31/2017
+ Job-Time   : 14:48:06
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+ Reading vapor pressure and property information for compound 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap
+ Note: Vapor Pressure / property file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap is empty
+ Free energy of fusion for pure compound 1 (DGFUS = 3.64493 kcal/mol)
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204754.5909 kcal/mol
+ E_gas                  :   -2204740.7759 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.8150 kcal/mol
+ E_diel                 :        -18.7411 kcal/mol
+ Averaging corr dE      :          1.1081 kcal/mol
+ EvdW in continuum      :       -358.6958 kcal/mol
+ Area                   :        347.5579 A^2
+ Volume                 :        402.8905 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0028 a.u.
+ Dipole moment (t,x,y,z):          7.1747  0.488760  7.156487 -0.149195 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.26E+02  4.58E+01  2.09E+02  1.75E+02  5.53E+02              
+ H-bond moment (accept) :          6.7617
+ H-bond moment (donor)  :          2.3419
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204751.2414 kcal/mol
+ E_gas                  :   -2204738.3753 kcal/mol
+ E_COSMO-E_gas+dE       :        -12.8661 kcal/mol
+ E_diel                 :        -17.6608 kcal/mol
+ Averaging corr dE      :          1.0677 kcal/mol
+ EvdW in continuum      :       -351.4171 kcal/mol
+ Area                   :        340.9253 A^2
+ Volume                 :        403.0683 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0031 a.u.
+ Dipole moment (t,x,y,z):          7.7437 -4.364802 -6.198433  1.578924 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.16E+02  3.56E+01  1.86E+02  1.45E+02  4.85E+02              
+ H-bond moment (accept) :          5.5908
+ H-bond moment (donor)  :          2.1978
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204749.4696 kcal/mol
+ E_gas                  :   -2204735.8858 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.5838 kcal/mol
+ E_diel                 :        -18.5107 kcal/mol
+ Averaging corr dE      :          1.0974 kcal/mol
+ EvdW in continuum      :       -356.7686 kcal/mol
+ Area                   :        345.9657 A^2
+ Volume                 :        403.3632 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0024 a.u.
+ Dipole moment (t,x,y,z):          7.3409 -4.690418 -5.646647 -0.062138 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.23E+02  4.47E+01  2.02E+02  1.75E+02  5.37E+02              
+ H-bond moment (accept) :          6.4083
+ H-bond moment (donor)  :          2.1788
+
+
+ Reading COSMO information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/1/1,2-dichlorobenzene_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/1/1,2-dichlorobenzene_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/1/1,2-dichlorobenzene.vap
+ Free energy of fusion for pure compound 2 (DGFUS = 0.00000 kcal/mol)
+ Enthalpy of fusion for pure compound 2 (DHFUS = 3.02545 kcal/mol)
+ Wagner equation coefficients ([mbar]/[K]) for compound 2:     41000.0000       729.0000        -8.2399         6.3495       -13.2433        17.2542
+ Vapor Pressure [mbar] / Temperature [°C] input for compound 2:
+                0.1000           -13.0000
+               10.0000            53.9000
+             1000.0000           180.0000
+ Antoine equation coefficients (in [mbar]/[K]) for compound 2:        17.3161      4278.8866       -42.0470
+ Minimum interpolative temperature for vapor pressure estimation of compound 2:     260.150 K
+ Maximum interpolative temperature for vapor pressure estimation of compound 2:     453.150 K
+ Minimum temperature for vapor pressure estimation of pure compound 2 (TPVMIN = 403.00000 K)
+ Maximum temperature for vapor pressure estimation of pure compound 2 (TPVMAX = 729.00000 K)
+ Boiling temperature of compound 2 (TBOIL = 453.15000 K)
+ Melting temperature of compound 2 (TMELT = 256.45000 K)
+ Experimental dielectric constant for molecule 4   EPSILON = 10.00000
+ Critical temperature of compound 2 (TCRIT = 689.73000 K)
+ Critical pressure of compound 2 (PCRIT = 41086.20000 mbar)
+
+ Compound Information for compound 2 (COSMO file /apps/cosmologic/COSMOthermX17/COSMOtherm/DATABASE-COSMO/BP-TZVPD-FINE/1/1,2-dichlorobenzene_c0.cosmo)
+ Atomic weights         : 111111111111
+ E_COSMO+dE             :    -722687.4330 kcal/mol
+ E_gas                  :    -722684.5914 kcal/mol
+ E_COSMO-E_gas+dE       :         -2.8416 kcal/mol
+ E_diel                 :         -3.9334 kcal/mol
+ Averaging corr dE      :          0.2066 kcal/mol
+ EvdW in continuum      :       -176.9267 kcal/mol
+ Area                   :        158.4547 A^2
+ Volume                 :        156.3838 A^3
+ Molecular Weight       :        147.0029 a.m.u.
+ Total COSMO charge     :          0.0012 a.u.
+ Dipole moment (t,x,y,z):          3.6341  0.000761  0.000036 -3.634116 Debye                            
+ Sigma moments (1-6)    :          0.0000  2.52E+01 -6.950676  9.980555 -5.510706  5.570643              
+ H-bond moment (accept) :          0.0000
+ H-bond moment (donor)  :          0.0000
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    4
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing solids solubilities: Heats of fusion used as given in the input file
+ Computed solubilities will be refined iteratively: Threshold = 1.00E-05
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,2-dichl
+ Mole Fraction        :     1.0000    0.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.43676 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.76165
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.02764 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.69267 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.30393 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.16842 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.84183 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,2-dichl
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  2  (1,2-dichlorobenzene)
+ Chemical potential of the compound in the mixture :        -4.98947 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.34148
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -722692.42243 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -8.06840 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.80858 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00000 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -9.87698 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,2-dichl
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.50695 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.05675
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.09783 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -15.67300 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.53357 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.14443 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -21.08270 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+ Compound:  2  (1,2-dichlorobenzene)
+ Chemical potential of the compound in the mixture :        -4.93723 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.48328
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -722692.37019 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -8.03569 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.81459 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00000 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -9.85028 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,2-dichl
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.65312 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.43194
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.24400 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -15.77157 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.50236 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.15154 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -21.14100 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -4.04704
+ w_Solubility [g(Solute)/g(Solution)]              :  2.29666054E-04
+
+ Compound:  2  (1,2-dichlorobenzene)
+ Chemical potential of the compound in the mixture :        -4.98947 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.34148
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -722692.42243 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -8.06840 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.80858 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00000 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -9.87698 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+ Log10(x_Solubility)                               :         0.00000
+
+
+
+
+ Results for mixture 5
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,2-dichl
+ Mole Fraction        :  8.973E-05    0.9999
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.92053 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.63129
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.51141 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.05201 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.23157 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.16059 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -21.14096 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.84769
+ w_Solubility [g(Solute)/g(Solution)]              :  3.63424190E-04
+
+ Compound:  2  (1,2-dichlorobenzene)
+ Chemical potential of the compound in the mixture :        -4.98947 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.34148
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -722692.42243 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -8.06827 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.80870 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00001 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -9.87695 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+
+
+ Results for mixture 6
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,2-dichl
+ Mole Fraction        :     0.0001    0.9999
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.93307 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.64064
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.52395 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.06873 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.22000 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.16582 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -21.14093 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.83834
+ w_Solubility [g(Solute)/g(Solution)]              :  3.71331851E-04
+
+ Compound:  2  (1,2-dichlorobenzene)
+ Chemical potential of the compound in the mixture :        -4.98947 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.34148
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -722692.42243 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -8.06819 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.80877 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00002 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -9.87694 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+
+
+ Results for mixture 7
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,2-dichl
+ Mole Fraction        :     0.0001    0.9999
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.93366 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.64108
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.52454 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.06957 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.21947 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.16613 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -21.14093 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.83790
+ w_Solubility [g(Solute)/g(Solution)]              :  3.71710416E-04
+
+ Compound:  2  (1,2-dichlorobenzene)
+ Chemical potential of the compound in the mixture :        -4.98947 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.34148
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -722692.42243 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -8.06818 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.80877 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00002 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -9.87694 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+
+
+ Results for mixture 8
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,2-dichl
+ Mole Fraction        :     0.0001    0.9999
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.93369 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.64110
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.52457 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.06961 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.21944 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.16614 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -21.14093 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.83788
+ w_Solubility [g(Solute)/g(Solution)]              :  3.71728347E-04
+
+ Compound:  2  (1,2-dichlorobenzene)
+ Chemical potential of the compound in the mixture :        -4.98947 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.34148
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -722692.42243 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -8.06818 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.80877 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00002 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -9.87694 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+
+
+ Results for mixture 9
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,2-dichl
+ Mole Fraction        :     0.0001    0.9999
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -5.93369 kcal/mol
+ Log10(partial pressure [mbar])                    :        -9.64110
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204760.52457 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.06961 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.21944 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.16614 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -21.14093 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -3.83787
+ w_Solubility [g(Solute)/g(Solution)]              :  3.71729196E-04
+
+ Compound:  2  (1,2-dichlorobenzene)
+ Chemical potential of the compound in the mixture :        -4.98947 kcal/mol
+ Log10(partial pressure [mbar])                    :         0.34148
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -722692.42243 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -8.06818 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         1.80877 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00002 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -9.87694 kcal/mol
+ Ring correction                                   :        -0.74108 kcal/mol
+
+
+----------------
+ END job       1
+----------------

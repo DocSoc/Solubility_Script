@@ -1,0 +1,450 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Solubility Calculation of Solute in Solvent 
+ Job-Date   : 03/31/2017
+ Job-Time   : 14:48:30
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+ Reading vapor pressure and property information for compound 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap
+ Note: Vapor Pressure / property file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap is empty
+ Free energy of fusion for pure compound 1 (DGFUS = 3.64493 kcal/mol)
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204754.5909 kcal/mol
+ E_gas                  :   -2204740.7759 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.8150 kcal/mol
+ E_diel                 :        -18.7411 kcal/mol
+ Averaging corr dE      :          1.1081 kcal/mol
+ EvdW in continuum      :       -358.6958 kcal/mol
+ Area                   :        347.5579 A^2
+ Volume                 :        402.8905 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0028 a.u.
+ Dipole moment (t,x,y,z):          7.1747  0.488760  7.156487 -0.149195 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.26E+02  4.58E+01  2.09E+02  1.75E+02  5.53E+02              
+ H-bond moment (accept) :          6.7617
+ H-bond moment (donor)  :          2.3419
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204751.2414 kcal/mol
+ E_gas                  :   -2204738.3753 kcal/mol
+ E_COSMO-E_gas+dE       :        -12.8661 kcal/mol
+ E_diel                 :        -17.6608 kcal/mol
+ Averaging corr dE      :          1.0677 kcal/mol
+ EvdW in continuum      :       -351.4171 kcal/mol
+ Area                   :        340.9253 A^2
+ Volume                 :        403.0683 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0031 a.u.
+ Dipole moment (t,x,y,z):          7.7437 -4.364802 -6.198433  1.578924 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.16E+02  3.56E+01  1.86E+02  1.45E+02  4.85E+02              
+ H-bond moment (accept) :          5.5908
+ H-bond moment (donor)  :          2.1978
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204749.4696 kcal/mol
+ E_gas                  :   -2204735.8858 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.5838 kcal/mol
+ E_diel                 :        -18.5107 kcal/mol
+ Averaging corr dE      :          1.0974 kcal/mol
+ EvdW in continuum      :       -356.7686 kcal/mol
+ Area                   :        345.9657 A^2
+ Volume                 :        403.3632 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0024 a.u.
+ Dipole moment (t,x,y,z):          7.3409 -4.690418 -5.646647 -0.062138 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.23E+02  4.47E+01  2.02E+02  1.75E+02  5.37E+02              
+ H-bond moment (accept) :          6.4083
+ H-bond moment (donor)  :          2.1788
+
+
+ Reading COSMO information for molecule 4 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane.vap
+ Note: Vapor Pressure / property file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane.vap is empty
+ Free energy of fusion for pure compound 2 (DGFUS = 0.00000 kcal/mol)
+
+ Compound Information for compound 2 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c0.cosmo)
+ Atomic weights         : 1111111111111111
+ E_COSMO+dE             :    -193903.2550 kcal/mol
+ E_gas                  :    -193897.7482 kcal/mol
+ E_COSMO-E_gas+dE       :         -5.5068 kcal/mol
+ E_diel                 :         -7.7764 kcal/mol
+ Averaging corr dE      :          0.3990 kcal/mol
+ EvdW in continuum      :       -138.0251 kcal/mol
+ Area                   :        143.5461 A^2
+ Volume                 :        127.9175 A^3
+ Molecular Weight       :         90.1215 a.m.u.
+ Total COSMO charge     :         -0.0003 a.u.
+ Dipole moment (t,x,y,z):          2.3375  2.064626 -0.115090 -1.090031 Debye                            
+ Sigma moments (1-6)    :          0.0000  5.17E+01  4.78E+01  8.09E+01  1.16E+02  1.80E+02              
+ H-bond moment (accept) :          4.0275
+ H-bond moment (donor)  :          0.0000
+
+
+ Reading COSMO information for molecule 5 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c1.cosmo
+ Reading gas phase energy information for molecule 5 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c1.energy
+
+ Compound Information for compound 2 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c1.cosmo)
+ Atomic weights         : 1111111111111111
+ E_COSMO+dE             :    -193902.1624 kcal/mol
+ E_gas                  :    -193897.6141 kcal/mol
+ E_COSMO-E_gas+dE       :         -4.5483 kcal/mol
+ E_diel                 :         -8.2255 kcal/mol
+ Averaging corr dE      :          0.3967 kcal/mol
+ EvdW in continuum      :       -136.2097 kcal/mol
+ Area                   :        141.3831 A^2
+ Volume                 :        128.1101 A^3
+ Molecular Weight       :         90.1215 a.m.u.
+ Total COSMO charge     :         -0.0003 a.u.
+ Dipole moment (t,x,y,z):          3.4959  0.611352 -0.841115  3.337682 Debye                            
+ Sigma moments (1-6)    :          0.0000  5.28E+01  4.80E+01  8.27E+01  1.18E+02  1.84E+02              
+ H-bond moment (accept) :          4.1311
+ H-bond moment (donor)  :          0.0000
+
+
+ Reading COSMO information for molecule 6 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c2.cosmo
+ Reading gas phase energy information for molecule 6 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c2.energy
+
+ Compound Information for compound 2 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c2.cosmo)
+ Atomic weights         : 1111111111111111
+ E_COSMO+dE             :    -193901.9663 kcal/mol
+ E_gas                  :    -193897.1378 kcal/mol
+ E_COSMO-E_gas+dE       :         -4.8285 kcal/mol
+ E_diel                 :         -5.7501 kcal/mol
+ Averaging corr dE      :          0.4156 kcal/mol
+ EvdW in continuum      :       -138.3446 kcal/mol
+ Area                   :        143.8484 A^2
+ Volume                 :        127.7826 A^3
+ Molecular Weight       :         90.1215 a.m.u.
+ Total COSMO charge     :         -0.0007 a.u.
+ Dipole moment (t,x,y,z):          0.0151 -0.001375  0.004323 -0.014418 Debye                            
+ Sigma moments (1-6)    :          0.0000  4.54E+01  3.73E+01  6.05E+01  7.99E+01  1.17E+02              
+ H-bond moment (accept) :          2.7367
+ H-bond moment (donor)  :          0.0000
+
+
+ Reading COSMO information for molecule 7 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c3.cosmo
+ Reading gas phase energy information for molecule 7 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c3.energy
+
+ Compound Information for compound 2 conformer 4 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c3.cosmo)
+ Atomic weights         : 1111111111111111
+ E_COSMO+dE             :    -193901.3696 kcal/mol
+ E_gas                  :    -193896.3610 kcal/mol
+ E_COSMO-E_gas+dE       :         -5.0086 kcal/mol
+ E_diel                 :         -5.6616 kcal/mol
+ Averaging corr dE      :          0.4055 kcal/mol
+ EvdW in continuum      :       -134.8284 kcal/mol
+ Area                   :        140.3955 A^2
+ Volume                 :        128.0227 A^3
+ Molecular Weight       :         90.1215 a.m.u.
+ Total COSMO charge     :         -0.0002 a.u.
+ Dipole moment (t,x,y,z):          2.0331 -0.074331  1.778456 -0.982372 Debye                            
+ Sigma moments (1-6)    :          0.0000  4.33E+01  3.50E+01  5.84E+01  7.86E+01  1.18E+02              
+ H-bond moment (accept) :          2.6851
+ H-bond moment (donor)  :          0.0000
+
+
+ Reading COSMO information for molecule 8 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c4.cosmo
+ Reading gas phase energy information for molecule 8 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c4.energy
+
+ Compound Information for compound 2 conformer 5 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c4.cosmo)
+ Atomic weights         : 1111111111111111
+ E_COSMO+dE             :    -193900.8693 kcal/mol
+ E_gas                  :    -193896.2332 kcal/mol
+ E_COSMO-E_gas+dE       :         -4.6361 kcal/mol
+ E_diel                 :         -6.2097 kcal/mol
+ Averaging corr dE      :          0.4131 kcal/mol
+ EvdW in continuum      :       -136.9545 kcal/mol
+ Area                   :        142.0746 A^2
+ Volume                 :        127.8804 A^3
+ Molecular Weight       :         90.1215 a.m.u.
+ Total COSMO charge     :         -0.0003 a.u.
+ Dipole moment (t,x,y,z):          2.3566  1.036516  1.944619  0.835148 Debye                            
+ Sigma moments (1-6)    :          0.0000  4.72E+01  3.86E+01  6.39E+01  8.45E+01  1.25E+02              
+ H-bond moment (accept) :          2.9018
+ H-bond moment (donor)  :          0.0000
+
+
+ Reading COSMO information for molecule 9 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c5.cosmo
+ Reading gas phase energy information for molecule 9 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c5.energy
+
+ Compound Information for compound 2 conformer 6 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1-2-Dimethoxyethane_c5.cosmo)
+ Atomic weights         : 1111111111111111
+ E_COSMO+dE             :    -193900.2529 kcal/mol
+ E_gas                  :    -193895.5381 kcal/mol
+ E_COSMO-E_gas+dE       :         -4.7148 kcal/mol
+ E_diel                 :         -6.5315 kcal/mol
+ Averaging corr dE      :          0.3983 kcal/mol
+ EvdW in continuum      :       -131.9931 kcal/mol
+ Area                   :        136.9818 A^2
+ Volume                 :        128.2954 A^3
+ Molecular Weight       :         90.1215 a.m.u.
+ Total COSMO charge     :  -1.4688503E-05 a.u.
+ Dipole moment (t,x,y,z):          2.7473 -2.071844 -0.153865 -1.797637 Debye                            
+ Sigma moments (1-6)    :          0.0000  4.67E+01  3.84E+01  6.54E+01  8.82E+01  1.34E+02              
+ H-bond moment (accept) :          3.0655
+ H-bond moment (donor)  :          0.0000
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    9
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing solids solubilities: Heats of fusion used as given in the input file
+ Computed solubilities will be refined iteratively: Threshold = 1.00E-05
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1-2-Dimet
+ Mole Fraction        :     1.0000    0.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.43676 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.76165
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.02764 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.69267 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.30393 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.16842 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.84183 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1-2-Dimet
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  2  (1-2-Dimethoxyethane)
+ Chemical potential of the compound in the mixture :        -1.68153 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.74123
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -193904.93657 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -3.30583 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         3.11237 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00046 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -6.96311 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1-2-Dimet
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.51977 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.53216
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.11065 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -13.74925 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.00417 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.14430 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.63190 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+ Compound:  2  (1-2-Dimethoxyethane)
+ Chemical potential of the compound in the mixture :        -1.65394 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.85097
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -193904.90898 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -3.26682 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         3.11882 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00047 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -6.94233 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1-2-Dimet
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.69710 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.95574
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.28798 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -13.87414 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.96819 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.17702 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.68598 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.52324
+ w_Solubility [g(Solute)/g(Solution)]              :         0.01240
+
+ Compound:  2  (1-2-Dimethoxyethane)
+ Chemical potential of the compound in the mixture :        -1.68153 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.74123
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -193904.93657 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -3.30583 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         3.11237 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :         0.00046 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -6.96311 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+ Log10(x_Solubility)                               :         0.00000
+
+
+
+
+ Results for mixture 5
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1-2-Dimet
+ Mole Fraction        :     0.0030    0.9970
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.72019 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.97295
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.31108 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -13.95594 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.94259 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.21637 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.70263 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.50602
+ w_Solubility [g(Solute)/g(Solution)]              :         0.01289
+
+ Compound:  2  (1-2-Dimethoxyethane)
+ Chemical potential of the compound in the mixture :        -1.68133 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.74139
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -193904.93636 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -3.31884 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         3.10868 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00303 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -6.96867 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 6
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1-2-Dimet
+ Mole Fraction        :     0.0031    0.9969
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.72039 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.97310
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.31127 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -13.95846 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.94229 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.21792 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.70330 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.50588
+ w_Solubility [g(Solute)/g(Solution)]              :         0.01290
+
+ Compound:  2  (1-2-Dimethoxyethane)
+ Chemical potential of the compound in the mixture :        -1.68132 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.74139
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -193904.93635 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -3.31936 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         3.10853 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00317 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -6.96890 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 7
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1-2-Dimet
+ Mole Fraction        :     0.0031    0.9969
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.72039 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.97310
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.31127 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -13.95848 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.94229 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.21793 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -18.70330 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.50588
+ w_Solubility [g(Solute)/g(Solution)]              :         0.01290
+
+ Compound:  2  (1-2-Dimethoxyethane)
+ Chemical potential of the compound in the mixture :        -1.68132 kcal/mol
+ Log10(partial pressure [mbar])                    :         1.74139
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -193904.93635 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -3.31936 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         3.10853 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.00317 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :        -6.96890 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+----------------
+ END job       1
+----------------

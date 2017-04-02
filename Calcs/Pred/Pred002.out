@@ -1,0 +1,2421 @@
+ ------------------------------------------------------------------------------ 
+ COSMOtherm Version C30-1701 (revision 3140)
+ ------------------------------------------------------------------------------ 
+ written by Frank Eckert, Andreas Klamt, Larissa Koch, Selman Terzi
+ Copyright (C) 1999-2017, COSMOlogic GmbH & Co. KG
+
+ Job-Name   : !! Solubility Calculation of Solute in Solvent 
+ Job-Date   : 03/31/2017
+ Job-Time   : 14:46:13
+ Hostname   : ukmcdwlx007
+ OS-Type    : linux
+ Executable : Linux 64-bit
+
+ Reading COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd from directory /apps/cosmologic/COSMOthermX17/COSMOtherm/CTDATA-FILES/
+ Info: # COSMOtherm parameter file BP_TZVPD_FINE_C30_1701.ctd for BP-TZVPD-FINE (BP-TZVP optimized) COSMO files                                              
+
+ Reading COSMOtherm license key license.txt from directory /apps/cosmologic/COSMOthermX17/licensefiles/
+
+ COSMOtherm license key expiration date 22-dec-2018
+ COSMOtherm license key version 17.0
+ Customer : AstraZeneca
+ ID       : 100905
+
+ License keys:
+  product                   |    licensed version    | status
+ ------------------------------------------------------------------------------ 
+  COSMOtherm                |          17.0          | active
+  TURBOMOLE                 |          7.1           | active
+  COSMOconf                 |          4.1           | active
+ ------------------------------------------------------------------------------ 
+
+
+ Reading COSMO information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo
+ Reading gas phase energy information for molecule 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.energy
+ Reading vapor pressure and property information for compound 1 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap
+ Note: Vapor Pressure / property file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968.vap is empty
+ Free energy of fusion for pure compound 1 (DGFUS = 3.64493 kcal/mol)
+
+ Compound Information for compound 1 conformer 1 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c0.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204754.5909 kcal/mol
+ E_gas                  :   -2204740.7759 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.8150 kcal/mol
+ E_diel                 :        -18.7411 kcal/mol
+ Averaging corr dE      :          1.1081 kcal/mol
+ EvdW in continuum      :       -358.6958 kcal/mol
+ Area                   :        347.5579 A^2
+ Volume                 :        402.8905 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0028 a.u.
+ Dipole moment (t,x,y,z):          7.1747  0.488760  7.156487 -0.149195 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.26E+02  4.58E+01  2.09E+02  1.75E+02  5.53E+02              
+ H-bond moment (accept) :          6.7617
+ H-bond moment (donor)  :          2.3419
+
+
+ Reading COSMO information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo
+ Reading gas phase energy information for molecule 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.energy
+
+ Compound Information for compound 1 conformer 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c1.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204751.2414 kcal/mol
+ E_gas                  :   -2204738.3753 kcal/mol
+ E_COSMO-E_gas+dE       :        -12.8661 kcal/mol
+ E_diel                 :        -17.6608 kcal/mol
+ Averaging corr dE      :          1.0677 kcal/mol
+ EvdW in continuum      :       -351.4171 kcal/mol
+ Area                   :        340.9253 A^2
+ Volume                 :        403.0683 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0031 a.u.
+ Dipole moment (t,x,y,z):          7.7437 -4.364802 -6.198433  1.578924 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.16E+02  3.56E+01  1.86E+02  1.45E+02  4.85E+02              
+ H-bond moment (accept) :          5.5908
+ H-bond moment (donor)  :          2.1978
+
+
+ Reading COSMO information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo
+ Reading gas phase energy information for molecule 3 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.energy
+
+ Compound Information for compound 1 conformer 3 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/a/AZ13530968_c2.cosmo)
+ Atomic weights         : 111111111111111111111111111111111111111111111
+ E_COSMO+dE             :   -2204749.4696 kcal/mol
+ E_gas                  :   -2204735.8858 kcal/mol
+ E_COSMO-E_gas+dE       :        -13.5838 kcal/mol
+ E_diel                 :        -18.5107 kcal/mol
+ Averaging corr dE      :          1.0974 kcal/mol
+ EvdW in continuum      :       -356.7686 kcal/mol
+ Area                   :        345.9657 A^2
+ Volume                 :        403.3632 A^3
+ Molecular Weight       :        376.2926 a.m.u.
+ Total COSMO charge     :          0.0024 a.u.
+ Dipole moment (t,x,y,z):          7.3409 -4.690418 -5.646647 -0.062138 Debye                            
+ Sigma moments (1-6)    :          0.0000  1.23E+02  4.47E+01  2.02E+02  1.75E+02  5.37E+02              
+ H-bond moment (accept) :          6.4083
+ H-bond moment (donor)  :          2.1788
+
+
+ Reading COSMO information for molecule 4 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1,1,3,3-Tetramethylurea_c0.cosmo
+ Reading gas phase energy information for molecule 4 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1,1,3,3-Tetramethylurea_c0.energy
+ Reading vapor pressure and property information for compound 2 from file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1,1,3,3-Tetramethylurea.vap
+ Note: Vapor Pressure / property file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1,1,3,3-Tetramethylurea.vap is empty
+ Free energy of fusion for pure compound 2 (DGFUS = 0.00000 kcal/mol)
+ WARNING: The chosen parameterization requires the dielectric constant (epsilon).
+ WARNING: Estimatation of epsilon fails using default value for molecule 4
+ WARNING: Please use experimental values whenever possible !
+
+ Compound Information for compound 2 (COSMO file /dbs/AZcosmotherm/AZ_BP_TZVPD-FINE/1/1,1,3,3-Tetramethylurea_c0.cosmo)
+ Atomic weights         : 11111111111111111111111111111
+ E_COSMO+dE             :    -324553.1932 kcal/mol
+ E_gas                  :    -324542.5512 kcal/mol
+ E_COSMO-E_gas+dE       :        -10.6420 kcal/mol
+ E_diel                 :        -16.2223 kcal/mol
+ Averaging corr dE      :          0.7303 kcal/mol
+ EvdW in continuum      :       -190.8336 kcal/mol
+ Area                   :        200.9422 A^2
+ Volume                 :        221.6073 A^3
+ Molecular Weight       :        160.2381 a.m.u.
+ Total COSMO charge     :          0.0002 a.u.
+ Dipole moment (t,x,y,z):          7.0462  2.803237 -6.155786 -1.974173 Debye                            
+ Sigma moments (1-6)    :          0.0000  8.84E+01  1.26E+02  2.88E+02  6.03E+02  1.33E+03              
+ H-bond moment (accept) :          9.6401
+ H-bond moment (donor)  :          0.0000
+
+
+ Total number of processed compounds:    2
+ Total number of processed molecules:    4
+
+
+----------------
+ START job     1
+----------------
+
+ ----------------------------------------------------
+ Automatic computation of solubities in compound    2
+ Computing solids solubilities: Heats of fusion used as given in the input file
+ Computed solubilities will be refined iteratively: Threshold = 1.00E-05
+ ----------------------------------------------------
+
+
+
+ Results for mixture 1
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     1.0000    0.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.43676 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.76165
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.02764 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.69267 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.30393 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.16842 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.84183 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+
+
+
+ Results for mixture 2
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.40209 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.50142
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.59533 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.37040 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58466 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.09075 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.86432 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 3
+ ---------------------
+ Temperature          :    298.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.97530 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.33208
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.56618 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -15.45752 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         7.16266 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.99577 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.64625 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.33484 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.31771
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.52808 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.31943 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.60179 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.08762 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.83360 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 4
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0000    1.0000
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.19550 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.81831
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.78638 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -15.57833 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         7.13125 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.02660 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.70285 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.66067
+ w_Solubility [g(Solute)/g(Solution)]              :         0.39626
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.40209 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.50142
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.59533 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.37040 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58466 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.09075 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.86432 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+ Log10(x_Solubility)                               :         0.00000
+
+
+
+
+ Results for mixture 5
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.2184    0.7816
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.18740 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.06677
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204763.77828 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.59451 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.34644 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.90447 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.05424 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.41221
+ w_Solubility [g(Solute)/g(Solution)]              :         0.08639
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.57543 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.63065
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.76867 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.05008 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.80070 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.79386 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.05693 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 6
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0387    0.9613
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.39383 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.96617
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.98472 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.17515 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58031 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.00551 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.77088 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.51281
+ w_Solubility [g(Solute)/g(Solution)]              :         0.50993
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.41172 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.50861
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.60497 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.66954 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.43498 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.20200 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.90252 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 7
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.3070    0.6930
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -8.80406 kcal/mol
+ Log10(partial pressure [mbar])                    :       -11.78098
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204763.39494 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.90698 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.11340 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.86087 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.17655 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.69800
+ w_Solubility [g(Solute)/g(Solution)]              :         0.04583
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.71187 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.73236
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.90511 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.69840 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.54856 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.12634 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.12062 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 8
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0200    0.9800
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.61887 kcal/mol
+ Log10(partial pressure [mbar])                    :       -13.13394
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204765.20975 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.21356 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.51875 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.01573 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.73831 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.34504
+ w_Solubility [g(Solute)/g(Solution)]              :         0.65934
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.40502 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.50361
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.59826 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.52442 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.50756 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.14764 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.88434 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 9
+ ---------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.4518    0.5482
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -8.29721 kcal/mol
+ Log10(partial pressure [mbar])                    :       -11.40313
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.88809 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -17.37637 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.78889 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.82598 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.35547 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.07585
+ w_Solubility [g(Solute)/g(Solution)]              :         0.01950
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -1.02207 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.96362
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324554.21531 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -7.70275 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.20623 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.69935 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.20964 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 10
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0084    0.9916
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.78674 kcal/mol
+ Log10(partial pressure [mbar])                    :       -13.25909
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204765.37762 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.26298 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.45433 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.02203 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.71763 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.21989
+ w_Solubility [g(Solute)/g(Solution)]              :         0.78083
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.40265 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.50184
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.59589 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.43456 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.55260 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.11439 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.87277 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 11
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.6027    0.3973
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.87679 kcal/mol
+ Log10(partial pressure [mbar])                    :       -11.08970
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.46767 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -17.79031 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.57766 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.86646 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.51703 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.38928
+ w_Solubility [g(Solute)/g(Solution)]              :  9.53002916E-03
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -1.49264 kcal/mol
+ Log10(partial pressure [mbar])                    :        -2.31444
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324554.68589 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -8.67262 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         4.87930 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.26585 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.28607 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 12
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0041    0.9959
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.85613 kcal/mol
+ Log10(partial pressure [mbar])                    :       -13.31082
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204765.44702 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.28806 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.42357 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.02435 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.70990 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.16816
+ w_Solubility [g(Solute)/g(Solution)]              :         0.83239
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.40222 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.50152
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.59547 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.40149 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.56914 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.10220 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.86843 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 13
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.6790    0.3210
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.71040 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.96565
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.30128 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -17.97784 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.51161 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.91480 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.58982 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.51333
+ w_Solubility [g(Solute)/g(Solution)]              :  7.17204034E-03
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -1.78901 kcal/mol
+ Log10(partial pressure [mbar])                    :        -2.53538
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324554.98225 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -9.12718 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         4.70270 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.51014 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.31974 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying restart 1
+
+
+
+ Results for mixture 14
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.3410    0.6590
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -8.67372 kcal/mol
+ Log10(partial pressure [mbar])                    :       -11.68381
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204763.26460 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -17.02375 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.02778 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.84757 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.22078 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.79516
+ w_Solubility [g(Solute)/g(Solution)]              :         0.03684
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.77442 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.77900
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.96766 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.94010 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.46193 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.25894 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.14310 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 15
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0160    0.9840
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.67393 kcal/mol
+ Log10(partial pressure [mbar])                    :       -13.17499
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204765.26481 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.22793 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.49925 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.01791 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.73121 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.30399
+ w_Solubility [g(Solute)/g(Solution)]              :         0.69849
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.40402 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.50286
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.59726 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.49333 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.52314 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.13611 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.88036 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 16
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.4966    0.5034
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -8.16211 kcal/mol
+ Log10(partial pressure [mbar])                    :       -11.30240
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.75299 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -17.50641 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.71275 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.82919 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.40596 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.17658
+ w_Solubility [g(Solute)/g(Solution)]              :         0.01550
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -1.14408 kcal/mol
+ Log10(partial pressure [mbar])                    :        -2.05458
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324554.33732 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -7.99952 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.10956 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.87521 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.23387 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 17
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0067    0.9933
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.81416 kcal/mol
+ Log10(partial pressure [mbar])                    :       -13.27953
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204765.40504 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.27258 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.44245 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.02297 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.71452 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.19945
+ w_Solubility [g(Solute)/g(Solution)]              :         0.80114
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.40244 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.50169
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.59569 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.42123 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.55927 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.10948 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.87102 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 18
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.6318    0.3682
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.80894 kcal/mol
+ Log10(partial pressure [mbar])                    :       -11.03912
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.39982 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -17.86304 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.55014 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.88315 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.54542 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.43986
+ w_Solubility [g(Solute)/g(Solution)]              :  8.48745274E-03
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -1.60195 kcal/mol
+ Log10(partial pressure [mbar])                    :        -2.39593
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324554.79520 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -8.84897 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         4.81336 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.36310 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.29923 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 19
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0036    0.9964
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.86360 kcal/mol
+ Log10(partial pressure [mbar])                    :       -13.31639
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204765.45449 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.29091 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.42012 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.02459 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.70909 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.16259
+ w_Solubility [g(Solute)/g(Solution)]              :         0.83797
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.40220 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.50150
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.59544 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.39807 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.57085 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.10094 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.86798 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 20
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.6877    0.3123
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.69382 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.95329
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.28470 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -17.99876 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.50512 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.92117 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.59783 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.52569
+ w_Solubility [g(Solute)/g(Solution)]              :  6.97159959E-03
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -1.82472 kcal/mol
+ Log10(partial pressure [mbar])                    :        -2.56200
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324555.01796 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -9.17756 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         4.68173 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.53586 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.32343 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 21
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0030    0.9970
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.87454 kcal/mol
+ Log10(partial pressure [mbar])                    :       -13.32454
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204765.46542 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.29514 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.41503 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.02494 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.70792 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.15444
+ w_Solubility [g(Solute)/g(Solution)]              :         0.84613
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.40216 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.50148
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.59540 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.39310 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.57334 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.09911 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.86733 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 22
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.7008    0.2992
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.67019 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.93568
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.26107 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.02969 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.49575 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.93089 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.60962 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.54330
+ w_Solubility [g(Solute)/g(Solution)]              :  6.69552758E-03
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -1.87825 kcal/mol
+ Log10(partial pressure [mbar])                    :        -2.60191
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324555.07150 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -9.25171 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         4.65033 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.57319 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.32886 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 23
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0029    0.9971
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.87654 kcal/mol
+ Log10(partial pressure [mbar])                    :       -13.32604
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204765.46742 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.29592 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.41409 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.02501 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.70771 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.15294
+ w_Solubility [g(Solute)/g(Solution)]              :         0.84763
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.40215 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.50147
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.59540 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.39219 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.57379 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.09878 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.86721 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 24
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.7032    0.2968
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.66595 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.93252
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.25684 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.03539 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.49405 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.93272 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.61178 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.54646
+ w_Solubility [g(Solute)/g(Solution)]              :  6.64719486E-03
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -1.88821 kcal/mol
+ Log10(partial pressure [mbar])                    :        -2.60934
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324555.08145 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -9.26533 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         4.64450 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.57997 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.32985 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+
+ Results for mixture 25
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0028    0.9972
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :       -10.87689 kcal/mol
+ Log10(partial pressure [mbar])                    :       -13.32630
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204765.46777 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.29606 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.41393 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -3.02502 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.70767 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.15268
+ w_Solubility [g(Solute)/g(Solution)]              :         0.84789
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.40215 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.50147
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.59540 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -4.39203 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.57387 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.09872 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.86719 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 26
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.7036    0.2964
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -7.66521 kcal/mol
+ Log10(partial pressure [mbar])                    :       -10.93197
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204762.25610 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -18.03639 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.49376 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.93304 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.61216 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -2.54701
+ w_Solubility [g(Solute)/g(Solution)]              :  6.63879442E-03
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -1.88996 kcal/mol
+ Log10(partial pressure [mbar])                    :        -2.61064
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324555.08320 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -9.26772 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         4.64347 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.58116 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.33003 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 27
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.3532    0.6468
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -8.62880 kcal/mol
+ Log10(partial pressure [mbar])                    :       -11.65032
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204763.21968 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -17.06481 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.99820 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.84343 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.23632 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.82866
+ w_Solubility [g(Solute)/g(Solution)]              :         0.03416
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.79834 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.79683
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.99158 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -7.02600 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.43196 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -1.30704 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.15092 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 28
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.2656    0.7344
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -8.97461 kcal/mol
+ Log10(partial pressure [mbar])                    :       -11.90813
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204763.56549 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.76119 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.22210 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.87999 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.12066 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.57085
+ w_Solubility [g(Solute)/g(Solution)]              :         0.06088
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.64339 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.68131
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.83663 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -6.39856 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.66139 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.96817 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.09178 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 29
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1999    0.8001
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.27743 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.13389
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204763.86831 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.53030 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.39370 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.91460 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -20.02735 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.34509
+ w_Solubility [g(Solute)/g(Solution)]              :         0.10000
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.55162 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.61290
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.74486 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.91140 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         5.85864 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.72740 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.04264 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 30
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1507    0.8493
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.54061 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.33009
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.13149 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.36865 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.50849 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.94231 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.95335 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.14889
+ w_Solubility [g(Solute)/g(Solution)]              :         0.15212
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.49582 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.57130
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.68906 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.53754 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.02176 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.55642 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -11.00288 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 31
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1137    0.8863
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.76840 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.49991
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.35928 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.26391 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.57581 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96337 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.89543 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.97907
+ w_Solubility [g(Solute)/g(Solution)]              :         0.21588
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.46128 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54555
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65452 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.25327 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.15216 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.43408 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.97134 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 32
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.0860    0.9140
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.96563 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.64694
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.55651 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.20355 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.60648 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.97910 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.85054 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.83204
+ w_Solubility [g(Solute)/g(Solution)]              :         0.28846
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.43952 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.52933
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.63276 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.03827 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.25417 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.34577 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.94668 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 33
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1068    0.8932
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.81517 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.53477
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.40605 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.24695 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58549 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96731 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88433 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.94421
+ w_Solubility [g(Solute)/g(Solution)]              :         0.23153
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45550 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54124
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.64874 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.19965 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.17734 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.41172 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96526 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 34
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1224    0.8776
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.71195 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.45782
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.30283 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.28649 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.56220 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.95844 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.90920 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -1.02115
+ w_Solubility [g(Solute)/g(Solution)]              :         0.19821
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.46881 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.55117
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.66206 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.32016 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.12100 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.46229 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.97887 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 35
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1107    0.8893
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.78868 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51502
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.37956 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25635 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58019 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96510 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.89058 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.96396
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22255
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45872 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54364
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65196 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22982 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16315 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42428 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96869 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 36
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1019    0.8981
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.84899 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.55999
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.43987 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.23570 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.59157 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.97008 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.87647 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.91899
+ w_Solubility [g(Solute)/g(Solution)]              :         0.24343
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45157 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.53831
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.64481 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.16189 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.19517 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.39612 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96095 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 37
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1085    0.8915
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.80352 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.52609
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.39440 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25102 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58322 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96634 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88707 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95289
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22754
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45690 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54228
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65014 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.21285 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.17112 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.41721 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96676 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 38
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1134    0.8866
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.77033 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.50135
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.36122 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.26317 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.57624 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96354 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.89497 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.97763
+ w_Solubility [g(Solute)/g(Solution)]              :         0.21651
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.46103 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54536
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65427 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.25102 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.15321 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.43314 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.97109 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 39
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1097    0.8903
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79515 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51985
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38603 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25401 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58153 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96564 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88904 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95913
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22472
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45792 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54304
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65116 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22240 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16663 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42118 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96785 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 40
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1069    0.8931
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.81404 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.53394
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.40493 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.24733 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58528 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96722 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88459 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.94504
+ w_Solubility [g(Solute)/g(Solution)]              :         0.23114
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45563 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54134
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.64887 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.20091 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.17674 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.41225 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96540 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 41
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1090    0.8910
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79985 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.52335
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.39073 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25232 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58248 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96604 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88793 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95563
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22630
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45734 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54262
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65059 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.21703 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16916 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.41895 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96724 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 42
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1106    0.8894
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.78930 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51549
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38018 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25613 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58032 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96515 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.89043 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.96349
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22276
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45864 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54358
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65188 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22911 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16348 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42398 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96861 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 43
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1117    0.8883
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.78143 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.50962
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.37231 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25902 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.57866 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96448 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.89231 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.96936
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22015
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45962 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54432
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65287 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.23816 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.15923 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42776 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96963 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 44
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1109    0.8891
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.78733 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51402
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.37821 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25685 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.57991 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96498 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.89090 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.96496
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22210
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45889 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54377
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65213 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.23137 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16242 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42492 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96886 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 45
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1102    0.8898
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79176 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51732
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38264 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25523 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58083 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96536 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88985 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.96165
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22358
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45834 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54336
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65158 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22628 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16481 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42280 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96829 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 46
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1097    0.8903
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79510 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51981
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38598 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25403 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58152 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96564 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88906 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95917
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22470
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45793 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54305
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65117 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22245 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16660 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42121 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96785 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 47
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1093    0.8907
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79761 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.52168
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38849 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25312 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58203 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96585 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88846 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95730
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22554
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45762 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54282
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65086 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.21959 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16795 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42001 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96753 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 48
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1096    0.8904
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79573 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.52028
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38661 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25380 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58165 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96569 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88891 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95870
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22491
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45785 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54299
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65109 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22174 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16694 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42091 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96777 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 49
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79432 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51923
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38520 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25431 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58136 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96557 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88924 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95975
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22444
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45802 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54312
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65126 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22335 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16618 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42158 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96795 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 50
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1100    0.8900
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79326 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51844
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38414 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25469 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58114 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96548 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88949 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.96054
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22408
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45815 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54322
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65139 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22456 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16562 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42208 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96809 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 51
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1099    0.8901
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79405 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51903
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38493 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25440 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58130 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96555 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88930 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95995
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22435
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45805 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54315
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65130 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22365 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16604 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42171 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96799 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 52
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79465 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51947
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38553 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25419 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58143 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96560 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88916 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95950
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22455
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45798 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54309
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65122 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22297 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16636 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42142 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96791 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 53
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1097    0.8903
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79509 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51981
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38597 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25403 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58152 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96564 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88906 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95917
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22470
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45793 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54305
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65117 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22246 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16660 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42121 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96785 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 54
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79476 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51956
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38564 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25415 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58145 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96561 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88914 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95942
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22459
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45797 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54308
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65121 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22284 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16642 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42137 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96790 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 55
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79451 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51937
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38539 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25424 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58140 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96559 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88920 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95961
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22450
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45800 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54310
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65124 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22313 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16629 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42149 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96793 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 56
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79470 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51951
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38558 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25417 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58144 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96560 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88915 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95947
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22456
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45798 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54309
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65122 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22292 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16639 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42140 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96790 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 57
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79484 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51962
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38572 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25412 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58146 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96562 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88912 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95936
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22461
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45796 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54307
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65120 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22275 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16646 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42133 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96789 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 58
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79473 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51954
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38561 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25416 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58144 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96561 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88914 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95944
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22458
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45797 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54308
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65121 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22288 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16641 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42138 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96790 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 59
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79465 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51948
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38553 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25419 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58143 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96560 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88916 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95950
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22455
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45798 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54309
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65122 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22297 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16636 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42142 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96791 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 60
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79459 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51943
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38547 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25421 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58141 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96560 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88918 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95955
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22453
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45799 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54310
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65123 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22303 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16633 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42145 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96792 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 61
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79464 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51947
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38552 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25419 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58142 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96560 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88917 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95951
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22454
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45798 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54309
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65123 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22298 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16636 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42143 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96791 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 62
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79467 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51949
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38555 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25418 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58143 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96560 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88916 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95949
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22456
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45798 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54309
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65122 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22295 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16637 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42141 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96791 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 63
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79470 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51951
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38558 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25417 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58144 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96560 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88915 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95947
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22456
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45798 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54309
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65122 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22292 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16639 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42140 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96790 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 64
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79471 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51952
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38559 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25416 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58144 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96561 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88915 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95945
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22457
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45797 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54308
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65122 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22290 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16640 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42139 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96790 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 65
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79470 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51951
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38558 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25417 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58144 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96560 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88915 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95946
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22457
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45797 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54309
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65122 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22291 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16639 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42140 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96790 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+
+ Note: Iterative computation of solubility of compound   1 is oscillating: trying to force convergence
+
+
+
+ Results for mixture 66
+ ----------------------
+ Temperature          :    293.150 K
+
+ Compound Nr.         :          1         2
+ Compound             :  AZ1353096 1,1,3,3-T
+ Mole Fraction        :     0.1098    0.8902
+
+ Compound:  1  (AZ13530968)
+ Chemical potential of the compound in the mixture :        -9.79469 kcal/mol
+ Log10(partial pressure [mbar])                    :       -12.51951
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :  -2204764.38557 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :       -16.25417 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.58143 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -2.96560 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -19.88915 kcal/mol
+ Ring correction                                   :        -2.22324 kcal/mol
+ Log10(x_Solubility)                               :        -0.95947
+ w_Solubility [g(Solute)/g(Solution)]              :         0.22456
+
+ Compound:  2  (1,1,3,3-Tetramethylurea)
+ Chemical potential of the compound in the mixture :        -0.45798 kcal/mol
+ Log10(partial pressure [mbar])                    :        -1.54309
+ Free energy of molecule in mix (E_COSMO+dE+Mu)    :   -324553.65122 kcal/mol
+ Total mean interaction energy in the mix (H_int)  :        -5.22292 kcal/mol
+ Misfit interaction energy in the mix (H_MF)       :         6.16638 kcal/mol
+ H-Bond interaction energy in the mix (H_HB)       :        -0.42140 kcal/mol
+ VdW interaction energy in the mix (H_vdW)         :       -10.96791 kcal/mol
+ Ring correction                                   :         0.00000 kcal/mol
+
+
+----------------
+ END job       1
+----------------
